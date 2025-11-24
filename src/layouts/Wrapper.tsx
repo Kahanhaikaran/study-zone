@@ -1,6 +1,8 @@
 "use client";
 
 import ScrollToTop from "@/common/ScrollToTop";
+import WhatsAppButton from "@/common/WhatsAppButton";
+import { PriceListFormProvider } from "@/context/PriceListFormContext";
 import { animationCreate } from "@/utils/utils";
 import { useEffect } from "react";
 
@@ -206,10 +208,11 @@ const Wrapper = ({ children }: any) => {
 	}, []);
 
 	return (
-		<>
+		<PriceListFormProvider>
 			{children}
 			<ScrollToTop />
-		</>
+			<WhatsAppButton />
+		</PriceListFormProvider>
 	);
 };
 

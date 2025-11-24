@@ -8,7 +8,8 @@ interface SubMenu {
 interface DataType {
 	id: number;
 	title: string;
-	link: string;
+	link?: string;
+	action?: "price-form";
 	sub_menus?: SubMenu[];
 }
 
@@ -37,7 +38,7 @@ const menu_data: DataType[] = [
 	{
 		id: 4,
 		title: "Price List",
-		link: "/pricing",
+		action: "price-form",
 	},
 	{
 		id: 5,

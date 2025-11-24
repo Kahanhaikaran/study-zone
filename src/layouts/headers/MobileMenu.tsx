@@ -1,11 +1,13 @@
 
 "use client"
 import menu_data from "@/data/menu_data";
+import { usePriceListForm } from "@/context/PriceListFormContext";
 import Link from "next/link";
 import React, { useState } from "react";
 
 const MobileMenu = () => {
 	const [openMenu, setOpenMenu] = useState<string | null>(null);
+	const { openForm } = usePriceListForm();
 
 	const toggleMenu = (title: string) => {
 		setOpenMenu((prev) => (prev === title ? null : title));
@@ -25,7 +27,19 @@ const MobileMenu = () => {
 					<ul>
 						{menu_data.map((item) => (
 							<li key={item.id} className={item.sub_menus ? "has-dropdown" : ""}>
-								<Link href={item.link}>{item.title}</Link>
+								{item.action === "price-form" ? (
+									<a
+										href="#price-list"
+										onClick={(e) => {
+											e.preventDefault();
+											openForm();
+										}}
+									>
+										{item.title}
+									</a>
+								) : (
+									item.link && <Link href={item.link}>{item.title}</Link>
+								)}
 								{item.sub_menus && (
 									<>
 										<ul

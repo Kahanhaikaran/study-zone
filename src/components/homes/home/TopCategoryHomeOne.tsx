@@ -18,7 +18,7 @@ const TopCategoryHomeOne = () => {
 	const featuredServices = services.slice(0, 9);
 
 	return (
-		<section className="top-category section-padding">
+		<section id="services" className="top-category section-padding">
 			<div className="container">
 				<div className="row g-4">
 					<div className="col-lg-5">
