@@ -1,4 +1,4 @@
-import HomeOne from "@/components/homes/home"; 
+import HomeOne from "@/components/home"; 
 import Wrapper from "@/layouts/Wrapper";
 import { Metadata } from "next";
 import React from "react";

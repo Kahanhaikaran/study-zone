@@ -41,18 +41,13 @@ const menu_data: DataType[] = [
 	},
 	{
 		id: 5,
-		title: "Assign Work",
-		link: "/contact",
+		title: "Testimonials",
+		link: "/pricing",
 	},
 	{
 		id: 6,
-		title: "Pay Now",
-		link: "/checkout",
-	},
-	{
-		id: 7,
-		title: "Contact",
-		link: "/contact",
+		title: "FAQ",
+		link: "/pricing",
 	},
 ];
 

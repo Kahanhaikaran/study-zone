@@ -38,7 +38,7 @@ const HeaderOne = () => {
                                     <img src="assets/img/logo/dot.png" alt="img" />
                                </div> 
 
-                                <NiceSelect
+                                {/* <NiceSelect
                                   className="category"
                                   options={[
                                     { value: "01", text: "Category" },
@@ -50,7 +50,7 @@ const HeaderOne = () => {
                                   defaultCurrent={0}
                                   onChange={selectHandler}
                                   name=""
-                                  placeholder="" />
+                                  placeholder="" /> */}
 
                             </div>
                         </div>
@@ -68,8 +68,8 @@ const HeaderOne = () => {
                                 className="d-flex align-items-center search-toggle"><i className="fas fa-search"></i></button>
                             </div>
                             <div className="header-button">
-                                <Link href="/sign-in" className="theme-btn style-2"><i className="far fa-user"></i> Admin</Link>
-                                <Link href="/register" className="theme-btn yellow-btn">Enroll Now</Link>
+                                {/* <Link href="/sign-in" className="theme-btn style-2"><i className="far fa-user"></i> Admin</Link> */}
+                                <Link href="/Contact" className="theme-btn yellow-btn">Contact Us</Link>
                             </div>
                             <div className="header__hamburger d-xl-none my-auto">
                                 <div className="sidebar__toggle">

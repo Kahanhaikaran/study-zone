@@ -16,22 +16,22 @@ import PopularCoursesHomeOne from "./PopularCoursesHomeOne";
 
 const HomeOne = () => {
 	return (
-		<> 
-			<HeaderOne />
-      <HeroHomeOne />
-      <FeatureHomeOne />
-      <TopCategoryHomeOne />
-			<PopularCoursesHomeOne />
-			<MarqueeOne />
-			<ChooseHomeOne />
-			<TeamHomeOne />
-			<NewsletterHomeOne />
-			<TestimonialHomeOne />
-			<BrandsHomeOne />
-			<BlogHomeOne />
-			<MarqueeOne /> 
-			<FooterOne />      
-		</>
+	<> 
+	    <HeaderOne />
+        <HeroHomeOne />
+        <FeatureHomeOne />
+        <TopCategoryHomeOne />
+		<PopularCoursesHomeOne />
+		<MarqueeOne />
+		<ChooseHomeOne />
+		<TeamHomeOne />
+		<NewsletterHomeOne />
+		<TestimonialHomeOne />
+		<BrandsHomeOne />
+		{/* <BlogHomeOne /> */}
+		<MarqueeOne /> 
+		<FooterOne />      
+	</>
 	);
 };
 
