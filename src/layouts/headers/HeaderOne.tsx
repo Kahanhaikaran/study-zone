@@ -54,7 +54,7 @@ const HeaderOne = () => {
 
                             </div>
                         </div>
-                        <div className="header-right d-flex justify-content-end align-items-center">
+                        <div className="header-right d-flex justify-content-end align-items-center flex-wrap flex-lg-nowrap gap-3 gap-lg-4">
                             <div className="mean__menu-wrapper">
                                 <div className="main-menu">
                                     <nav id="mobile-menu">
@@ -67,11 +67,11 @@ const HeaderOne = () => {
                                 onClick={ () => setOpen(!open)}
                                 className="d-flex align-items-center search-toggle"><i className="fas fa-search"></i></button>
                             </div>
-                            <div className="header-button">
+                            <div className="header-button d-none d-lg-flex flex-wrap">
                                 <Link href="/sign-in" className="theme-btn style-2"><i className="far fa-user"></i> Admin</Link>
                                 <Link href="/register" className="theme-btn yellow-btn">Enroll Now</Link>
                             </div>
-                            <div className="header__hamburger d-xl-none my-auto">
+                            <div className="header__hamburger d-lg-none my-auto">
                                 <div className="sidebar__toggle">
                                     <div className="header-bar" onClick={ () => setOpenCanvas(!openCanvas)}>
                                         <span></span>

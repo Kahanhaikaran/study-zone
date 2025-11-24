@@ -12,21 +12,26 @@ const Error = () => {
       <BreadcrumbEvent title="Error 404" subtitle="Error 404" />
 
       <div className="error-section fix section-padding pt-0">
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-lg-8">
-                        <div className="error-items text-center">
-                            <div className="error-image wow fadeInUp" data-wow-delay=".3s">
-                                <img src="assets/img/404.png" alt="img" />
-                            </div>
-                            <Link href="/" className="theme-btn wow fadeInUp" data-wow-delay=".5s">
-                                Back To Home
-                            </Link>
-                        </div>
-                    </div>
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 col-md-10 col-12">
+              <div className="error-items text-center px-3 px-md-0">
+                <div className="error-image wow fadeInUp" data-wow-delay=".3s">
+                  <img
+                    src="assets/img/404.png"
+                    alt="404 - page not found"
+                    className="img-fluid mx-auto d-block"
+                    style={{ maxWidth: "100%", height: "auto" }}
+                  />
                 </div>
+                <Link href="/" className="theme-btn wow fadeInUp mt-4" data-wow-delay=".5s">
+                  Back To Home
+                </Link>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
         <MarqueeOne />
         <FooterOne />
