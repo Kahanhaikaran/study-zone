@@ -1,7 +1,13 @@
 
+'use client';
+
 import React from 'react';
 
 const CtaHomeFour = () => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
+
   return (
     <>
      <section className="cta-newsletter-section style-2 fix">
@@ -25,7 +31,12 @@ const CtaHomeFour = () => {
                             to bright your career!
                         </h2>
                     </div>
-                    <form action="#" id="contact-form" method="POST" className="newsletter-input-items mt-4 mt-md-0 wow fadeInUp" data-wow-delay=".3s">
+                    <form
+                      id="contact-form"
+                      className="newsletter-input-items mt-4 mt-md-0 wow fadeInUp"
+                      data-wow-delay=".3s"
+                      onSubmit={handleSubmit}
+                    >
                         <input type="email" id="email" placeholder="Email Address" />
                         <div className="icon">
                             <i className="fas fa-envelope"></i>

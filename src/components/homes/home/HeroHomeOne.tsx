@@ -1,4 +1,6 @@
 
+'use client';
+
 import Count from '@/common/Count';
 import Link from 'next/link';
 import React from 'react';
@@ -33,10 +35,18 @@ const HeroHomeOne = () => {
                                 notes, or exam guidance. Partner with our expert freelance team and achieve your goals
                                 with confidence, clarity, and zero stress.
                             </p>
-                            <div className="hero-button wow fadeInUp d-flex gap-3" data-wow-delay=".7s">
+                            <div className="hero-button wow fadeInUp d-flex gap-3 flex-wrap justify-content-center" data-wow-delay=".7s">
                                 <Link href="/about" className="theme-btn hover-white">Explore Services</Link>
                                 <Link href="tel:+917303628683" className="theme-btn style-2">Call +91 73036 28683</Link>
                             </div>
+                            <form
+                              className="hero-search wow fadeInUp"
+                              data-wow-delay=".8s"
+                              onSubmit={(e) => e.preventDefault()}
+                            >
+                                <input type="text" placeholder="Search services, notes, exams..." />
+                                <button type="submit" className="theme-btn yellow-btn">Search</button>
+                            </form>
                         </div>
                     </div>
                     <div className="hero-image">

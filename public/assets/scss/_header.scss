@@ -275,6 +275,7 @@
 		gap: 50px;
 		max-width: 415px;
 		width: 100%;
+		align-items: center;
 
 		@include breakpoint (max-xl4){
 			max-width: 360px;
@@ -293,86 +294,43 @@
 		@include breakpoint (max-xl){
 			max-width: 415px;
 			width: 100%;
+			justify-content: space-between;
+		}
+
+		@include breakpoint (max-lg){
+			gap: 20px;
+			justify-content: space-between;
+		}
+
+		@include breakpoint (max-sm){
+			gap: 12px;
 		}
 
 		.category-oneadjust{
-			max-width: 215px;
-			width: 100%;
-			position: relative;
+			display: none;
+		}
 
-			@include breakpoint (max-xxl){
-				display: none;
-			}
+		.mobile-nav-trigger {
+			display: none;
 
-			@include breakpoint (max-xl){
+			@include breakpoint (max-lg){
 				display: block;
 			}
 
-			@include breakpoint (max-sm){
-				display: none;
-			}
-
-			.dot {
-				position: absolute;
-				top: 15px;
-				left: 15px;
-			}
-
-			.nice-select{
-				width: unset !important;
-				gap: 20px;
-				font-size: 16px;
-				border-radius: 10px;
-				border: 1px solid rgba(0, 91, 255, 0.10);
-				background: rgba(0, 91, 255, 0.05);
-				padding: 20px 35px 20px 40px;
-				line-height: 1;
-
-				&::after{
-					width: 8px;
-					height: 8px;
-					right: 20px;
-					top: 52%;
-				}
+			button {
+				border: none;
+				background: transparent;
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+				padding: 6px 2px;
 
 				span {
-					font-size: 14px;
-					font-weight: 500;
-					color: $header-color;
-				}
-
-				.selected.focus {
-					background-color: $theme-blue;
-					color: $white;
-					font-weight: 500;
-				}
-
-				.focus {
-					background-color: transparent;
-				}
-
-				.option:hover {
-					background-color: transparent;
-					color: $header-color;
-				}
-
-				.list{
-					max-height: 45vh !important;
-					background: $bg-color;
-					width: 100%;
-					padding: 5px 8px;
-					overflow-y: scroll;
-					z-index: 999 !important;
-
-					@include breakpoint (max-xl){
-						right: -60px;
-					}
-
-					li {
-						color: $header-color;
-						font-size: 14px;
-						border: none;
-					}
+					display: block;
+					width: 26px;
+					height: 2px;
+					background-color: $header-color;
+					border-radius: 2px;
 				}
 			}
 		}
