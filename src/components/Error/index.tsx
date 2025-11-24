@@ -28,7 +28,7 @@ const Error = () => {
             </div>
         </div>
 
-        <MarqueeOne style_2={true} />
+        <MarqueeOne />
         <FooterOne />
     </>
   );
