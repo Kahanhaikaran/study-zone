@@ -22,9 +22,9 @@ const HeroHomeOne = () => {
                 <img src="assets/img/hero/vectoe.png" alt="img" />
             </div>
             <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="hero-content">
+                <div className="row align-items-center">
+                    <div className="col-xl-6 col-lg-6">
+                        <div className="hero-content text-center text-lg-start">
                             <span className="wow fadeInUp">Study support that adapts to you</span>
                             <h1 className="wow fadeInUp" data-wow-delay=".3s">
                                 Is the burden of studies
@@ -49,33 +49,35 @@ const HeroHomeOne = () => {
                             </form>
                         </div>
                     </div>
-                    <div className="hero-image">
-                        <img src="assets/img/hero/hero-1.jpg" alt="img" className="img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.3s" />
-                        <div className="counter-box float-bob-x">
-                            <p>More then</p>
-                            <h2><span className="odometer" data-count="2800">
-                              <Count number={2800} text='+' />
-                              </span></h2>
-                            <p>Quality Courses</p>
-                        </div>
-                        <div className="rating-box float-bob-y">
-                            <div className="content">
-                                <h2><span className="odometer" data-count="4.8">
-                                  <Count number={4} text=".8k" />
+                    <div className="col-xl-6 col-lg-6 mt-5 mt-lg-0">
+                        <div className="hero-image text-center text-lg-end">
+                            <img src="assets/img/hero/hero-1.jpg" alt="img" className="img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.3s" />
+                            <div className="counter-box float-bob-x">
+                                <p>More then</p>
+                                <h2><span className="odometer" data-count="2800">
+                                  <Count number={2800} text='+' />
                                   </span></h2>
-                                <p>5820+ Reviews</p>
-                                <div className="star">
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                </div>
+                                <p>Quality Courses</p>
                             </div>
-                            <img src="assets/img/hero/trustpilot-logopng.png" alt="img" />
-                        </div>
-                        <div className="circle-img float-bob-y"> 
-                            <img src="assets/img/hero/circle.png" alt="img" />
+                            <div className="rating-box float-bob-y">
+                                <div className="content">
+                                    <h2><span className="odometer" data-count="4.8">
+                                      <Count number={4} text=".8k" />
+                                      </span></h2>
+                                    <p>5820+ Reviews</p>
+                                    <div className="star">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <img src="assets/img/hero/trustpilot-logopng.png" alt="img" />
+                            </div>
+                            <div className="circle-img float-bob-y"> 
+                                <img src="assets/img/hero/circle.png" alt="img" />
+                            </div>
                         </div>
                     </div>
                 </div>
