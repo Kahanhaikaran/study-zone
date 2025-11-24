@@ -1,0 +1,51 @@
+
+// @import "../../public/assets/css/flaticon_tecz.css";
+
+// @import "react-toastify/dist/ReactToastify.css";
+// @import "react-toastify/dist/ReactToastify.css";
+
+// @import "../../public/assets/css/spacing.css";
+
+
+@import "swiper/css/bundle";  
+@import "~bootstrap/scss/bootstrap";
+@import "react-modal-video/css/modal-video.css";
+
+@import "../../public/assets/css/font-awesome.css";
+@import "../../public/assets/css/animate.css";
+@import "../../public/assets/css/meanmenu.css";
+@import "../../public/assets/css/nice-select.css";
+@import "../../public/assets/css/odometer.css";
+@import "../../public/assets/css/bootstrap.min.css";
+@import "../../public/assets/scss/main.scss";
+// @import "../../public/assets/css/main.css";
+
+img.media-placeholder {
+  background-color: #f8fafc;
+  border: 1px dashed #cbd5f5;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.bg-media-placeholder {
+  background-color: #f8fafc !important;
+  border: 1px dashed #cbd5f5;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-media-placeholder::after {
+  content: attr(data-placeholder-label);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: clamp(0.75rem, 1vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.55);
+}
