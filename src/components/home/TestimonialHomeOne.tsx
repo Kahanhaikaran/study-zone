@@ -15,7 +15,7 @@ const TestimonialHomeOne = () => {
                         Students Reviews
                     </h6>
                     <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                        8500+ Students Say About Our <br /> Courses and Instructors
+                        2500+ Students Say About Our <br /> Academic Support
                     </h2>
                 </div>
                 <Swiper 
@@ -60,12 +60,12 @@ const TestimonialHomeOne = () => {
                                     <i className="fas fa-star"></i>
                                 </div>
                                 <p>
-                                    "The course content was and easy to follow instructors were
-                                    available answer questions "
+                                    "My dissertation timeline was impossible until their team broke
+                                    it into milestones. I submitted early and finally slept."
                                 </p>
                                 <div className="client-info">
-                                    <h4>Richard C. Andre</h4>
-                                    <span>Web Designer</span>
+                                    <h4>Neha Kapoor</h4>
+                                    <span>Masters Student</span>
                                 </div>
                             </div>
                             <div className="testimonial-image">
@@ -84,12 +84,12 @@ const TestimonialHomeOne = () => {
                                     <i className="fas fa-star"></i>
                                 </div>
                                 <p>
-                                    "The course content was and easy to follow instructors were
-                                    available answer questions "
+                                    "They rewrote my entire project deck overnight with zero
+                                    plagiarism. The professor called it the model submission."
                                 </p>
                                 <div className="client-info">
-                                    <h4>Richard C. Andre</h4>
-                                    <span>Web Designer</span>
+                                    <h4>Rahul Deshmukh</h4>
+                                    <span>BBA Final Year</span>
                                 </div>
                             </div>
                             <div className="testimonial-image">
@@ -108,12 +108,12 @@ const TestimonialHomeOne = () => {
                                     <i className="fas fa-star"></i>
                                 </div>
                                 <p>
-                                    "The course content was and easy to follow instructors were
-                                    available answer questions "
+                                    "Exam week used to wreck me. Their concise notes and mock
+                                    tests helped me jump two grade bands in one semester."
                                 </p>
                                 <div className="client-info">
-                                    <h4>Richard C. Andre</h4>
-                                    <span>Web Designer</span>
+                                    <h4>Saanvi Mehta</h4>
+                                    <span>BSc Computer Science</span>
                                 </div>
                             </div>
                             <div className="testimonial-image">
@@ -132,12 +132,12 @@ const TestimonialHomeOne = () => {
                                     <i className="fas fa-star"></i>
                                 </div>
                                 <p>
-                                    "The course content was and easy to follow instructors were
-                                    available answer questions "
+                                    "From topic selection to final viva prep, they guided me like a
+                                    mentor. I cleared my thesis defense with full confidence."
                                 </p>
                                 <div className="client-info">
-                                    <h4>Richard C. Andre</h4>
-                                    <span>Web Designer</span>
+                                    <h4>Aditya Rao</h4>
+                                    <span>MBA Candidate</span>
                                 </div>
                             </div>
                             <div className="testimonial-image">
