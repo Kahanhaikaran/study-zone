@@ -55,7 +55,15 @@ const FooterOne = ({style_2} : any) => {
                                 <ul className="list-area">
                                     <li><Link href="/about">About StudyZone</Link></li>
                                     <li><Link href="/services">Our Services</Link></li>
-                                    <li><Link href="/courses">Sample Work</Link></li>
+                                    <li>
+                                        <a
+                                            href="https://wa.me/917303628683?text=provide%20me%20sample%20work"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Sample Work
+                                        </a>
+                                    </li>
                                     <li><Link href="/faq">FAQs</Link></li>
                                     <li><Link href="/contact">Contact</Link></li>
                                 </ul>

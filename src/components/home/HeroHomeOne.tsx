@@ -42,18 +42,18 @@ const HeroHomeOne = () => {
                     <div className="hero-image">
                         <img src="/assets/img/hero/hero-1.jpg" alt="img" className="img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.3s" />
                         <div className="counter-box float-bob-x">
-                            <p>More then</p>
-                            <h2><span className="odometer" data-count="2800">
-                              <Count number={2800} text='+' />
-                              </span></h2>
-                            <p>Quality Courses</p>
+                            <p>Trusted by more than</p>
+                            <h2>
+                                <span className="odometer" data-count="2800">
+                                    <Count number={2800} text="+" />
+                                </span>
+                            </h2>
+                            <p>Completed Projects</p>
                         </div>
                         <div className="rating-box float-bob-y">
                             <div className="content">
-                                <h2><span className="odometer" data-count="4.8">
-                                  <Count number={4} text=".8k" />
-                                  </span></h2>
-                                <p>5820+ Reviews</p>
+                                <h2>4.8/5</h2>
+                                <p>5,820+ Reviews</p>
                                 <div className="star">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>

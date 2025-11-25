@@ -1423,6 +1423,44 @@
         }
     }
 
+    &.no-image {
+        &::before {
+            top: 82%;
+
+            @include breakpoint (max-lg){
+                top: 85%;
+            }
+
+            @include breakpoint (max-sm){
+                top: 88%;
+            }
+        }
+
+        .page-heading {
+            padding-bottom: 80px;
+
+            @include breakpoint (max-md){
+                padding-bottom: 70px;
+            }
+
+            @include breakpoint (max-sm){
+                padding-bottom: 60px;
+            }
+
+            .breadcrumb-items {
+                margin-top: 25px;
+
+                @include breakpoint (max-md){
+                    margin-top: 20px;
+                }
+
+                @include breakpoint (max-sm){
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
 	.page-heading {
         padding: 120px 0 100px;
         text-align: center;

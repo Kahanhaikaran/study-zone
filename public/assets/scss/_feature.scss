@@ -1311,4 +1311,85 @@
 			}
 		}
 	}
+
+	// Pricing Form Styles
+	.pricing-form-wrapper {
+		background-color: $bg-color;
+		border: 1px solid $theme-blue;
+		border-radius: 10px;
+		padding: 60px;
+		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.06);
+		margin-top: 40px;
+
+		@include breakpoint (max-lg){
+			padding: 40px 30px;
+		}
+
+		@include breakpoint (max-sm){
+			padding: 30px 20px;
+		}
+	}
+
+	.pricing-form {
+		.form-group {
+			margin-bottom: 0;
+
+			label {
+				display: block;
+				margin-bottom: 8px;
+				color: $header-color;
+				font-size: 16px;
+				font-weight: 500;
+				text-transform: capitalize;
+			}
+		}
+
+		.form-control {
+			width: 100%;
+			padding: 16px 30px;
+			border: 1px solid rgba(0, 91, 255, 0.2);
+			border-radius: 7px;
+			background-color: $white;
+			color: $text-color;
+			font-size: 16px;
+			font-weight: 400;
+			outline: none;
+			transition: all 0.3s ease;
+
+			&:focus {
+				border-color: $theme-blue;
+				box-shadow: 0 0 0 3px rgba(0, 91, 255, 0.1);
+			}
+
+			&::placeholder {
+				color: $text-color;
+				opacity: 0.6;
+			}
+		}
+
+		select.form-control {
+			appearance: none;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235B6D84' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-position: right 30px center;
+			padding-right: 60px;
+			cursor: pointer;
+		}
+
+		.form-submit {
+			margin-top: 10px;
+			text-align: center;
+
+			.theme-btn {
+				width: 100%;
+				justify-content: center;
+				background-color: $theme-green;
+				color: $header-color;
+
+				&:hover {
+					color: $white;
+				}
+			}
+		}
+	}
 }

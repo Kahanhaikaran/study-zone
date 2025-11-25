@@ -1,311 +1,167 @@
+"use client";
 
-import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
+import { services } from '@/data/services';
 
 const PricingArea = () => {
+  const [formData, setFormData] = useState({
+    service: '',
+    university: '',
+    name: '',
+    email: '',
+    phone: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Format the message for WhatsApp
+    const selectedService = services.find(s => s.slug === formData.service);
+    const serviceName = selectedService ? selectedService.title : formData.service;
+    
+    const message = `Hello! I'm interested in getting pricing information.
+
+Service: ${serviceName}
+University: ${formData.university}
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}`;
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // WhatsApp number (from ContactArea.tsx)
+    const whatsappNumber = '917303628683';
+    
+    // Open WhatsApp with the message
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+  };
+
   return (
     <>
-       <section className="pricing-section section-padding pt-0 fix">
-            <div className="container">
-                <div className="section-title text-center">
-                    <h6>Pricing Package</h6>
-                    <h2>
-                        Flexible Pricing for Learner
-                    </h2>
-                </div>
-                <div className="d-flex justify-content-center mt-3 mt-md-0">
-                    <div className="pricing-two__tab">
-                        <nav>
-                            <div className="nav nav-tabs" id="nav-tab" role="tablist">
-                                <button className="nav-link active" id="pt-1-tab" data-bs-toggle="tab"
-                                    data-bs-target="#pt-1" type="button" role="tab" aria-controls="pt-1"
-                                    aria-selected="true">Monthly</button>
-                                <button className="nav-link" id="pt-2-tab" data-bs-toggle="tab" data-bs-target="#pt-2"
-                                    type="button" role="tab" aria-controls="pt-2"
-                                    aria-selected="false">Yearly</button>
-
-                            </div>
-                        </nav>
+      <section className="pricing-section section-padding">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-8 col-lg-10">
+              <div className="section-title text-center mb-5">
+                <h6>Price List</h6>
+                <h2>Get Pricing Information</h2>
+                <p className="mt-3">
+                  Fill out the form below and we'll send you pricing details via WhatsApp
+                </p>
+              </div>
+              
+              <div className="pricing-form-wrapper">
+                <form id="pricing-form" onSubmit={handleSubmit} className="pricing-form">
+                  <div className="row g-4">
+                    <div className="col-12">
+                      <div className="form-group">
+                        <label htmlFor="service">Service</label>
+                        <select
+                          name="service"
+                          id="service"
+                          value={formData.service}
+                          onChange={handleChange}
+                          required
+                          className="form-control"
+                        >
+                          <option value="">Select Service</option>
+                          {services.map((service) => (
+                            <option key={service.slug} value={service.slug}>
+                              {service.title}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
                     </div>
-                </div>
-                <div className="pricing__tab-content">
-                    <div className="tab-content" id="nav-tabContent">
-                        <div className="tab-pane fade show active" id="pt-1" role="tabpanel" aria-labelledby="pt-1-tab">
-                            <div className="pricing-package-wrapper">
-                                <div className="row">
-                                    <div className="col-xl-4 col-lg-6 col-md-6">
-                                        <div className="pricing-card-items">
-                                            <div className="pricing-header">
-                                                <h5>Undergraduate</h5>
-                                                <h2>$175.00</h2>
-                                                <span>per monthly</span>
-                                            </div>
-                                            <p>
-                                                Includes All Standard Plan features, personalized financial guidance.
-                                            </p>
-                                            <div className="pricing-btn">
-                                                <Link href="/pricing" className="theme-btn green-btn">
-                                                    Choose Plan
-                                                </Link>
-                                            </div>
-                                            <ul className="pricing-list">
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Individual Course
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Course Learning Checks
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Offline Learning 
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    High Resolution Videos
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    24/7 Dedicated Support
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Interactive practice sessions
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-4 col-lg-6 col-md-6">
-                                        <div className="pricing-card-items style-2">
-                                            <Link href="/pricing" className="post-btn">popular</Link>
-                                            <div className="pricing-header">
-                                                <h5>Graduate Programs</h5>
-                                                <h2>$280.00</h2>
-                                                <span>per monthly</span>
-                                            </div>
-                                            <p>
-                                                Includes All Standard Plan features, personalized financial guidance.
-                                            </p>
-                                            <div className="pricing-btn">
-                                                <Link href="/pricing" className="theme-btn">
-                                                    Choose Plan
-                                                </Link>
-                                            </div>
-                                            <ul className="pricing-list">
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Individual Course
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Course Learning Checks
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Offline Learning 
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    High Resolution Videos
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    24/7 Dedicated Support
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Interactive practice sessions
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-4 col-lg-6 col-md-6">
-                                        <div className="pricing-card-items">
-                                            <div className="pricing-header">
-                                                <h5>Online Programs</h5>
-                                                <h2>$530.00</h2>
-                                                <span>per monthly</span>
-                                            </div>
-                                            <p>
-                                                Includes All Standard Plan features, personalized financial guidance.
-                                            </p>
-                                            <div className="pricing-btn">
-                                                <Link href="/pricing" className="theme-btn green-btn">
-                                                    Choose Plan
-                                                </Link>
-                                            </div>
-                                            <ul className="pricing-list">
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Individual Course
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Course Learning Checks
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Offline Learning 
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    High Resolution Videos
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    24/7 Dedicated Support
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Interactive practice sessions
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="tab-pane fade" id="pt-2" role="tabpanel" aria-labelledby="pt-2-tab">
-                            <div className="pricing-package-wrapper">
-                                <div className="row">
-                                    <div className="col-xl-4 col-lg-6 col-md-6">
-                                        <div className="pricing-card-items">
-                                            <div className="pricing-header">
-                                                <h5>Undergraduate</h5>
-                                                <h2>$275.00</h2>
-                                                <span>per monthly</span>
-                                            </div>
-                                            <p>
-                                                Includes All Standard Plan features, personalized financial guidance.
-                                            </p>
-                                            <div className="pricing-btn">
-                                                <Link href="/pricing" className="theme-btn green-btn">
-                                                    Choose Plan
-                                                </Link>
-                                            </div>
-                                            <ul className="pricing-list">
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Individual Course
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Course Learning Checks
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Offline Learning 
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    High Resolution Videos
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    24/7 Dedicated Support
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Interactive practice sessions
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-4 col-lg-6 col-md-6">
-                                        <div className="pricing-card-items style-2">
-                                            <Link href="/pricing" className="post-btn">popular</Link>
-                                            <div className="pricing-header">
-                                                <h5>Graduate Programs</h5>
-                                                <h2>$380.00</h2>
-                                                <span>per monthly</span>
-                                            </div>
-                                            <p>
-                                                Includes All Standard Plan features, personalized financial guidance.
-                                            </p>
-                                            <div className="pricing-btn">
-                                                <Link href="/pricing" className="theme-btn">
-                                                    Choose Plan
-                                                </Link>
-                                            </div>
-                                            <ul className="pricing-list">
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Individual Course
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Course Learning Checks
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Offline Learning 
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    High Resolution Videos
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    24/7 Dedicated Support
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Interactive practice sessions
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-4 col-lg-6 col-md-6">
-                                        <div className="pricing-card-items">
-                                            <div className="pricing-header">
-                                                <h5>Online Programs</h5>
-                                                <h2>$730.00</h2>
-                                                <span>per monthly</span>
-                                            </div>
-                                            <p>
-                                                Includes All Standard Plan features, personalized financial guidance.
-                                            </p>
-                                            <div className="pricing-btn">
-                                                <Link href="/pricing" className="theme-btn green-btn">
-                                                    Choose Plan
-                                                </Link>
-                                            </div>
-                                            <ul className="pricing-list">
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Individual Course
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Course Learning Checks
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Offline Learning 
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    High Resolution Videos
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    24/7 Dedicated Support
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-check-mark"></i>
-                                                    Interactive practice sessions
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    
+                    <div className="col-12">
+                      <div className="form-group">
+                        <label htmlFor="university">University</label>
+                        <input
+                          type="text"
+                          name="university"
+                          id="university"
+                          placeholder="Enter your university name"
+                          value={formData.university}
+                          onChange={handleChange}
+                          required
+                          className="form-control"
+                        />
+                      </div>
                     </div>
-                </div>
+                    
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="name">Name</label>
+                        <input
+                          type="text"
+                          name="name"
+                          id="name"
+                          placeholder="Enter your full name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          placeholder="Enter your email address"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="col-12">
+                      <div className="form-group">
+                        <label htmlFor="phone">Phone</label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          id="phone"
+                          placeholder="Enter your phone number"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="col-12">
+                      <div className="form-submit">
+                        <button type="submit" className="theme-btn">
+                          Get Price
+                          <i className="fas fa-arrow-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

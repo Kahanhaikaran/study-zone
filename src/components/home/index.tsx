@@ -27,7 +27,6 @@ const HomeOne = () => {
 		<NewsletterHomeOne />
 		<TestimonialHomeOne />
 		<FaqArea />
-		<BrandsHomeOne />
 		{/* <BlogHomeOne /> */}
 		<MarqueeOne /> 
 		<FooterOne />      

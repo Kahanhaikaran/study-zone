@@ -11,16 +11,6 @@ const BrandsHomeOne = () => {
 			<section className="brand-section fix section-padding pt-0">
 				<div className="container">
 					<div className="brand-wrapper">
-						<div className="section-title text-center">
-							<h2 className="wow fadeInUp mb-3" data-wow-delay=".3s">
-								25m+ Trusted Partners
-							</h2>
-							<p className="wow fadeInUp" data-wow-delay=".5s mt-3">
-								Education is the foundation of personal societal growth,
-								empowering <br />
-								individuals with knowledge, skills critical thinking.
-							</p>
-						</div>
 						<Swiper
              spaceBetween={30}
              speed={1500}

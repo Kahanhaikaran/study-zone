@@ -261,3 +261,133 @@
         justify-content: center;
     }
 }
+
+.contact-info-wrapper {
+    margin-top: 40px;
+
+    .contact-info-card {
+        border: 1px solid $border-color;
+        border-radius: 16px;
+        padding: 28px;
+        background-color: $white;
+        box-shadow: 0 12px 35px rgba(3, 31, 66, 0.05);
+        height: 100%;
+
+        @include breakpoint (max-lg){
+            padding: 24px;
+        }
+
+        @include breakpoint (max-sm){
+            text-align: center;
+        }
+
+        .icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background-color: rgba(0, 91, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $theme-blue;
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        .label {
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            color: $text-color;
+            margin-bottom: 6px;
+        }
+
+        .value {
+            font-size: 20px;
+            font-weight: 600;
+            color: $header-color;
+            display: block;
+            word-break: break-word;
+        }
+
+        .subtext {
+            margin-top: 6px;
+            color: $text-color;
+            font-size: 15px;
+        }
+
+        .alt-link {
+            margin-top: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: $theme-blue;
+            font-weight: 600;
+
+            &::after {
+                content: "\f061";
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 400;
+            }
+
+            &:hover {
+                color: $theme-green;
+            }
+
+            @include breakpoint (max-sm){
+                justify-content: center;
+            }
+        }
+    }
+
+    .contact-cta-bar {
+        margin-top: 40px;
+        border: 1px solid $border-color;
+        border-radius: 18px;
+        padding: 30px 35px;
+        background-color: $bg-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        flex-wrap: wrap;
+
+        @include breakpoint (max-md){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include breakpoint (max-sm){
+            text-align: center;
+            align-items: center;
+        }
+
+        h4 {
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+
+            @include breakpoint (max-sm){
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .theme-btn {
+                min-width: 160px;
+                justify-content: center;
+
+                @include breakpoint (max-sm){
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

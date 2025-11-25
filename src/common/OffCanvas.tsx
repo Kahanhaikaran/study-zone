@@ -22,13 +22,12 @@ const OffCanvas = ({setOpenCanvas, openCanvas} : any) => {
                                 </button>
                             </div>
                         </div>
-                        <h3 className="offcanvas-title">Hello There!</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, </p>
+                        <h3 className="offcanvas-title">Need academic support?</h3>
+                        <p>We respond daily between <strong>10 AM – 11 PM IST</strong>. Choose a channel below and get a plan within minutes.</p>
                         <div className="social-icon d-flex align-items-center">
-                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                            <a href="#"><i className="fab fa-twitter"></i></a>
-                            <a href="#"><i className="fab fa-youtube"></i></a>
-                            <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+                            <a href="https://wa.me/917303628683" aria-label="WhatsApp"><i className="fab fa-whatsapp"></i></a>
                         </div>
                         <div className="mobile-menu fix mb-3 mean-container">
                           <MobileMenu />
@@ -40,25 +39,36 @@ const OffCanvas = ({setOpenCanvas, openCanvas} : any) => {
                                     <span>
                                         Address:
                                     </span>
-                                    7300-7398 Colonial Rd,
-                                    Brooklyn, NY 11209
+                                    India · Remote support, global delivery
                                 </li>
                                 <li>
                                     <span>
                                         Call Us:
                                     </span>
-                                    <a href="tel:+00012345688">+000 123 456 88</a>
+                                    <a href="tel:+917303628683">+91 73036 28683</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        WhatsApp:
+                                    </span>
+                                    <a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer">Chat instantly</a>
                                 </li>
                                 <li>
                                     <span>
                                         Email:
                                     </span>
-                                    <a href="mailto:supportedus@gmail.com">supportedus@gmail.com</a>
+                                    <a href="mailto:support@studyzone.in">support@studyzone.in</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        Hours:
+                                    </span>
+                                    10 AM – 11 PM IST (7 days)
                                 </li>
                             </ul>
                             <div className="offcanvas-button">
-                                <Link href="/sign-in" className="theme-btn style-2"><i className="far fa-user"></i> Admin</Link>
-                                <Link href="/register" className="theme-btn yellow-btn">Enroll Now</Link>
+                                <a href="tel:+917303628683" className="theme-btn style-2"><i className="far fa-phone"></i> Call Now</a>
+                                <a href="https://wa.me/917303628683" className="theme-btn yellow-btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                             </div>
                         </div>
                     </div>

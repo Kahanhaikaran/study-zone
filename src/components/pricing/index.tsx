@@ -9,7 +9,7 @@ const Pricing = () => {
 	return (
 		<>
 			<HeaderOne />
-			<BreadcrumbEvent title="Pricing" subtitle="Pricing" />
+			<BreadcrumbEvent title="Price List" subtitle="Price List" />
 			<PricingArea />       
 			<MarqueeOne style_2={true} />
 			<FooterOne />

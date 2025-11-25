@@ -4,7 +4,7 @@ import React from "react";
 const BreadcrumbEvent = ({title, subtitle} : any) => {
 	return (
 		<>
-			<section className="breadcrumb-wrapper">
+			<section className="breadcrumb-wrapper no-image">
 				<div className="shape-1">
 					<img src="/assets/img/breadcrumb/shape-1.png" alt="img" />
 				</div>
@@ -30,9 +30,6 @@ const BreadcrumbEvent = ({title, subtitle} : any) => {
 								</li>
 								<li className="style-2">{subtitle}</li>
 							</ul>
-							<div className="breadcrumb-image">
-								<img src="/assets/img/breadcrumb/breadcrumb.jpg" alt="img" />
-							</div>
 						</div>
 					</div>
 				</div>
