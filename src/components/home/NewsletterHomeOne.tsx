@@ -10,13 +10,13 @@ const NewsletterHomeOne = () => {
           data-wow-duration="1.5s"
           data-wow-delay="0.3s"
         >
-          <img src="assets/img/cta/girl-img.png" alt="img" />
+          <img src="/assets/img/cta/girl-img.png" alt="img" />
         </div>
         <div className="shape-1">
-          <img src="assets/img/cta/shape-1.png" alt="img" />
+          <img src="/assets/img/cta/shape-1.png" alt="img" />
         </div>
         <div className="shape-2">
-          <img src="assets/img/cta/shape-2.png" alt="img" />
+          <img src="/assets/img/cta/shape-2.png" alt="img" />
         </div>
         <div className="container">
           <div className="cta-newsletter-wrapper">

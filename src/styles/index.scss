@@ -20,7 +20,6 @@
 @import "../../public/assets/css/odometer.css";
 @import "../../public/assets/css/bootstrap.min.css";
 @import "../../public/assets/scss/main.scss";
-// @import "../../public/assets/css/main.css";
 
 // Newsletter section custom styles
 .cta-newsletter-wrapper {
@@ -150,6 +149,13 @@
         }
       }
     }
+  }
+}
+
+// Hide main menu on mobile - only show in drawer
+.header-main .mean__menu-wrapper .main-menu {
+  @media (max-width: 1199px) {
+    display: none !important;
   }
 }
 

@@ -1,8 +1,6 @@
 import React from "react";
 
 import HeroHomeOne from "./HeroHomeOne";
-import TeamHomeOne from "./TeamHomeOne";
-import BlogHomeOne from "./BlogHomeOne";
 import ChooseHomeOne from "./ChooseHomeOne";
 import BrandsHomeOne from "./BrandsHomeOne";
 import MarqueeOne from "@/common/MarqueeOne";
@@ -24,7 +22,7 @@ const HomeOne = () => {
 		<TopServicesHomeOne />
 		<MarqueeOne />
 		<ChooseHomeOne />
-		<TeamHomeOne />
+		
 		<NewsletterHomeOne />
 		<TestimonialHomeOne />
 		<BrandsHomeOne />

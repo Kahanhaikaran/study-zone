@@ -74,6 +74,10 @@ const Wrapper = ({ children }: any) => {
 			if (img.dataset.placeholderApplied === "true") {
 				return false;
 			}
+			// Don't replace if image has successfully loaded (has valid dimensions)
+			if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
+				return false;
+			}
 			const normalized = rawSrc.toLowerCase();
 			return (
 				normalized.includes("/assets/img") ||
@@ -107,19 +111,32 @@ const Wrapper = ({ children }: any) => {
 				processedImages.add(img);
 			};
 
-			if (img.complete && (img.naturalWidth || img.naturalHeight)) {
-				apply();
+			// Only apply placeholder if image failed to load
+			if (img.complete) {
+				// Image has finished loading - check if it actually loaded successfully
+				if (img.naturalWidth === 0 || img.naturalHeight === 0) {
+					// Image failed to load (0x0 dimensions)
+					apply();
+				}
+				// If image loaded successfully (has dimensions), don't replace it
 				return;
 			}
 
-			const handleFinish = () => {
-				img.removeEventListener("load", handleFinish);
-				img.removeEventListener("error", handleFinish);
+			// Image is still loading - only replace on error
+			const handleError = () => {
+				img.removeEventListener("load", handleLoad);
+				img.removeEventListener("error", handleError);
 				apply();
 			};
 
-			img.addEventListener("load", handleFinish);
-			img.addEventListener("error", handleFinish);
+			const handleLoad = () => {
+				// Image loaded successfully - don't replace it
+				img.removeEventListener("load", handleLoad);
+				img.removeEventListener("error", handleError);
+			};
+
+			img.addEventListener("load", handleLoad);
+			img.addEventListener("error", handleError);
 		};
 
 		const shouldReplaceBackground = (element: HTMLElement) => {
@@ -172,7 +189,16 @@ const Wrapper = ({ children }: any) => {
 		};
 
 		const bootstrapScan = () => {
-			document.querySelectorAll("img").forEach(applyImagePlaceholder);
+			document.querySelectorAll("img").forEach((img) => {
+				// Only process images that have finished loading and failed
+				if (img.complete && (img.naturalWidth === 0 || img.naturalHeight === 0)) {
+					applyImagePlaceholder(img);
+				} else if (!img.complete) {
+					// Image is still loading - set up error handler
+					applyImagePlaceholder(img);
+				}
+				// If image is complete and has dimensions, skip it (it loaded successfully)
+			});
 			document.querySelectorAll<HTMLElement>("[style*='/assets/img']").forEach(applyBackgroundPlaceholder);
 			document.querySelectorAll<HTMLElement>("*").forEach((element) => {
 				const bg = window.getComputedStyle(element).backgroundImage || "";
@@ -182,7 +208,8 @@ const Wrapper = ({ children }: any) => {
 			});
 		};
 
-		bootstrapScan();
+		// Delay initial scan slightly to allow images to start loading
+		setTimeout(bootstrapScan, 100);
 
 		const observer = new MutationObserver((mutations) => {
 			mutations.forEach((mutation) => {

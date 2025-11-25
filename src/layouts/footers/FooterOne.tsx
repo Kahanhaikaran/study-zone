@@ -13,9 +13,9 @@ const FooterOne = ({style_2} : any) => {
                             <div className="single-footer-widget">
                                 <div className="widget-head">
                                     <Link href="/">
-                                        {style_2 ? <img src="/assets/img/logo/black-logo-2.svg" alt="img" /> 
+                                        {style_2 ? <img src="..." alt="img" /> 
                                         :                                        
-                                        <img src="/assets/img/logo/white-logo.svg" alt="img" />
+                                        <img src="......." alt="img" />
                                         }
                                     </Link>
                                 </div>
@@ -89,12 +89,12 @@ const FooterOne = ({style_2} : any) => {
                     </div>
                 </div>
                 <div className={`footer-bottom wow fadeInUp ${style_2 ? "style-4" : ""}`} data-wow-delay=".3s">
-                    <p>Copyright © <Link href="/">Eduspace</Link>, all rights reserved.</p>
+                    <p>Copyright © <Link href="/">....</Link>, all rights reserved.</p>
                 </div>
             </div>
             <div className={`footer-name ${style_2 ? "style-2" : ""}`}>
                 <h2>
-                    Eduspace
+                    nameHere
                 </h2>
             </div>
         </footer>
