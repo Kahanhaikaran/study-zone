@@ -9,10 +9,10 @@ import MarqueeOne from "@/common/MarqueeOne";
 import FeatureHomeOne from "./FeatureHomeOne";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import NewsletterHomeOne from "./NewsletterHomeOne";
-import TopCategoryHomeOne from "./TopCategoryHomeOne";
+// import TopCategoryHomeOne from "./TopCategoryHomeOne";
 import TestimonialHomeOne from "./TestimonialHomeOne";
 import FooterOne from "@/layouts/footers/FooterOne";
-import PopularCoursesHomeOne from "./PopularCoursesHomeOne";
+import TopServicesHomeOne from "./TopServicesHomeOne";
 
 const HomeOne = () => {
 	return (
@@ -20,8 +20,8 @@ const HomeOne = () => {
 	    <HeaderOne />
         <HeroHomeOne />
         <FeatureHomeOne />
-        <TopCategoryHomeOne />
-		<PopularCoursesHomeOne />
+        {/* <TopCategoryHomeOne /> */}
+		<TopServicesHomeOne />
 		<MarqueeOne />
 		<ChooseHomeOne />
 		<TeamHomeOne />

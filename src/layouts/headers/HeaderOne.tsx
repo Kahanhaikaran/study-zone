@@ -30,12 +30,12 @@ const HeaderOne = () => {
                         <div className="header-left">
                             <div className="logo">
                                 <Link href="/" className="header-logo">
-                                    <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
+                                    <img src="assets/img/placeholder.svg" alt="logo-img" />
                                 </Link>
                             </div>
                             <div className="category-oneadjust">
                                <div className="dot">
-                                    <img src="assets/img/logo/dot.png" alt="img" />
+                                    <img src="/assets/img/logo/dot.png" alt="img" />
                                </div> 
 
                                 {/* <NiceSelect

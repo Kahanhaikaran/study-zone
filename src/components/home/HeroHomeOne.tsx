@@ -8,16 +8,16 @@ const HeroHomeOne = () => {
     <>
         <section className="hero-section hero-1 fix">
             <div className="shape-left">
-                <img src="assets/img/hero/shape-left.png" alt="img" />
+                <img src="/assets/img/hero/shape-left.png" alt="img" />
             </div>
             <div className="shape-right">
-                <img src="assets/img/hero/shape-right.png" alt="img" />
+                <img src="/assets/img/hero/shape-right.png" alt="img" />
             </div>
             <div className="dot-shape float-bob-x">
-                <img src="assets/img/hero/dot.png" alt="img" />
+                <img src="/assets/img/hero/dot.png" alt="img" />
             </div>
             <div className="vector-shape float-bob-y">
-                <img src="assets/img/hero/vectoe.png" alt="img" />
+                <img src="/assets/img/hero/vectoe.png" alt="img" />
             </div>
             <div className="container">
                 <div className="row">
@@ -33,14 +33,14 @@ const HeroHomeOne = () => {
                                 notes, or exam guidance. Partner with our expert freelance team and achieve your goals
                                 with confidence, clarity, and zero stress.
                             </p>
-                            <div className="hero-button wow fadeInUp d-flex gap-3" data-wow-delay=".7s">
-                                <Link href="/about" className="theme-btn hover-white">Explore Services</Link>
+                            <div className="hero-button wow fadeInUp d-flex gap-3 justify-content-center align-items-center" data-wow-delay=".7s">
+                                <Link href="/services" className="theme-btn hover-white">Explore Services</Link>
                                 <Link href="tel:+917303628683" className="theme-btn style-2">Call +91 73036 28683</Link>
                             </div>
                         </div>
                     </div>
                     <div className="hero-image">
-                        <img src="assets/img/hero/hero-1.jpg" alt="img" className="img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.3s" />
+                        <img src="/assets/img/hero/hero-1.jpg" alt="img" className="img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.3s" />
                         <div className="counter-box float-bob-x">
                             <p>More then</p>
                             <h2><span className="odometer" data-count="2800">
@@ -62,10 +62,10 @@ const HeroHomeOne = () => {
                                     <i className="fas fa-star"></i>
                                 </div>
                             </div>
-                            <img src="assets/img/hero/trustpilot-logopng.png" alt="img" />
+                            <img src="/assets/img/hero/trustpilot-logopng.png" alt="img" />
                         </div>
                         <div className="circle-img float-bob-y"> 
-                            <img src="assets/img/hero/circle.png" alt="img" />
+                            <img src="/assets/img/hero/circle.png" alt="img" />
                         </div>
                     </div>
                 </div>

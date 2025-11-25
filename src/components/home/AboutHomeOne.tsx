@@ -29,7 +29,7 @@ const AboutHomeOne = () => {
 					</div>
 					<div className="col-xl-6">
 						<div className="about-image wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.3s">
-							<img src="assets/img/about/01.jpg" alt="img" />
+							<img src="/assets/img/about/01.jpg" alt="img" />
 						</div>
 					</div>
 				</div>

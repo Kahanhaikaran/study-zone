@@ -69,7 +69,7 @@ const TestimonialHomeOne = () => {
                                 </div>
                             </div>
                             <div className="testimonial-image">
-                                <img src="assets/img/testimonial/01.png" alt="img" />
+                                <img src="/assets/img/testimonial/01.png" alt="img" />
                             </div>
                         </div>
                     </SwiperSlide>
@@ -93,7 +93,7 @@ const TestimonialHomeOne = () => {
                                 </div>
                             </div>
                             <div className="testimonial-image">
-                                <img src="assets/img/testimonial/02.png" alt="img" />
+                                <img src="/assets/img/testimonial/02.png" alt="img" />
                             </div>
                         </div>
                     </SwiperSlide>
@@ -117,7 +117,7 @@ const TestimonialHomeOne = () => {
                                 </div>
                             </div>
                             <div className="testimonial-image">
-                                <img src="assets/img/testimonial/01.png" alt="img" />
+                                <img src="/assets/img/testimonial/01.png" alt="img" />
                             </div>
                         </div>
                     </SwiperSlide>
@@ -141,7 +141,7 @@ const TestimonialHomeOne = () => {
                                 </div>
                             </div>
                             <div className="testimonial-image">
-                                <img src="assets/img/testimonial/02.png" alt="img" />
+                                <img src="/assets/img/testimonial/02.png" alt="img" />
                             </div>
                         </div>
                     </SwiperSlide>

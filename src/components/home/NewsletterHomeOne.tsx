@@ -31,17 +31,17 @@ const NewsletterHomeOne = () => {
               </p>
             </div>
             <div
-              className="newsletter-input-items mt-4 mt-md-0 wow fadeInUp flex-column flex-md-row gap-3"
+              className="newsletter-input-items mt-4 mt-md-0 wow fadeInUp d-flex flex-column flex-md-row gap-3"
               data-wow-delay=".5s"
             >
-              <a href="tel:+917303628683" className="theme-btn yellow-btn w-100 text-center">
+              <a href="tel:+917303628683" className="theme-btn yellow-btn text-center">
                 Call +91 73036 28683
               </a>
               <a
                 href="https://wa.me/917303628683"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="theme-btn hover-white w-100 text-center"
+                className="theme-btn hover-white text-center"
               >
                 Chat on WhatsApp
               </a>

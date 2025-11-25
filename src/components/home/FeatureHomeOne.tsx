@@ -10,7 +10,7 @@ const coreServices = [
   {
     icon: "flaticon-online-education",
     title: "Project & Dissertation Help",
-    description: "From topic selection to final report, receive original content and expert guidance end-to-end.",
+    description: "From topic selection to final report, receive original content and expert guidance.",
   },
   {
     icon: "flaticon-community",

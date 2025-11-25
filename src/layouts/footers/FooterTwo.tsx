@@ -7,13 +7,13 @@ const FooterTwo = () => {
     <>
        <footer className="footer-section fix footer-bg">
             <div className="big-circle">
-                <img src="assets/img/footer/big-circle.png" alt="img" />
+                <img src="/assets/img/footer/big-circle.png" alt="img" />
             </div>
             <div className="circle-shape-2">
-                <img src="assets/img/footer/circle-2.png" alt="img" />
+                <img src="/assets/img/footer/circle-2.png" alt="img" />
             </div>
             <div className="Vector-shape-2">
-                <img src="assets/img/footer/Vector-2.png" alt="img" />
+                <img src="/assets/img/footer/Vector-2.png" alt="img" />
             </div>
             <div className="container">
                 <div className="footer-banner-items">
@@ -28,7 +28,7 @@ const FooterTwo = () => {
                                     <Link href="/register" className="theme-btn wow fadeInUp" data-wow-delay=".5s">Get Started</Link>
                                 </div>
                                 <div className="thumb">
-                                    <img src="assets/img/boy-img-2.png" alt="img" className="wow fadeInUp"  data-wow-delay="0.7s" />
+                                    <img src="/assets/img/boy-img-2.png" alt="img" className="wow fadeInUp"  data-wow-delay="0.7s" />
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ const FooterTwo = () => {
                                     <Link href="/register" className="theme-btn wow fadeInUp" data-wow-delay=".5s">Get Started</Link>
                                 </div>
                                 <div className="thumb">
-                                    <img src="assets/img/boy-img-3.png" alt="img" className="wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.3s" />
+                                    <img src="/assets/img/boy-img-3.png" alt="img" className="wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.3s" />
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ const FooterTwo = () => {
                             <div className="single-footer-widget">
                                 <div className="widget-head">
                                     <Link href="/">
-                                        <img src="assets/img/logo/white-logo.svg" alt="img" />
+                                        <img src="/assets/img/logo/white-logo.svg" alt="img" />
                                     </Link>
                                 </div>
                                 <div className="footer-content">

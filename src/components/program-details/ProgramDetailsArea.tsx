@@ -11,7 +11,7 @@ const ProgramDetailsArea = () => {
                         <div className="col-lg-8">
                             <div className="program-details-items">
                                 <div className="details-image">
-                                    <img src="assets/img/program/details-1.jpg" alt="img" />
+                                    <img src="/assets/img/program/details-1.jpg" alt="img" />
                                 </div>
                                 <div className="details-content">
                                     <div className="post">
@@ -20,7 +20,7 @@ const ProgramDetailsArea = () => {
                                     <h2 className="mb-0">Drawing Classes</h2>
                                     <div className="details-author-area">
                                         <div className="author-items">
-                                            <img src="assets/img/program/author.png" alt="img" />
+                                            <img src="/assets/img/program/author.png" alt="img" />
                                             <p>Savannah Nguyen</p>
                                         </div>
                                         <ul className="class-list">
@@ -131,7 +131,7 @@ const ProgramDetailsArea = () => {
                         <div className="col-lg-12">
                             <div className="program-author-items">
                                 <div className="thumb">
-                                    <img src="assets/img/program/p-author.jpg" alt="img" />
+                                    <img src="/assets/img/program/p-author.jpg" alt="img" />
                                 </div>
                                 <div className="content">
                                     <h2>Savannah Nguyen</h2>

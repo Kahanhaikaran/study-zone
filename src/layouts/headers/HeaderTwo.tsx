@@ -19,11 +19,11 @@ const HeaderTwo = () => {
             <div className="container">
                 <div className="header-top">
                     <Link href="/" className="top-logo">
-                        <img src="assets/img/logo/black-logo.svg" alt="img" />
+                        <img src="/assets/img/logo/black-logo.svg" alt="img" />
                     </Link>
                     <div className="category-oneadjust gap-6 d-flex align-items-center">
                         <div className="icon">
-                            <img src="assets/img/logo/dot.png" alt="img" />
+                            <img src="/assets/img/logo/dot.png" alt="img" />
                         </div> 
                         <NiceSelect
                                   className="category"
@@ -55,7 +55,7 @@ const HeaderTwo = () => {
                     <div className="mega-menu-wrapper">
                         <div className="header-main">
                             <Link href="/" className="header-logo">
-                                <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
+                                <img src="/assets/img/logo/black-logo.svg" alt="logo-img" />
                             </Link>
                             <div className="header-left">
                                 <div className="mean__menu-wrapper">

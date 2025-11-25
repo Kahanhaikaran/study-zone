@@ -34,7 +34,7 @@ const NewsDetailsArea = () => {
                                             to how it compares to digital marketing. Plus, get insight into the benefits and risks of performance 
                                             marketing and how it can affect your companys long-term success and profitability. 
                                         </p>
-                                        <img src="assets/img/news/post-4.jpg" alt="blog__img" className="single-post-image" />
+                                        <img src="/assets/img/news/post-4.jpg" alt="blog__img" className="single-post-image" />
                                         <h2>How to Remedy Tailbone Back Problems</h2>
                                         <p>
                                             Performance marketing is an approach to digital marketing or advertising where businesses only pay when a 
@@ -64,7 +64,7 @@ const NewsDetailsArea = () => {
                                             to how it compares to digital marketing. Plus, get insight into the benefits and risks of performance 
                                             marketing and how it can affect your companys long-term success and profitability.
                                         </p>
-                                        <img className="alignleft" src="assets/img/news/post-5.jpg" alt="blog__img" />
+                                        <img className="alignleft" src="/assets/img/news/post-5.jpg" alt="blog__img" />
                                         <p>
                                             With worldwide annual spend on digital advertising surpassing $325 billion, its no surprise that different 
                                             approaches to online marketing are becoming available. One of these new approaches is performance marketing 
@@ -104,7 +104,7 @@ const NewsDetailsArea = () => {
                                     <ul className="comments-item-list">
                                         <li className="single-comment-item">
                                             <div className="author-img">
-                                                <img src="assets/img/news/author_img2.jpg" alt="img" />
+                                                <img src="/assets/img/news/author_img2.jpg" alt="img" />
                                             </div>
                                             <div className="author-info-comment">
                                                 <div className="info">
@@ -119,7 +119,7 @@ const NewsDetailsArea = () => {
                                         </li>
                                         <li className="single-comment-item">
                                             <div className="author-img">
-                                                <img src="assets/img/news/author_img3.jpg" alt="img" />
+                                                <img src="/assets/img/news/author_img3.jpg" alt="img" />
                                             </div>
                                             <div className="author-info-comment">
                                                 <div className="info">
@@ -134,7 +134,7 @@ const NewsDetailsArea = () => {
                                             <ul className="replay-comment">
                                                 <li className="single-comment-item">
                                                     <div className="author-img">
-                                                        <img src="assets/img/news/author_img4.jpg" alt="img" />
+                                                        <img src="/assets/img/news/author_img4.jpg" alt="img" />
                                                     </div>
                                                     <div className="author-info-comment">
                                                         <div className="info">

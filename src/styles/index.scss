@@ -7,6 +7,8 @@
 // @import "../../public/assets/css/spacing.css";
 
 
+
+
 @import "swiper/css/bundle";  
 @import "~bootstrap/scss/bootstrap";
 @import "react-modal-video/css/modal-video.css";
@@ -20,32 +22,163 @@
 @import "../../public/assets/scss/main.scss";
 // @import "../../public/assets/css/main.css";
 
-img.media-placeholder {
-  background-color: #f8fafc;
-  border: 1px dashed #cbd5f5;
-  border-radius: 18px;
-  object-fit: cover;
+// Newsletter section custom styles
+.cta-newsletter-wrapper {
+  // Reduce top and bottom padding
+  padding: 60px 0 !important;
+  
+  @media (max-width: 1199px) {
+    padding: 50px 0 !important;
+  }
+  
+  // No max-width or margin for small screens - content takes full available space
+  margin-left: 0;
+  margin-right: 0;
+  
+  // Add margin-left for md+ screens to prevent overlap with girl-shape image
+  @media (min-width: 768px) {
+    margin-left: 280px; // Space for image + margin
+  }
+  
+  // Adjust margin for larger screens if needed
+  @media (min-width: 1200px) {
+    margin-left: 300px;
+  }
+  
+  // Reduce main heading size
+  .section-title h2 {
+    font-size: 42px !important;
+    
+    @media (max-width: 1199px) {
+      font-size: 36px !important;
+    }
+    
+    @media (max-width: 767px) {
+      font-size: 32px !important;
+    }
+  }
 }
 
-.bg-media-placeholder {
-  background-color: #f8fafc !important;
-  border: 1px dashed #cbd5f5;
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
+.cta-newsletter-wrapper .newsletter-input-items {
+  display: flex !important;
+  flex-direction: column;
+  max-width: 100%;
+  gap: 15px; // Ensure gap between buttons
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 20px; // Larger gap on desktop
+  }
+  
+  .theme-btn {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    display: inline-flex !important; // Override default inline-box
+    align-items: center;
+    justify-content: center;
+    position: relative !important; // Override absolute positioning from main.css
+    top: auto !important; // Reset top positioning
+    right: auto !important; // Reset right positioning
+    
+    // Ensure buttons are side by side and share space equally
+    @media (min-width: 768px) {
+      flex: 1 1 0; // Equal flex, allow shrink, 0 basis
+      min-width: 180px; // Minimum width for buttons
+      max-width: none;
+    }
+  }
 }
 
-.bg-media-placeholder::after {
-  content: attr(data-placeholder-label);
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #94a3b8;
-  font-size: clamp(0.75rem, 1vw, 1rem);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.55);
+// Add more spacing to list items to separate from buttons
+.cta-newsletter-wrapper .list-items {
+  margin-top: 40px !important; // Increased spacing from buttons
+  
+  @media (min-width: 768px) {
+    margin-top: 50px !important;
+  }
 }
+
+// Fixed height for main service cards to keep them consistent
+.courses-card-main-items {
+  .courses-card-items {
+    min-height: 525px;
+    display: flex;
+    flex-direction: column;
+    
+    .courses-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      
+      // Limit tagline height
+      p.text-muted {
+        min-height: 40px;
+        max-height: 40px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      
+      // Limit highlights list height
+      ul.list-unstyled {
+        min-height: 60px;
+        flex: 1;
+      }
+    }
+  }
+}
+
+// Improve text visibility on blue hover cards for services
+.courses-card-main-items .courses-card-items-hover {
+  .courses-content {
+    // Make description text more visible (remove muted color)
+    p.text-muted {
+      color: rgba(255, 255, 255, 0.95) !important;
+      opacity: 1 !important;
+    }
+    
+    // Ensure list items are clearly visible
+    ul.list-unstyled {
+      li {
+        color: rgba(255, 255, 255, 0.95) !important;
+        
+        i.far.fa-check-circle {
+          color: rgba(255, 255, 255, 0.9) !important;
+        }
+      }
+    }
+  }
+}
+
+// img.media-placeholder {
+//   background-color: #f8fafc;
+//   border: 1px dashed #cbd5f5;
+//   border-radius: 18px;
+//   object-fit: cover;
+// }
+
+// .bg-media-placeholder {
+//   background-color: #f8fafc !important;
+//   border: 1px dashed #cbd5f5;
+//   border-radius: 20px;
+//   position: relative;
+//   overflow: hidden;
+// }
+
+// .bg-media-placeholder::after {
+//   content: attr(data-placeholder-label);
+//   position: absolute;
+//   inset: 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: #94a3b8;
+//   font-size: clamp(0.75rem, 1vw, 1rem);
+//   font-weight: 600;
+//   letter-spacing: 0.08em;
+//   text-transform: uppercase;
+//   background: rgba(255, 255, 255, 0.55);
+// }

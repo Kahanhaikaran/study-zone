@@ -7,10 +7,10 @@ const FooterThree = () => {
     <>
        <footer className="footer-section-3 fix">
             <div className="circle-shape">
-                <img src="assets/img/footer/circle.png" alt="img" />
+                <img src="/assets/img/footer/circle.png" alt="img" />
             </div>
             <div className="vector-shape">
-                <img src="assets/img/footer/Vector.png" alt="img" />
+                <img src="/assets/img/footer/Vector.png" alt="img" />
             </div>
             <div className="container">
                 <div className="footer-widget-wrapper style-2">
@@ -19,7 +19,7 @@ const FooterThree = () => {
                             <div className="single-footer-widget">
                                 <div className="widget-head">
                                     <Link href="/">
-                                        <img src="assets/img/logo/black-logo-3.svg" alt="img" />
+                                        <img src="/assets/img/logo/black-logo-3.svg" alt="img" />
                                     </Link>
                                 </div>
                                 <div className="footer-content">

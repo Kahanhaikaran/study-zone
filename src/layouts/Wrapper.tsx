@@ -76,7 +76,7 @@ const Wrapper = ({ children }: any) => {
 			}
 			const normalized = rawSrc.toLowerCase();
 			return (
-				normalized.includes("assets/img") ||
+				normalized.includes("/assets/img") ||
 				normalized.endsWith(".png") ||
 				normalized.endsWith(".jpg") ||
 				normalized.endsWith(".jpeg") ||
@@ -128,7 +128,7 @@ const Wrapper = ({ children }: any) => {
 			}
 			const inlineStyle = element.getAttribute("style")?.toLowerCase() || "";
 			const computedStyle = window.getComputedStyle(element).backgroundImage?.toLowerCase() || "";
-			return inlineStyle.includes("assets/img") || computedStyle.includes("assets/img");
+			return inlineStyle.includes("/assets/img") || computedStyle.includes("/assets/img");
 		};
 
 		const applyBackgroundPlaceholder = (element: HTMLElement) => {
@@ -167,16 +167,16 @@ const Wrapper = ({ children }: any) => {
 			if (node instanceof HTMLElement) {
 				applyBackgroundPlaceholder(node);
 				node.querySelectorAll("img").forEach(applyImagePlaceholder);
-				node.querySelectorAll<HTMLElement>("[style*='assets/img']").forEach(applyBackgroundPlaceholder);
+				node.querySelectorAll<HTMLElement>("[style*='/assets/img']").forEach(applyBackgroundPlaceholder);
 			}
 		};
 
 		const bootstrapScan = () => {
 			document.querySelectorAll("img").forEach(applyImagePlaceholder);
-			document.querySelectorAll<HTMLElement>("[style*='assets/img']").forEach(applyBackgroundPlaceholder);
+			document.querySelectorAll<HTMLElement>("[style*='/assets/img']").forEach(applyBackgroundPlaceholder);
 			document.querySelectorAll<HTMLElement>("*").forEach((element) => {
 				const bg = window.getComputedStyle(element).backgroundImage || "";
-				if (bg.toLowerCase().includes("assets/img")) {
+				if (bg.toLowerCase().includes("/assets/img")) {
 					applyBackgroundPlaceholder(element);
 				}
 			});
