@@ -60,8 +60,8 @@ const ContactArea = () => {
                                 <img src="/assets/img/small-line.png" alt="img" />
                             </div>
                             <h4>
-                                <a href="tel:++00012345688">+000 123 456 88</a> <br />
-                                <a href="tel:+4325688899">+432 568 88 99</a>
+                                <a href="tel:+917303628683">+91 73036 28683</a> <br />
+                                <a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
                             </h4>
                         </div>
                     </div>

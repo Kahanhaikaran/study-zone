@@ -42,12 +42,17 @@ const menu_data: DataType[] = [
 	{
 		id: 5,
 		title: "Testimonials",
-		link: "/pricing",
+		link: "/#testimonials",
 	},
 	{
 		id: 6,
 		title: "FAQ",
-		link: "/pricing",
+		link: "/#faq",
+	},
+	{
+		id: 7,
+		title: "Contact",
+		link: "/contact",
 	},
 ];
 

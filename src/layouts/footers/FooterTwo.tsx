@@ -54,7 +54,7 @@ const FooterTwo = () => {
                             <div className="single-footer-widget">
                                 <div className="widget-head">
                                     <Link href="/">
-                                        <img src="/assets/img/logo/white-logo.svg" alt="img" />
+                                        <img src="/assets/img/logo/placeholder-logo.svg" alt="img" />
                                     </Link>
                                 </div>
                                 <div className="footer-content">
@@ -91,7 +91,7 @@ const FooterTwo = () => {
                                    <h3>Quick Link</h3>
                                 </div>
                                 <ul className="list-area">
-                                    <li><Link href="/about">About Eduspace</Link></li>
+                                    <li><Link href="/about">About StudyZone</Link></li>
                                     <li><Link href="/instructor">Instructors</Link></li>
                                     <li><Link href="/courses">Best Courses</Link></li>
                                     <li><Link href="/contact">Student Reviews</Link></li>
@@ -127,7 +127,7 @@ const FooterTwo = () => {
                     </div>
                 </div>
                 <div className="footer-bottom style-2">
-                    <p>Copyright © <Link href="/">Eduspace</Link>, all rights reserved.</p>
+                    <p>Copyright © <Link href="/">StudyZone</Link>, all rights reserved.</p>
                 </div>
             </div>
         </footer>

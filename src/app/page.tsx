@@ -5,9 +5,9 @@ import React from "react";
 // meta data
 
 export const metadata: Metadata = {
-	title: "Eduspace - Online Course, Education & University Next JS Template",
-	description: "Full Stack Developer",
-	keywords: "Full Stack Developer, at rk-theme",
+	title: "StudyZone - Academic Support Platform",
+	description: "Personalized academic support for assignments, projects, and exams.",
+	keywords: "StudyZone, academic support, assignments, projects, exam help",
 };
 
 const index = () => {

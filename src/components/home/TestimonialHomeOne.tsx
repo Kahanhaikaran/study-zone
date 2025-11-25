@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 const TestimonialHomeOne = () => {
   return (
     <>
-      <section className="testimonial-section fix section-padding">
+      <section id="testimonials" className="testimonial-section fix section-padding">
             <div className="container">
                 <div className="section-title text-center">
                     <h6 className="wow fadeInUp">

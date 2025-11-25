@@ -7,9 +7,9 @@ import Contact from '@/components/contact';
 
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-	title: "Contact - Eduspace - Online Course, Education & University Next JS Template",
-	description: "Full Stack Developer",
-	keywords: "Full Stack Developer, at rk-theme",
+	title: "Contact - StudyZone Academic Support",
+	description: "Get in touch with StudyZone for assignments, projects, and exam help.",
+	keywords: "StudyZone contact, academic help contact",
 };
 
 

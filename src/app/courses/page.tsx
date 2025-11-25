@@ -6,9 +6,9 @@ import Courses from '@/components/courses';
 
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-	title: "Courses - Eduspace - Online Course, Education & University Next JS Template",
-	description: "Full Stack Developer",
-	keywords: "Full Stack Developer, at rk-theme",
+	title: "Courses - StudyZone Academic Support",
+	description: "Browse StudyZone services covering assignments, projects, and exam prep.",
+	keywords: "StudyZone courses, academic services list",
 };
 
 

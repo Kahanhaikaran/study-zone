@@ -13,9 +13,9 @@ const FooterOne = ({style_2} : any) => {
                             <div className="single-footer-widget">
                                 <div className="widget-head">
                                     <Link href="/">
-                                        {style_2 ? <img src="/assets/img/logo/white-logo.svg" alt="img" /> 
+                                        {style_2 ? <img src="/assets/img/logo/placeholder-logo.svg" alt="img" /> 
                                         :                                        
-                                        <img src="/assets/img/logo/black-logo.svg" alt="img" />
+                                        <img src="/assets/img/logo/placeholder-logo.svg" alt="img" />
                                         }
                                     </Link>
                                 </div>
@@ -53,7 +53,7 @@ const FooterOne = ({style_2} : any) => {
                                    <h3>Quick Link</h3>
                                 </div>
                                 <ul className="list-area">
-                                    <li><Link href="/about">About Eduspace</Link></li>
+                                    <li><Link href="/about">About StudyZone</Link></li>
                                     <li><Link href="/instructor">Instructors</Link></li>
                                     <li><Link href="/courses">Best Courses</Link></li>
                                     <li><Link href="/contact">Student Reviews</Link></li>
@@ -80,7 +80,10 @@ const FooterOne = ({style_2} : any) => {
                                             <a href="mailto:info@example.com" className="link">info@example.com</a>
                                         </li>
                                         <li>
-                                            <a href="tel:+0001238899">+000 (123) 88 99</a>
+                                            <a href="tel:+917303628683">+91 73036 28683</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer" className="link">Chat on WhatsApp</a>
                                         </li>
                                     </ul>
                                 </div>

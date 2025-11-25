@@ -7,9 +7,9 @@ import Wrapper from '@/layouts/Wrapper';
 
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-	title: "About - Eduspace - Online Course, Education & University Next JS Template",
-	description: "Full Stack Developer",
-	keywords: "Full Stack Developer, at rk-theme",
+	title: "About - StudyZone Academic Support",
+	description: "Learn how StudyZone delivers personalized academic assistance.",
+	keywords: "StudyZone, about StudyZone, academic support story",
 };
 
 

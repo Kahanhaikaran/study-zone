@@ -18,9 +18,9 @@ const FooterThree = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="single-footer-widget">
                                 <div className="widget-head">
-                                    <Link href="/">
-                                        <img src="/assets/img/logo/black-logo-3.svg" alt="img" />
-                                    </Link>
+                                <Link href="/">
+                                    <img src="/assets/img/logo/placeholder-logo.svg" alt="img" />
+                                </Link>
                                 </div>
                                 <div className="footer-content">
                                     <p>
@@ -96,7 +96,7 @@ const FooterThree = () => {
             <div className="footer-bottom style-3">
                 <div className="container">
                     <div className="footer-bottom-wrapper">
-                        <p>Copyright © <Link href="/">Eduspace</Link>, all rights reserved.</p>
+                        <p>Copyright © <Link href="/">StudyZone</Link>, all rights reserved.</p>
                         <ul className="footer-menu wow fadeInUp" data-wow-delay=".5s">
                             <li>
                                 <Link href="/courses">

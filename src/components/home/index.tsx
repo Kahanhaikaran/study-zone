@@ -11,6 +11,7 @@ import NewsletterHomeOne from "./NewsletterHomeOne";
 import TestimonialHomeOne from "./TestimonialHomeOne";
 import FooterOne from "@/layouts/footers/FooterOne";
 import TopServicesHomeOne from "./TopServicesHomeOne";
+import FaqArea from "@/components/faq/FaqArea";
 
 const HomeOne = () => {
 	return (
@@ -25,6 +26,7 @@ const HomeOne = () => {
 		
 		<NewsletterHomeOne />
 		<TestimonialHomeOne />
+		<FaqArea />
 		<BrandsHomeOne />
 		{/* <BlogHomeOne /> */}
 		<MarqueeOne /> 

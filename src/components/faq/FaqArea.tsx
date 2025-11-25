@@ -4,7 +4,7 @@ import React from 'react';
 const FaqArea = () => {
   return (
     <>
-       <section className="gallery-section section-padding pt-0 fix">
+       <section id="faq" className="gallery-section section-padding pt-0 fix">
             <div className="faq-wrapper style-5">
                 <div className="container">
                     <div className="section-title text-center">

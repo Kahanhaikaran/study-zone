@@ -30,7 +30,7 @@ const FooterFive = () => {
                             </h6>
                             <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
                                 Register To Get Quality Business <br />
-                                Courses with Eduspace
+                                Courses with StudyZone
                             </h2>
                         </div>
                         <Link href="/contact" className="theme-btn mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".3s">Get Started Now</Link>
@@ -43,9 +43,9 @@ const FooterFive = () => {
                         <div className="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="single-footer-widget">
                                 <div className="widget-head">
-                                    <Link href="/">
-                                        <img src="/assets/img/logo/white-logo-2.svg" alt="img" />
-                                    </Link>
+                                <Link href="/">
+                                    <img src="/assets/img/logo/placeholder-logo.svg" alt="img" />
+                                </Link>
                                 </div>
                                 <div className="footer-content">
                                     <p>Get the latest news delivered to you inbox</p>
@@ -64,7 +64,7 @@ const FooterFive = () => {
                         <div className="col-xl-5 col-lg-5 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
                             <div className="single-footer-widget style-left">
                                 <div className="widget-head">
-                                   <h4>Ready to Get started your business <br /> Coach with Eduspace</h4>
+                                   <h4>Ready to get started with StudyZone?</h4>
                                 </div>
                                 <div className="contact-list-area">
                                     <ul>
@@ -106,7 +106,7 @@ const FooterFive = () => {
             <div className="footer-bottom style-3 style-5">
                 <div className="container">
                     <div className="footer-bottom-wrapper">
-                        <p className="wow fadeInUp" data-wow-delay=".3s">Copyright © <Link href="/">Eduspace</Link>, all rights reserved.</p>
+                        <p className="wow fadeInUp" data-wow-delay=".3s">Copyright © <Link href="/">StudyZone</Link>, all rights reserved.</p>
                         <ul className="footer-menu wow fadeInUp" data-wow-delay=".5s">
                             <li>
                                 <Link href="/courses">

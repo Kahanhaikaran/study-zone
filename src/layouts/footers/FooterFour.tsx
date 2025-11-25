@@ -12,9 +12,9 @@ const FooterFour = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="single-footer-widget">
                                 <div className="widget-head">
-                                    <Link href="/">
-                                        <img src="/assets/img/logo/black-logo-2.svg" alt="img" />
-                                    </Link>
+                                <Link href="/">
+                                    <img src="/assets/img/logo/placeholder-logo.svg" alt="img" />
+                                </Link>
                                 </div>
                                 <div className="footer-content">
                                     <p>
@@ -50,7 +50,7 @@ const FooterFour = () => {
                                    <h3>Quick Link</h3>
                                 </div>
                                 <ul className="list-area">
-                                    <li><Link href="about">About Eduspace</Link></li>
+                                    <li><Link href="about">About StudyZone</Link></li>
                                     <li><Link href="instructor">Instructors</Link></li>
                                     <li><Link href="/courses">Best Courses</Link></li>
                                     <li><Link href="/contact">Student Reviews</Link></li>
@@ -86,12 +86,12 @@ const FooterFour = () => {
                     </div>
                 </div>
                 <div className="footer-bottom style-4 wow fadeInUp" data-wow-delay=".3s">
-                    <p>Copyright © <Link href="/">Eduspace</Link>, all rights reserved.</p>
+                    <p>Copyright © <Link href="/">StudyZone</Link>, all rights reserved.</p>
                 </div>
             </div>
             <div className="footer-name style-2">
                 <h2>
-                    Eduspace
+                    StudyZone
                 </h2>
             </div>
         </footer>
