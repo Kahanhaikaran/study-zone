@@ -3,6 +3,8 @@ import Link from 'next/link';
 import React from 'react';
 
 const FooterOne = ({style_2} : any) => {
+  const footerYear = new Date().getFullYear();
+
   return (
     <>
        <footer className={`footer-section fix ${style_2 ? "" : "footer-bg"}`}>
@@ -21,14 +23,12 @@ const FooterOne = ({style_2} : any) => {
                                 </div>
                                 <div className="footer-content">
                                     <p>
-                                        Education the foundation personal and societal growth, empowering individuals with knowledge.
+                                        Is the burden of studies weighing you down? We craft assignments, projects, notes, and dissertations that let you focus on learning while we handle the paperwork.
                                     </p>
                                     <div className="social-icon">
-                                        <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i className="fab fa-instagram"></i></a>
-                                        <a href="#"><i className="fab fa-dribbble"></i></a>
-                                        <a href="#"><i className="fab fa-behance"></i></a>
-                                        <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                                        <a href="https://www.instagram.com" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+                                        <a href="https://wa.me/917303628683" aria-label="WhatsApp"><i className="fab fa-whatsapp"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -36,28 +36,28 @@ const FooterOne = ({style_2} : any) => {
                         <div className="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
                             <div className="single-footer-widget">
                                 <div className="widget-head">
-                                   <h3>Online Platform</h3>
+                                   <h3>Key Services</h3>
                                 </div>
                                 <ul className="list-area">
-                                    <li><Link href="/courses">Coursera</Link></li>
-                                    <li><Link href="/courses">MasterClass</Link></li>
-                                    <li><Link href="/courses">Skillshare</Link></li>
-                                    <li><Link href="/courses">LinkedIn Learning</Link></li>
-                                    <li><Link href="/courses">FutureLearn</Link></li>
+                                    <li><Link href="/services">Assignments & Case Studies</Link></li>
+                                    <li><Link href="/services">Projects & Viva Decks</Link></li>
+                                    <li><Link href="/services">Exam Notes & Handwriting</Link></li>
+                                    <li><Link href="/services">Dissertations & Thesis Support</Link></li>
+                                    <li><Link href="/services">Custom Academic Solutions</Link></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".6s">
                             <div className="single-footer-widget">
                                 <div className="widget-head">
-                                   <h3>Quick Link</h3>
+                                   <h3>Quick Links</h3>
                                 </div>
                                 <ul className="list-area">
                                     <li><Link href="/about">About StudyZone</Link></li>
-                                    <li><Link href="/instructor">Instructors</Link></li>
-                                    <li><Link href="/courses">Best Courses</Link></li>
-                                    <li><Link href="/contact">Student Reviews</Link></li>
+                                    <li><Link href="/services">Our Services</Link></li>
+                                    <li><Link href="/courses">Sample Work</Link></li>
                                     <li><Link href="/faq">FAQs</Link></li>
+                                    <li><Link href="/contact">Contact</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -69,15 +69,10 @@ const FooterOne = ({style_2} : any) => {
                                 <div className="footer-content">
                                     <ul className="contact-info">
                                         <li>
-                                            55 Main Street, 2nd block
-                                            Malborne, Australia
+                                            Remote support across India – connect online or schedule an on-campus drop.
                                         </li>
                                         <li>
-                                            55 Main Street, 2nd block
-                                            Malborne, Australia
-                                        </li>
-                                        <li>
-                                            <a href="mailto:info@example.com" className="link">info@example.com</a>
+                                            <a href="mailto:hello@studyzone.in" className="link">hello@studyzone.in</a>
                                         </li>
                                         <li>
                                             <a href="tel:+917303628683">+91 73036 28683</a>
@@ -92,12 +87,12 @@ const FooterOne = ({style_2} : any) => {
                     </div>
                 </div>
                 <div className={`footer-bottom wow fadeInUp ${style_2 ? "style-4" : ""}`} data-wow-delay=".3s">
-                    <p>Copyright © <Link href="/">....</Link>, all rights reserved.</p>
+                    <p>Copyright © {footerYear} <Link href="/">Study Zone Services</Link> · All rights reserved.</p>
                 </div>
             </div>
             <div className={`footer-name ${style_2 ? "style-2" : ""}`}>
                 <h2>
-                    nameHere
+                    Study smarter with us
                 </h2>
             </div>
         </footer>

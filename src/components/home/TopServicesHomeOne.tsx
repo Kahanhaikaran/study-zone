@@ -93,7 +93,7 @@ const TopServicesHomeOne = () => {
                     {categoryServices.map((service, index) => (
                       <div 
                         key={service.slug} 
-                        className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 wow fadeInUp" 
+                        className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 wow fadeInUp" 
                         data-wow-delay={`${(index + 1) * 0.2}s`}
                       >
                         <div className="courses-card-main-items">
