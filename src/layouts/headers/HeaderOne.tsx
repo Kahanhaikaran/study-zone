@@ -30,7 +30,7 @@ const HeaderOne = () => {
                         <div className="header-left">
                             <div className="logo">
                                 <Link href="/" className="header-logo">
-                                    <img src="...." alt="logo-img" />
+                                    <img src="/assets/img/logo/black-logo.svg" alt="logo-img" />
                                 </Link>
                             </div>
                             <div className="category-oneadjust">

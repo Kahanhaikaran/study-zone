@@ -13,9 +13,9 @@ const FooterOne = ({style_2} : any) => {
                             <div className="single-footer-widget">
                                 <div className="widget-head">
                                     <Link href="/">
-                                        {style_2 ? <img src="..." alt="img" /> 
+                                        {style_2 ? <img src="/assets/img/logo/white-logo.svg" alt="img" /> 
                                         :                                        
-                                        <img src="......." alt="img" />
+                                        <img src="/assets/img/logo/black-logo.svg" alt="img" />
                                         }
                                     </Link>
                                 </div>
