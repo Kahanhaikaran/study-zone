@@ -27,9 +27,9 @@ const ChooseHomeOne = () => {
                                 <i className="flaticon-satisfaction"></i>
                             </div>
                             <div className="content">
-                               <h2><span className="odometer" data-count="100"> <Count number={100} text='%' /> </span></h2>
+                               <h2><span className="odometer" data-count="99.07"> <Count number={99.07} text='%' /> </span></h2>
                                <p>
-                                    100% plagiarism-free deliverables verified before hand-off.
+                                    Customer satisfaction across assignments, projects, and exams.
                                </p>
                             </div>
                         </div>
@@ -40,10 +40,10 @@ const ChooseHomeOne = () => {
                                 <i className="flaticon-graduation"></i>
                             </div>
                             <div className="content">
-                                <p>On-Time Delivery</p>
-                                <h2><span className="odometer" data-count="24"><Count number={24} text='/7' /></span></h2>
+                                <p>Assignment Specialists</p>
+                                <h2><span className="odometer" data-count="275"><Count number={275} text='+' /></span></h2>
                                 <p>
-                                    24/7 availability for urgent requests, revisions, and exam support.
+                                    Subject experts, research writers, and project mentors working behind every delivery.
                                 </p>
                             </div>
                         </div>
@@ -52,10 +52,10 @@ const ChooseHomeOne = () => {
                                 <i className="flaticon-instructor"></i>
                             </div>
                             <div className="content">
-                                <p>Students Assisted</p>
-                                <h2><span className="odometer" data-count="500"><Count number={500} text='+' /></span></h2>
+                                <p>Students Satisfied</p>
+                                <h2><span className="odometer" data-count="1400"><Count number={1400} text='+' /></span></h2>
                                 <p>
-                                    Personalized guidance from experienced mentors across subjects.
+                                    Learners from universities across India trusting us for repeat semesters.
                                 </p>
                             </div>
                         </div>

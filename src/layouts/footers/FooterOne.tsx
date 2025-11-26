@@ -83,7 +83,7 @@ const FooterOne = ({style_2} : any) => {
                                             <a href="mailto:hello@studyzone.in" className="link">hello@studyzone.in</a>
                                         </li>
                                         <li>
-                                            <a href="tel:+917303628683">+91 73036 28683</a>
+                                            <a href="tel:+9108882309876">+91-08882309876</a>
                                         </li>
                                         <li>
                                             <a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer" className="link">Chat on WhatsApp</a>

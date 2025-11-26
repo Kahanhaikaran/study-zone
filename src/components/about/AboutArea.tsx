@@ -11,8 +11,8 @@ const services = [
 ];
 
 const AboutArea = () => {
-	const phoneHref = "tel:+917303628683";
-	const whatsappHref = "https://wa.me/917303628683";
+	const phoneHref = "tel:+9108882309876";
+	const whatsappHref = "https://wa.me/9108882309876";
 
 	return (
 		<section className="about-section fix">
@@ -57,7 +57,7 @@ const AboutArea = () => {
 										<p>Need urgent help? Call or WhatsApp anytime for reliable, affordable academic assistance.</p>
 										<div className="d-flex gap-3 flex-wrap">
 											<a className="theme-btn style-2" href={phoneHref}>
-												Call +91 73036 28683
+												Call +91-08882309876
 											</a>
 											<a
 												className="theme-btn hover-white"

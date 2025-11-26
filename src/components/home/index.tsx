@@ -18,6 +18,7 @@ const HomeOne = () => {
 	<> 
 	    <HeaderOne />
         <HeroHomeOne />
+        <BrandsHomeOne />
         <FeatureHomeOne />
         {/* <TopCategoryHomeOne /> */}
 		<TopServicesHomeOne />

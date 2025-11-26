@@ -35,20 +35,20 @@ const HeroHomeOne = () => {
                             </p>
                             <div className="hero-button wow fadeInUp d-flex gap-3 justify-content-center align-items-center" data-wow-delay=".7s">
                                 <Link href="/services" className="theme-btn hover-white">Explore Services</Link>
-                                <Link href="tel:+917303628683" className="theme-btn style-2">Call +91 73036 28683</Link>
+                                <Link href="tel:+9108882309876" className="theme-btn style-2">Call +91-08882309876</Link>
                             </div>
                         </div>
                     </div>
                     <div className="hero-image">
                         <img src="/assets/img/hero/hero-1.jpg" alt="img" className="img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.3s" />
                         <div className="counter-box float-bob-x">
-                            <p>Trusted by more than</p>
+                            <p>Fact &amp; Figures</p>
                             <h2>
-                                <span className="odometer" data-count="2800">
-                                    <Count number={2800} text="+" />
+                                <span className="odometer" data-count="5780">
+                                    <Count number={5780} text="+" />
                                 </span>
                             </h2>
-                            <p>Completed Projects</p>
+                            <p>Assignments Completed</p>
                         </div>
                         <div className="rating-box float-bob-y">
                             <div className="content">
