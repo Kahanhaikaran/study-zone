@@ -19,7 +19,7 @@ const HeaderTwo = () => {
             <div className="container">
                 <div className="header-top">
                     <Link href="/" className="top-logo">
-                        <img src="/assets/img/logo/placeholder-logo.svg" alt="img" />
+                        <img src="/assets/img/logo/logo-sz.svg" alt="MyShikshaSagar logo" />
                     </Link>
                     <div className="category-oneadjust gap-6 d-flex align-items-center">
                         <div className="icon">
@@ -55,7 +55,7 @@ const HeaderTwo = () => {
                     <div className="mega-menu-wrapper">
                         <div className="header-main">
                             <Link href="/" className="header-logo">
-                                <img src="/assets/img/logo/placeholder-logo.svg" alt="logo-img" />
+                                <img src="/assets/img/logo/logo-sz.svg" alt="MyShikshaSagar logo" />
                             </Link>
                             <div className="header-left">
                                 <div className="mean__menu-wrapper">

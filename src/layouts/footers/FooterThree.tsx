@@ -19,7 +19,7 @@ const FooterThree = () => {
                             <div className="single-footer-widget">
                                 <div className="widget-head">
                                 <Link href="/">
-                                    <img src="/assets/img/logo/placeholder-logo.svg" alt="img" />
+                                    <img src="/assets/img/logo/logo-sz.svg" alt="MyShikshaSagar logo" />
                                 </Link>
                                 </div>
                                 <div className="footer-content">

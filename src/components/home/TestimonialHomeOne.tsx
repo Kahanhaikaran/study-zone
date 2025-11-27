@@ -1,11 +1,15 @@
 "use client";
-import React from 'react';
-import { Pagination } from 'swiper/modules';
+import React, { useRef } from 'react';
+import { Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
  
 
 const TestimonialHomeOne = () => {
+  const prevRef = useRef<HTMLButtonElement | null>(null);
+  const nextRef = useRef<HTMLButtonElement | null>(null);
+  const paginationRef = useRef<HTMLDivElement | null>(null);
+
   return (
     <>
       <section id="testimonials" className="testimonial-section fix section-padding">
@@ -26,11 +30,30 @@ const TestimonialHomeOne = () => {
                     delay: 2000,
                     disableOnInteraction: false,
                 }}
+                navigation={{
+                  prevEl: prevRef.current,
+                  nextEl: nextRef.current,
+                }}
                 pagination={{
-                    el: ".dot",
                     clickable: true,
                 }}
-                modules={[Pagination]}
+                modules={[Pagination, Navigation]}
+                onBeforeInit={(swiper) => {
+                  // @ts-expect-error Swiper typing
+                  swiper.params.navigation.prevEl = prevRef.current;
+                  // @ts-expect-error Swiper typing
+                  swiper.params.navigation.nextEl = nextRef.current;
+                  if (paginationRef.current) {
+                    // @ts-expect-error Swiper typing
+                    swiper.params.pagination.el = paginationRef.current;
+                  }
+                }}
+                onInit={(swiper) => {
+                  swiper.navigation.init();
+                  swiper.navigation.update();
+                  swiper.pagination.render();
+                  swiper.pagination.update();
+                }}
                 breakpoints={{
                   1199: {
                       slidesPerView: 2,
@@ -146,10 +169,19 @@ const TestimonialHomeOne = () => {
                         </div>
                     </SwiperSlide>
                      
-                    <div className="swiper-dot text-center mt-5">
-                        <div className="dot"></div>
-                    </div>
+                    
                 </Swiper>
+                <div className="testimonial-controls">
+                  <button ref={prevRef} className="testimonial-nav testimonial-prev" aria-label="Previous testimonial">
+                    <i className="far fa-arrow-left"></i>
+                  </button>
+                  <div className="swiper-dot">
+                    <div ref={paginationRef} className="dot"></div>
+                  </div>
+                  <button ref={nextRef} className="testimonial-nav testimonial-next" aria-label="Next testimonial">
+                    <i className="far fa-arrow-right"></i>
+                  </button>
+                </div>
             </div>
         </section>
     </>

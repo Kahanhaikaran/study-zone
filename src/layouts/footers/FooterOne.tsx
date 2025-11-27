@@ -14,12 +14,17 @@ const FooterOne = ({style_2} : any) => {
                         <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="single-footer-widget">
                                 <div className="widget-head">
-                                    <Link href="/">
-                                        {style_2 ? <img src="/assets/img/logo/placeholder-logo.svg" alt="img" /> 
-                                        :                                        
-                                        <img src="/assets/img/logo/placeholder-logo.svg" alt="img" />
-                                        }
-                                    </Link>
+                                    <div className="footer-brand">
+                                        <Link href="/" className="footer-logo">
+                                            {style_2 ? <img src="/assets/img/logo/logo-sz.svg" alt="MyShikshaSagar logo" /> 
+                                            :                                        
+                                            <img src="/assets/img/logo/logo-sz.svg" alt="MyShikshaSagar logo" />
+                                            }
+                                        </Link>
+                                        <p className="footer-brand-text">
+                                            Your on-demand academic studio for assignments, research, and exam prep.
+                                        </p>
+                                    </div>
                                 </div>
                                 <div className="footer-content">
                                     <p>
@@ -77,16 +82,20 @@ const FooterOne = ({style_2} : any) => {
                                 <div className="footer-content">
                                     <ul className="contact-info">
                                         <li>
-                                            Remote support across India – connect online or schedule an on-campus drop.
+                                            <span className="label">Remote support</span>
+                                            <p>Connect online across India or request safe on-campus drop-offs.</p>
                                         </li>
                                         <li>
+                                            <span className="label">Email</span>
                                             <a href="mailto:hello@studyzone.in" className="link">hello@studyzone.in</a>
                                         </li>
                                         <li>
+                                            <span className="label">Call</span>
                                             <a href="tel:+9108882309876">+91-08882309876</a>
                                         </li>
                                         <li>
-                                            <a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer" className="link">Chat on WhatsApp</a>
+                                            <span className="label">WhatsApp</span>
+                                            <a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer" className="link">Chat instantly</a>
                                         </li>
                                     </ul>
                                 </div>
