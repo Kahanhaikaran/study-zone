@@ -64,7 +64,6 @@ const TopServicesHomeOne = () => {
               <h6 className="wow fadeInUp">
                 Our Services
               </h6>
-              <h2 className="wow fadeInUp" data-wow-delay=".3s">Explore Top Services</h2>
             </div>
             <ul className="nav">
               {Object.entries(serviceCategories).map(([key, label], index) => (
