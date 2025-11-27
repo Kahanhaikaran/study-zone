@@ -305,6 +305,13 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 					padding: 32px;
 					border-radius: 24px;
 					box-shadow: 0 12px 45px rgba(15, 23, 42, 0.08);
+					margin-bottom: 26px;
+				}
+				.info-panel + .info-panel {
+					margin-top: 10px;
+				}
+				.info-panel > p {
+					max-width: 640px;
 				}
 				.styled-list {
 					list-style: none;
@@ -389,9 +396,13 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 					}
 					.sticky-card {
 						position: static;
+						margin-top: 8px;
 					}
 				}
 				@media (max-width: 767px) {
+					.hero-panel {
+						padding: 22px 18px;
+					}
 					.hero-meta-card {
 						margin: 0 auto;
 					}

@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from 'react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
  
@@ -9,6 +9,7 @@ const TestimonialHomeOne = () => {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
   const paginationRef = useRef<HTMLDivElement | null>(null);
+  const swiperInstanceRef = useRef<any | null>(null);
 
   return (
     <>
@@ -27,32 +28,22 @@ const TestimonialHomeOne = () => {
                 speed={2000}
                 loop={true}
                 autoplay={{
-                    delay: 2000,
+                    delay: 3500,
                     disableOnInteraction: false,
-                }}
-                navigation={{
-                  prevEl: prevRef.current,
-                  nextEl: nextRef.current,
                 }}
                 pagination={{
                     clickable: true,
                 }}
-                modules={[Pagination, Navigation]}
-                onBeforeInit={(swiper) => {
-                  // @ts-expect-error Swiper typing
-                  swiper.params.navigation.prevEl = prevRef.current;
-                  // @ts-expect-error Swiper typing
-                  swiper.params.navigation.nextEl = nextRef.current;
+                modules={[Pagination]}
+                onSwiper={(swiper) => {
+                  swiperInstanceRef.current = swiper;
                   if (paginationRef.current) {
                     // @ts-expect-error Swiper typing
                     swiper.params.pagination.el = paginationRef.current;
+                    swiper.pagination.init();
+                    swiper.pagination.render();
+                    swiper.pagination.update();
                   }
-                }}
-                onInit={(swiper) => {
-                  swiper.navigation.init();
-                  swiper.navigation.update();
-                  swiper.pagination.render();
-                  swiper.pagination.update();
                 }}
                 breakpoints={{
                   1199: {
@@ -172,13 +163,23 @@ const TestimonialHomeOne = () => {
                     
                 </Swiper>
                 <div className="testimonial-controls">
-                  <button ref={prevRef} className="testimonial-nav testimonial-prev" aria-label="Previous testimonial">
+                  <button
+                    ref={prevRef}
+                    className="testimonial-nav testimonial-prev"
+                    aria-label="Previous testimonial"
+                    onClick={() => swiperInstanceRef.current?.slidePrev()}
+                  >
                     <i className="far fa-arrow-left"></i>
                   </button>
                   <div className="swiper-dot">
                     <div ref={paginationRef} className="dot"></div>
                   </div>
-                  <button ref={nextRef} className="testimonial-nav testimonial-next" aria-label="Next testimonial">
+                  <button
+                    ref={nextRef}
+                    className="testimonial-nav testimonial-next"
+                    aria-label="Next testimonial"
+                    onClick={() => swiperInstanceRef.current?.slideNext()}
+                  >
                     <i className="far fa-arrow-right"></i>
                   </button>
                 </div>

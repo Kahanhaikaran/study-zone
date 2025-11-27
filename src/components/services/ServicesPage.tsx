@@ -26,7 +26,7 @@ const ServicesPage = () => {
 					{services.map((service, index) => {
 						const theme = cardThemes[index % cardThemes.length];
 						return (
-							<div className="col-xl-4 col-lg-4 col-md-6" key={service.slug}>
+							<div className="col-xl-4 col-lg-4 col-md-6 col-sm-6" key={service.slug}>
 								<div className="service-card-lite courses-card-items h-100 wow fadeInUp" data-wow-delay={`${index * 0.08}s`}>
 									<div className="service-card-head">
 										<div className="icon-circle" style={{ color: theme.accent }}>
@@ -79,6 +79,7 @@ const ServicesPage = () => {
 					display: flex;
 					flex-direction: column;
 					gap: 18px;
+					height: 100%;
 				}
 				.service-card-lite:hover {
 					transform: translateY(-6px);
@@ -111,7 +112,6 @@ const ServicesPage = () => {
 				.pill-group {
 					display: grid;
 					grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-					flex-wrap: wrap;
 					gap: 10px;
 					padding: 0;
 					margin: 0;
@@ -134,12 +134,14 @@ const ServicesPage = () => {
 				.service-card-footer {
 					display: flex;
 					align-items: flex-end;
+					justify-content: space-between;
 					gap: 16px;
 					padding-top: 16px;
 					border-top: 1px solid rgba(15, 23, 42, 0.08);
 					font-size: 13px;
 					color: rgba(15, 23, 42, 0.7);
 					flex-wrap: wrap;
+					margin-top: auto;
 				}
 				.footer-meta {
 					min-width: 100px;
@@ -152,13 +154,28 @@ const ServicesPage = () => {
 				.footer-meta span {
 					color: rgba(15, 23, 42, 0.55);
 				}
-				@media (max-width: 575px) {
+				@media (max-width: 991px) {
+					.section-title p {
+						max-width: 520px;
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+				@media (max-width: 767px) {
 					.service-card-lite {
 						padding: 22px 18px;
 					}
+					.pill-group {
+						grid-template-columns: 1fr;
+					}
+				}
+				@media (max-width: 575px) {
 					.service-card-footer {
 						flex-direction: column;
 						align-items: flex-start;
+					}
+					.section-padding {
+						padding: 60px 0;
 					}
 				}
 			`}</style>
