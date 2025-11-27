@@ -64,14 +64,7 @@ const HeroHomeOne = () => {
                                     <h3>4.8/5</h3>
                                     <p className="muted">5,820+ Reviews</p>
                                 </div>
-                                <div className="star">
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                </div>
-                                <img src="/assets/img/hero/trustpilot-logopng.png" alt="Trustpilot rating" />
+                                <p className="muted mb-0">4.8/5 • 5,820+ Reviews</p>
                             </div>
                             <div className="circle-img float-bob-y">
                                 <img src="/assets/img/hero/circle.png" alt="Graphic accent" />

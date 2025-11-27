@@ -49,7 +49,7 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 
 			<section className="section-padding service-hero">
 				<div className="container">
-					<div className="row g-4 align-items-center">
+					<div className="hero-panel row g-4 align-items-center">
 						<div className="col-lg-7">
 							<div className="hero-copy wow fadeInUp">
 								<span className="eyebrow">Academic Support Service</span>
@@ -169,29 +169,28 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 
 			<style jsx>{`
 				.service-hero {
-					background: linear-gradient(135deg, #0f172a, #111b31);
-					color: #fff;
+					background: #f7f9fc;
+				}
+				.hero-panel {
+					background: #fff;
+					border-radius: 28px;
+					box-shadow: 0 25px 65px rgba(6, 22, 54, 0.08);
+					padding: clamp(24px, 3vw, 48px);
 					position: relative;
 					overflow: hidden;
-				}
-				.service-hero::after {
-					content: "";
-					position: absolute;
-					inset: 0;
-					background: url("/assets/img/shape-3.png") center/cover no-repeat;
-					opacity: 0.08;
-					pointer-events: none;
 				}
 				.hero-copy {
 					position: relative;
 					z-index: 1;
+					color: #0f172a;
 				}
 				.hero-copy h1 {
-					color: #fff;
+					color: #0f172a;
 					margin-bottom: 12px;
+					font-size: clamp(28px, 4vw, 44px);
 				}
 				.hero-copy p {
-					color: rgba(255, 255, 255, 0.82);
+					color: #4b5a70;
 				}
 				.hero-copy .muted {
 					margin-bottom: 18px;
@@ -215,16 +214,15 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 					list-style: none;
 				}
 				.chip {
-					background: rgba(15, 23, 42, 0.35);
-					backdrop-filter: blur(6px);
+					background: #f8fafc;
 					border-radius: 999px;
 					padding: 10px 16px;
 					display: inline-flex;
 					align-items: center;
 					gap: 8px;
 					font-size: 14px;
-					color: #fff;
-					border: 1px solid rgba(250, 204, 21, 0.3);
+					color: #0f172a;
+					border: 1px solid rgba(15, 23, 42, 0.08);
 				}
 				.cta-stack {
 					display: flex;
@@ -234,10 +232,10 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 				.hero-meta-card {
 					position: relative;
 					z-index: 1;
-					background: #fff;
+					padding: clamp(24px, 3vw, 32px);
 					border-radius: 24px;
-					padding: 32px;
-					box-shadow: 0 25px 55px rgba(15, 23, 42, 0.25);
+					background: #fff;
+					box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
 					color: #0f172a;
 				}
 				.stat-grid {

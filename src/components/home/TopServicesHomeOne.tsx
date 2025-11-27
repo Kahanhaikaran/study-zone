@@ -61,9 +61,15 @@ const TopServicesHomeOne = () => {
         <div className="container">
           <div className="section-title-area align-items-end">
             <div className="section-title">
-              <h6 className="wow fadeInUp">
+              <h6 className="wow fadeInUp heading-label">
                 Our Services
               </h6>
+              <h2 className="wow fadeInUp services-title" data-wow-delay=".2s">
+                Stress-free academic support for every milestone
+              </h2>
+              <p className="wow fadeInUp services-subtitle" data-wow-delay=".3s">
+                Assignments, research, exams, and presentations handled by domain experts with full confidentiality.
+              </p>
             </div>
             <ul className="nav">
               {Object.entries(serviceCategories).map(([key, label], index) => (
@@ -121,7 +127,7 @@ const TopServicesHomeOne = () => {
                               <p className="text-muted mb-2" style={{ fontSize: '14px', lineHeight: '1.5' }}>
                                 {service.tagline}
                               </p>
-                              <ul className="list-unstyled mb-0" style={{ fontSize: '13px' }}>
+                              <ul className="list-unstyled mb-3" style={{ fontSize: '13px' }}>
                                 {service.highlights.slice(0, 2).map((highlight, idx) => (
                                   <li key={idx} className="mb-1">
                                     <i className="far fa-check-circle text-success me-2"></i>
@@ -129,39 +135,7 @@ const TopServicesHomeOne = () => {
                                   </li>
                                 ))}
                               </ul>
-                            </div>
-                          </div>
-                          <div className="courses-card-items-hover">
-                            <div className="courses-content">
-                              <ul className="post-cat">
-                                <li>
-                                  <Link href="/services">{serviceCategories[getServiceCategory(service) as keyof typeof serviceCategories]}</Link>
-                                </li>
-                                <li>
-                                  <i className="fas fa-star"></i>
-                                  <i className="fas fa-star"></i>
-                                  <i className="fas fa-star"></i>
-                                  <i className="fas fa-star"></i>
-                                  <i className="fas fa-star"></i>
-                                </li>
-                              </ul>
-                              <h5>
-                                <Link href={`/services/${service.slug}`}>
-                                  {service.title}
-                                </Link>
-                              </h5>
-                              <p className="mb-3" style={{ fontSize: '14px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.95)' }}>
-                                {service.description}
-                              </p>
-                              <ul className="list-unstyled mb-3" style={{ fontSize: '13px' }}>
-                                {service.highlights.slice(0, 2).map((highlight, idx) => (
-                                  <li key={idx} className="mb-2" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
-                                    <i className="far fa-check-circle me-2" style={{ color: 'rgba(255, 255, 255, 0.9)' }}></i>
-                                    {highlight}
-                                  </li>
-                                ))}
-                              </ul>
-                              <Link href={`/services/${service.slug}`} className="theme-btn yellow-btn">
+                              <Link href={`/services/${service.slug}`} className="theme-btn hero-btn mt-3">
                                 View Details
                               </Link>
                             </div>

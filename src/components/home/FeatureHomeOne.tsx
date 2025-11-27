@@ -4,33 +4,33 @@ import React from 'react';
 const coreServices = [
   {
     icon: "fas fa-file-alt",
-    accent: "#4c7df3",
+    accent: "#FFD25D",
     title: "Assignments for All Subjects",
-    description: "Get researched, plagiarism-free submissions tailored to your syllabus and university format.",
+    description: "Research-backed answers and plagiarism-free submissions aligned to your syllabus and format.",
   },
   {
     icon: "fas fa-project-diagram",
-    accent: "#ec4899",
+    accent: "#12D1C0",
     title: "Project & Dissertation Help",
-    description: "From topic selection to final report, receive original content and expert guidance.",
+    description: "From topic approval to final report, get original content plus end-to-end mentor guidance.",
   },
   {
     icon: "fas fa-book-open",
-    accent: "#22c55e",
+    accent: "#FFC857",
     title: "Exam Notes & PPTs",
-    description: "Score-ready notes, presentations, and summaries that make revision effortless.",
+    description: "Score-ready notes, sleek slides, and summaries that make revision effortless.",
   },
   {
     icon: "fas fa-chalkboard-teacher",
-    accent: "#f97316",
+    accent: "#8BC6FF",
     title: "Online / Offline Exam Support",
-    description: "Confidently prepare with live guidance, mock questions, and last-minute doubt clearing.",
+    description: "Mock drills, last-minute doubt clearing, and live guidance for any exam pattern.",
   },
   {
     icon: "fas fa-shield-alt",
-    accent: "#a855f7",
+    accent: "#FF9EC2",
     title: "Confidential Academic Partner",
-    description: "Strict privacy, secure delivery, and on-time updates keep you in control of every milestone.",
+    description: "Private handling, secure delivery, and real-time updates so you stay in control.",
   },
 ];
 
@@ -46,12 +46,13 @@ const FeatureHomeOne = () => {
                 data-wow-delay={`${index * 0.2}s`}
                 key={service.title}
               >
-                <div className="feature-box-items">
+                <div className="feature-box-items hero-tint">
                   <div
                     className="icon"
                     style={{
                       color: service.accent,
                       backgroundColor: `${service.accent}1f`,
+                      boxShadow: `0 10px 25px ${service.accent}33`,
                     }}
                   >
                     <i className={service.icon} aria-hidden="true"></i>

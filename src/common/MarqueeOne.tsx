@@ -26,7 +26,7 @@ const MarqueeOne = ({style_2} : any) => {
   return (
     <> 
        <div className="marquee-section style-header">
-            <div className={`mycustom-marque  ${style_2 ? "theme-green-bg-1" : "header-marque theme-blue-bg"}`}>
+            <div className={`mycustom-marque  ${style_2 ? "theme-green-bg-1" : "header-marque hero-marquee-bg"}`}>
                 <div className="scrolling-wrap">
                     {renderStrip(style_2)}
                     {renderStrip(style_2)}

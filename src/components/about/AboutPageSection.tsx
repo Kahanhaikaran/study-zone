@@ -3,66 +3,69 @@ import React from "react";
 
 const AboutPageSection = () => {
 	return (
-		<section className="about-section section-padding pt-0">
+		<section className="about-section section-padding pt-0 about-light-panel">
 			<div className="container">
-				<div className="row g-5 align-items-center">
-					<div className="col-lg-6">
-						<div className="section-title mb-4">
-							<h6 className="wow fadeInUp">About StudyZone Support</h6>
-							<h2 className="wow fadeInUp" data-wow-delay=".2s">
-								Personal academic help that feels like a teammate
-							</h2>
-						</div>
-						<p className="wow fadeInUp" data-wow-delay=".3s">
-							StudyZone is a freelance-led academic support studio that lightens the workload for college and
-							university students. We combine research, writing, design, and mentoring so you can focus on learning
-							while we take care of the documentation and submission side of things.
-						</p>
-						<p className="wow fadeInUp" data-wow-delay=".4s">
-							From quick notes and presentations to long-form dissertations, every deliverable is customized to
-							your syllabus, deadline, and preferred tone. Transparency, confidentiality, and plagiarism-free work
-							are the promises that keep clients coming back semester after semester.
-						</p>
-						<div className="row g-3 mt-2">
-							<div className="col-sm-6">
-								<div className="about-stat wow fadeInUp" data-wow-delay=".5s">
-									<h3>500+</h3>
-									<p>Students guided every year</p>
-								</div>
-							</div>
-							<div className="col-sm-6">
-								<div className="about-stat wow fadeInUp" data-wow-delay=".6s">
-									<h3>24/7</h3>
-									<p>Support for urgent submissions</p>
+				<div className="about-card">
+					<div className="row g-5 align-items-center">
+						<div className="col-lg-6 order-lg-2">
+							<div className="about-visual wow fadeInUp" data-wow-delay=".2s">
+								<img src="/assets/img/about/about-main.png" alt="Students collaborating" />
+								<div className="about-note">
+									<div className="value">3000+</div>
+									<p>Projects delivered with 98% repeat requests</p>
 								</div>
 							</div>
 						</div>
-						<ul className="about-list wow fadeInUp mt-4" data-wow-delay=".7s">
-							<li>
-								<i className="far fa-check-circle"></i> Assignments, dissertations, and exam prep created from
-								scratch
-							</li>
-							<li>
-								<i className="far fa-check-circle"></i> Confidential interactions—your information never leaves the
-								room
-							</li>
-							<li>
-								<i className="far fa-check-circle"></i> Multi-format delivery (Word, PPT, handwritten, PDF) based on
-								your instructions
-							</li>
-						</ul>
-						<div className="d-flex flex-wrap gap-3 mt-4 wow fadeInUp" data-wow-delay=".8s">
-							<Link href="/services" className="theme-btn">
-								View Services
-							</Link>
-							<a href="tel:+9108882309876" className="theme-btn style-2">
-								Call +91-08882309876
-							</a>
-						</div>
-					</div>
-					<div className="col-lg-6">
-						<div className="about-page-image wow fadeInUp" data-wow-delay=".4s">
-							<img src="/assets/img/about/about-main.png" alt="Students collaborating" />
+						<div className="col-lg-6 order-lg-1">
+							<div className="about-copy">
+								<p className="eyebrow wow fadeInUp">About StudyZone Support</p>
+								<h2 className="wow fadeInUp" data-wow-delay=".1s">
+									Personal academic help that feels like a teammate
+								</h2>
+								<p className="wow fadeInUp" data-wow-delay=".2s">
+									StudyZone is a freelance-led academic studio that lightens the workload for college and university
+									students. We combine research, writing, design, and mentoring so you can focus on learning while we
+									handle the documentation and submission grind.
+								</p>
+								<p className="wow fadeInUp" data-wow-delay=".3s">
+									From quick notes and presentations to long-form dissertations, every deliverable is customized to
+									your syllabus, deadline, and preferred tone. Transparency, confidentiality, and plagiarism-free work
+									keep clients coming back semester after semester.
+								</p>
+								<div className="about-stats wow fadeInUp" data-wow-delay=".4s">
+									<div className="stat">
+										<strong>500+</strong>
+										<span>Students guided every year</span>
+									</div>
+									<div className="stat">
+										<strong>4.8/5</strong>
+										<span>Average rating</span>
+									</div>
+									<div className="stat">
+										<strong>24/7</strong>
+										<span>Support window</span>
+									</div>
+								</div>
+								<ul className="about-list wow fadeInUp" data-wow-delay=".5s">
+									<li>
+										<i className="far fa-check-circle"></i> Assignments, dissertations, and exam prep created from scratch
+									</li>
+									<li>
+										<i className="far fa-check-circle"></i> Confidential interactions—your information never leaves the room
+									</li>
+									<li>
+										<i className="far fa-check-circle"></i> Multi-format delivery (Word, PPT, handwritten, PDF) based on your instructions
+									</li>
+								</ul>
+								<div className="about-actions wow fadeInUp" data-wow-delay=".6s">
+									<Link href="/services" className="theme-btn">
+										View Services
+									</Link>
+									<a href="tel:+9108882309876" className="theme-btn style-2">
+										Call +91-08882309876
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
