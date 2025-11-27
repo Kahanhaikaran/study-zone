@@ -1,14 +1,13 @@
 <svg width="360" height="120" viewBox="0 0 360 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-  <!-- ICON -->
-  <g transform="translate(20,20)">
-    <rect x="0" y="0" width="80" height="80" rx="16" fill="#0057FF"/>
-    <path d="M20 30H60M20 45H48M20 60H55" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <!-- New Icon -->
+  <g transform="translate(20,28)">
+    <rect x="0" y="0" width="64" height="64" rx="14" fill="#0057FF"/>
+    <path d="M18 32C18 24 24 18 32 18C40 18 46 24 46 32C46 40 40 46 32 46" stroke="white" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M26 34L31 39L42 28" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <!-- TEXT -->
-  <text x="120" y="70" font-family="Inter, Segoe UI, sans-serif" font-size="42" font-weight="700" fill="#002A5C">
-    Study<tspan fill="#0057FF">Zone</tspan>
+  <!-- Text -->
+  <text x="110" y="70" font-family="Inter, 'Segoe UI', sans-serif" font-size="32" font-weight="700" fill="#002A5C">
+    My<tspan fill="#0057FF">Shiksha</tspan>Sagar
   </text>
-
 </svg>

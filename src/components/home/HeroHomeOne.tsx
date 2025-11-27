@@ -62,9 +62,9 @@ const HeroHomeOne = () => {
                             <div className="stat-card floating rating">
                                 <div>
                                     <h3>4.8/5</h3>
-                                    <p className="muted">5,820+ Reviews</p>
+                                    <p className="muted">Average rating</p>
                                 </div>
-                                <p className="muted mb-0">4.8/5 • 5,820+ Reviews</p>
+                                <p className="muted mb-0">Based on 5,820+ student reviews</p>
                             </div>
                             <div className="circle-img float-bob-y">
                                 <img src="/assets/img/hero/circle.png" alt="Graphic accent" />
