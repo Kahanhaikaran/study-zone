@@ -7,7 +7,6 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import NavMenu from './NavMenu';
 import MarqueeOne from '@/common/MarqueeOne';
-import Search from '@/common/Search';
 import OffCanvas from '@/common/OffCanvas';
 
 const HeaderOne = () => {
@@ -16,7 +15,6 @@ const HeaderOne = () => {
   const { sticky } = UseSticky()
 
 
-  const [open, setOpen] = useState(false)
   const [openCanvas, setOpenCanvas] = useState(false)
 
 
@@ -48,11 +46,6 @@ const HeaderOne = () => {
                                     </nav>
                                 </div>
                             </div>
-                            <div className="header-search">
-                                <button 
-                                onClick={ () => setOpen(!open)}
-                                className="d-flex align-items-center search-toggle"><i className="fas fa-search"></i></button>
-                            </div>
                             <div className="header-button">
                                 {/* <Link href="/sign-in" className="theme-btn style-2"><i className="far fa-user"></i> Admin</Link> */}
                                 <Link href="/Contact" className="theme-btn yellow-btn">Contact Us</Link>
@@ -72,7 +65,6 @@ const HeaderOne = () => {
             </div>
         </header>
 
-        <Search open={open} setOpen={setOpen} />
         <OffCanvas openCanvas={openCanvas} setOpenCanvas={setOpenCanvas} />
       
     </>
