@@ -62,7 +62,7 @@ const AboutPageSection = () => {
 					</div>
 					<div className="col-lg-6">
 						<div className="about-page-image wow fadeInUp" data-wow-delay=".4s">
-							<img src="/assets/img/about/about-main.jpg" alt="Students collaborating" />
+							<img src="/assets/img/about/about-main.png" alt="Students collaborating" />
 						</div>
 					</div>
 				</div>

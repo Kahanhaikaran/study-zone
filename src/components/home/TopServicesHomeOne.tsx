@@ -38,18 +38,18 @@ const getServicesByCategory = (category: string): Service[] => {
   return services.filter(service => getServiceCategory(service) === category);
 };
 
-// Get service image (using placeholder for now, can be updated later)
+// Get service image (using PNG images 1-8)
 const getServiceImage = (index: number): string => {
   const images = [
-    '/assets/img/courses/01.jpg',
-    '/assets/img/courses/02.jpg',
-    '/assets/img/courses/03.jpg',
-    '/assets/img/courses/04.jpg',
-    '/assets/img/courses/01.jpg',
-    '/assets/img/courses/02.jpg',
-    '/assets/img/courses/03.jpg',
-    '/assets/img/courses/04.jpg',
-    '/assets/img/courses/01.jpg',
+    '/assets/img/courses/1.png',
+    '/assets/img/courses/2.png',
+    '/assets/img/courses/3.png',
+    '/assets/img/courses/4.png',
+    '/assets/img/courses/5.png',
+    '/assets/img/courses/6.png',
+    '/assets/img/courses/7.png',
+    '/assets/img/courses/8.png',
+    '/assets/img/courses/9.png',
   ];
   return images[index % images.length];
 };
@@ -57,7 +57,7 @@ const getServiceImage = (index: number): string => {
 const TopServicesHomeOne = () => {
   return (
     <>
-      <section className="popular-courses-section fix section-padding section-bg">
+      <section className="popular-courses-section fix section-padding section-bg top-services">
         <div className="container">
           <div className="section-title-area align-items-end">
             <div className="section-title">
@@ -100,8 +100,6 @@ const TopServicesHomeOne = () => {
                           <div className="courses-card-items">
                             <div className="courses-image">
                               <img src={getServiceImage(index)} alt={service.title} />
-                              <h3 className="courses-title">{serviceCategories[getServiceCategory(service) as keyof typeof serviceCategories]}</h3>
-                              <h4 className="topic-title">{service.title}</h4>
                             </div>
                             <div className="courses-content">
                               <ul className="post-cat">

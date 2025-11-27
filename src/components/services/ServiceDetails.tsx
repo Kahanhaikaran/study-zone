@@ -16,9 +16,9 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 	}
 
 	const heroStats = [
-		{ label: "Assignments Completed", value: "5780+" },
-		{ label: "Assignment Specialists", value: "275+" },
-		{ label: "Students Satisfied", value: "1400+" },
+		{ value: "5,780+", label: "Projects" },
+		{ value: "4.8/5", label: "Rating" },
+		{ value: "24/7", label: "Support" },
 	];
 
 	const assurances = ["100% confidentiality", "Plagiarism-free delivery", "On-time submissions"];

@@ -20,9 +20,9 @@ const HeroHomeOne = () => {
                 <img src="/assets/img/hero/vectoe.png" alt="img" />
             </div>
             <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="hero-content">
+                <div className="row align-items-center g-5 hero-grid">
+                    <div className="col-xl-5 col-lg-6">
+                        <div className="hero-content text-center text-lg-start">
                             <span className="wow fadeInUp">Study support that adapts to you</span>
                             <h1 className="wow fadeInUp" data-wow-delay=".3s">
                                 Is the burden of studies
@@ -33,27 +33,37 @@ const HeroHomeOne = () => {
                                 notes, or exam guidance. Partner with our expert freelance team and achieve your goals
                                 with confidence, clarity, and zero stress.
                             </p>
-                            <div className="hero-button wow fadeInUp d-flex gap-3 justify-content-center align-items-center" data-wow-delay=".7s">
+                            <div className="hero-button wow fadeInUp" data-wow-delay=".7s">
                                 <Link href="/services" className="theme-btn hover-white">Explore Services</Link>
                                 <Link href="tel:+9108882309876" className="theme-btn style-2">Call +91-08882309876</Link>
                             </div>
                         </div>
                     </div>
-                    <div className="hero-image">
-                        <img src="/assets/img/hero/hero-1.jpg" alt="img" className="img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.3s" />
-                        <div className="counter-box float-bob-x">
-                            <p>Fact &amp; Figures</p>
-                            <h2>
-                                <span className="odometer" data-count="5780">
-                                    <Count number={5780} text="+" />
-                                </span>
-                            </h2>
-                            <p>Assignments Completed</p>
-                        </div>
-                        <div className="rating-box float-bob-y">
-                            <div className="content">
-                                <h2>4.8/5</h2>
-                                <p>5,820+ Reviews</p>
+                    <div className="col-xl-7 col-lg-6">
+                        <div className="hero-visual">
+                            <div className="hero-visual-frame">
+                                <img
+                                    src="/assets/img/hero/hero-1.jpg"
+                                    alt="StudyZone hero"
+                                    className="img-custom-anim-left"
+                                    data-wow-duration="1.5s"
+                                    data-wow-delay="0.3s"
+                                />
+                            </div>
+                            <div className="stat-card floating fact">
+                                <p className="label">Fact &amp; Figures</p>
+                                <h3>
+                                    <span className="odometer" data-count="5780">
+                                        <Count number={5780} text="+" />
+                                    </span>
+                                </h3>
+                                <p className="muted">Assignments Completed</p>
+                            </div>
+                            <div className="stat-card floating rating">
+                                <div>
+                                    <h3>4.8/5</h3>
+                                    <p className="muted">5,820+ Reviews</p>
+                                </div>
                                 <div className="star">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
@@ -61,11 +71,11 @@ const HeroHomeOne = () => {
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
                                 </div>
+                                <img src="/assets/img/hero/trustpilot-logopng.png" alt="Trustpilot rating" />
                             </div>
-                            <img src="/assets/img/hero/trustpilot-logopng.png" alt="img" />
-                        </div>
-                        <div className="circle-img float-bob-y"> 
-                            <img src="/assets/img/hero/circle.png" alt="img" />
+                            <div className="circle-img float-bob-y">
+                                <img src="/assets/img/hero/circle.png" alt="Graphic accent" />
+                            </div>
                         </div>
                     </div>
                 </div>

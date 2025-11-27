@@ -30,27 +30,13 @@ const HeaderOne = () => {
                         <div className="header-left">
                             <div className="logo">
                                 <Link href="/" className="header-logo">
-                                    <img src="/assets/img/logo/placeholder-logo.svg" alt="logo-img" />
+                                    <img src="/assets/img/logo/logo-sz.svg" alt="logo-img" />
                                 </Link>
                             </div>
                             <div className="category-oneadjust">
                                <div className="dot">
                                     <img src="/assets/img/logo/dot.png" alt="img" />
                                </div> 
-
-                                {/* <NiceSelect
-                                  className="category"
-                                  options={[
-                                    { value: "01", text: "Category" },
-                                    { value: "02", text: "Web Design" },
-                                    { value: "03", text: "Web Development" },
-                                    { value: "04", text: "Graphic Design" },
-                                    { value: "05", text: "Software Eng" },
-                                  ]}
-                                  defaultCurrent={0}
-                                  onChange={selectHandler}
-                                  name=""
-                                  placeholder="" /> */}
 
                             </div>
                         </div>
