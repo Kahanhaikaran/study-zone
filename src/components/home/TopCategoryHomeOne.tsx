@@ -44,7 +44,7 @@ const TopCategoryHomeOne = () => {
 								{featuredServices.map((service, index) => (
 									<div
 										className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-										data-wow-delay={`${0.3 + (index % 3) * 0.2}s`}
+										data-wow-delay=".05s"
 										key={service.slug}
 									>
 										<div className={`top-category-box-items ${index % 3 === 2 ? "border-right-none" : ""}`}>

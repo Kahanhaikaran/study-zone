@@ -5,9 +5,11 @@
 
     .shape-left {
         position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 99;
+        top: 25px;
+        left: clamp(-110px, -6vw, -60px);
+        z-index: 1;
+        pointer-events: none;
+        mix-blend-mode: screen;
 
         @include breakpoint (max-xl){
             display: none;
@@ -16,9 +18,11 @@
 
     .shape-right {
         position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index: 99;
+        bottom: 35px;
+        right: clamp(-120px, -6vw, -60px);
+        z-index: 1;
+        pointer-events: none;
+        mix-blend-mode: screen;
 
         @include breakpoint (max-xl){
             display: none;

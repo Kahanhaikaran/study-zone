@@ -39,7 +39,7 @@ const FeatureHomeOne = () => {
     <>
       <section className="feature-section section-padding">
         <div className="container">
-          <div className="row g-3 row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xxl-5">
+          <div className="row g-3 row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xxl-5 feature-grid-tight">
             {coreServices.map((service, index) => (
               <div
                 className="col wow fadeInUp"

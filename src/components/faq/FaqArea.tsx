@@ -5,45 +5,45 @@ const academicFaqs = [
 	{
 		id: 'collapseOne',
 		headingId: 'headingOne',
-		question: 'What kind of academic work do you handle?',
+		question: 'What types of academic work can you help me with?',
 		answer:
-			'We support everything from everyday assignments and handwritten journals to research-heavy dissertations, viva decks, and presentation-ready PPTs. If it is part of your coursework, we can execute it.',
+			'We handle daily assignments, handwritten notes, lab files, reports, projects, presentations, viva decks, and long-form work like dissertations or theses. If it is part of your coursework or exam prep, we can guide or execute it end-to-end.',
 		defaultOpen: true,
 	},
 	{
 		id: 'collapseTwo',
 		headingId: 'headingTwo',
-		question: 'Can you follow my college or university format?',
+		question: 'Will the work match my college or university guidelines?',
 		answer:
-			'Yes. Share your rubric, template, or past sample and we will mirror the exact structure, citation style, and submission guidelines so it feels native to your institute.',
+			'Yes. You can share your rubric, sample, or official template and we strictly follow the same format, structure, and citation style so your work looks exactly as your institute expects.',
 	},
 	{
 		id: 'collapseThree',
 		headingId: 'headingThree',
-		question: 'How fast can you deliver assignments or notes?',
+		question: 'How fast can you deliver assignments, notes, or projects?',
 		answer:
-			'Turnarounds start from 24 hours for short tasks and scale up with project complexity. We always commit to a deadline upfront and share progress checkpoints so you are never left guessing.',
+			'Short tasks can be delivered within 24 hours and larger projects are planned with clear milestones and deadlines. We confirm timelines before starting and keep you updated so there are no last-minute surprises.',
 	},
 	{
 		id: 'collapseFour',
 		headingId: 'headingFour',
-		question: 'Is the content plagiarism-free?',
+		question: 'Is the content 100% plagiarism-free and original?',
 		answer:
-			'Every draft is created from scratch, referenced properly, and scanned through leading plagiarism tools. We can attach the originality report with your delivery on request.',
+			'Yes. Every solution is created from scratch, referenced correctly, and checked through trusted plagiarism tools. On request, we can also provide you with a plagiarism report for additional assurance.',
 	},
 	{
 		id: 'collapseFive',
 		headingId: 'headingFive',
-		question: 'Will my details stay confidential?',
+		question: 'Will my personal details and files stay confidential?',
 		answer:
-			'Absolutely. Your name, subject, and files are handled only by the assigned expert. We never reuse or resell your content, and communication stays 1:1 through secure channels.',
+			'Absolutely. Your name, contact details, subjects, and files are only accessible to the assigned expert and our core team. We never resell or reuse your material and all communication remains strictly 1:1.',
 	},
 	{
 		id: 'collapseSix',
 		headingId: 'headingSix',
-		question: 'How do I get started with a new task?',
+		question: 'How do I get started and place a new request?',
 		answer:
-			'Send your requirements on WhatsApp or call at +91-8882309876 or email us. We confirm the scope, share the quote, and begin once you approve. You receive drafts, revisions, and final files right on time.',
+			'Simply share your requirements via WhatsApp, call, or email along with your deadline. We review the task, confirm scope and pricing, and start once you approve—then share drafts, revisions, and final files on time.',
 	},
 ];
 

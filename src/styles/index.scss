@@ -498,28 +498,53 @@
   color: #fff;
   padding: clamp(14px, 3.2vw, 36px) 0 clamp(8px, 2vw, 28px);
   overflow: hidden;
+  // Match the horizontal rhythm of the header logo + nav
+  .container {
+    padding-left: clamp(24px, 5vw, 70px);
+    padding-right: clamp(24px, 5vw, 70px);
+  }
 
   .hero-grid {
     align-items: center;
     row-gap: clamp(4px, 1.2vw, 18px);
 
+    // Make hero text column start on the same vertical line as the logo
+    // so logo, heading, and subheading feel aligned.
+    @media (min-width: 1200px) {
+      > .col-xl-5:first-child {
+        padding-left: 0;
+      }
+    }
+
     .hero-content {
       text-align: center;
+      max-width: clamp(340px, 46vw, 560px);
+      margin-left: 0;
 
       @media (min-width: 992px) {
         text-align: left;
       }
 
       h1 {
-        font-size: clamp(1.85rem, 2.2vw, 2.4rem);
-        margin-top: 2px;
-        margin-bottom: 8px;
+        // Slightly smaller so a single line doesn’t collide with the hero image
+        // while still feeling like a strong headline.
+        font-size: clamp(1.6rem, 2.2vw, 2.4rem);
+        line-height: 1.18;
+        letter-spacing: -0.02em;
+        margin-top: clamp(4px, 0.7vw, 8px);
+        margin-bottom: clamp(6px, 0.9vw, 10px);
+        
+        @media (min-width: 1400px) {
+          white-space: nowrap;
+        }
       }
 
       p {
-        color: rgba(255, 255, 255, 0.78);
-        max-width: 560px;
+        color: rgba(255, 255, 255, 0.88);
+        max-width: 500px;
         margin: 0 auto;
+        font-size: clamp(0.9rem, 0.95vw, 0.98rem);
+        line-height: 1.72;
 
         @media (min-width: 992px) {
           margin: 0;
@@ -660,14 +685,30 @@
 
     .circle-img {
       position: absolute;
-      inset: auto auto 20px 20px;
-      width: 120px;
-      opacity: 0.85;
+      top: -110px;
+      left: -140px;
+      width: clamp(140px, 18vw, 200px);
+      opacity: 0.65;
+      z-index: 0;
+      pointer-events: none;
 
-      @media (max-width: 991px) {
+      @media (max-width: 992px) {
+        top: -80px;
+        left: -60px;
+        opacity: 0.45;
+      }
+
+      @media (max-width: 767px) {
         display: none;
       }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
     }
+
   }
 }
 

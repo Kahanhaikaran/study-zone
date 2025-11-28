@@ -73,7 +73,8 @@ const TopServicesHomeOne = () => {
             </div>
             <ul className="nav">
               {Object.entries(serviceCategories).map(([key, label], index) => (
-                <li key={key} className="nav-item wow fadeInUp" data-wow-delay={`${(index + 1) * 0.2}s`}>
+                // Keep tabs snappy but add a subtle fade-in
+                <li key={key} className="nav-item wow fadeInUp" data-wow-delay=".05s">
                   <a 
                     href={`#${key}`} 
                     data-bs-toggle="tab" 
@@ -98,8 +99,9 @@ const TopServicesHomeOne = () => {
                     {categoryServices.map((service, index) => (
                       <div 
                         key={service.slug} 
-                        className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 wow fadeInUp" 
-                        data-wow-delay={`${(index + 1) * 0.2}s`}
+                      // Uniform, minimal animation on cards
+                      className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
+                      data-wow-delay=".05s"
                       >
                         <div className="courses-card-main-items">
                           <div className="courses-card-items">

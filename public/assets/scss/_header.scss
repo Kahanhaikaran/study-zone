@@ -267,7 +267,9 @@
 		overflow: visible;
 
 		img {
-			height: 58px;
+			// Very bold logo size as requested
+			height: 300px;
+			max-width: 300px;
 			width: auto;
 			display: block;
 			transition: transform 0.25s ease;
@@ -282,7 +284,7 @@
 			min-width: auto;
 
 			img {
-				height: 58px;
+				height: 56px;
 			}
 
 			.logo-mark {
@@ -292,7 +294,7 @@
 
 		@include breakpoint (max-sm) {
 			img {
-				height: 64px;
+				height: 52px;
 			}
 		}
 	}

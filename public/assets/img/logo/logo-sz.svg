@@ -1,13 +1,13 @@
-<svg width="360" height="120" viewBox="0 0 360 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="520" height="180" viewBox="0 0 520 180" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- New Icon -->
-  <g transform="translate(20,28)">
-    <rect x="0" y="0" width="64" height="64" rx="14" fill="#0057FF"/>
-    <path d="M18 32C18 24 24 18 32 18C40 18 46 24 46 32C46 40 40 46 32 46" stroke="white" stroke-width="4" stroke-linecap="round" fill="none"/>
-    <path d="M26 34L31 39L42 28" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(26,44)">
+    <rect x="0" y="0" width="92" height="92" rx="20" fill="#0057FF"/>
+    <path d="M26 46C26 34.954 34.954 26 46 26C57.046 26 66 34.954 66 46C66 57.046 57.046 66 46 66" stroke="white" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+    <path d="M36 48L43 55L60 38" stroke="white" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
   <!-- Text -->
-  <text x="110" y="70" font-family="Inter, 'Segoe UI', sans-serif" font-size="32" font-weight="700" fill="#002A5C">
+  <text x="150" y="110" font-family="Inter, 'Segoe UI', sans-serif" font-size="48" font-weight="700" fill="#002A5C" letter-spacing="0.01em">
     My<tspan fill="#0057FF">Shiksha</tspan>Sagar
   </text>
 </svg>
