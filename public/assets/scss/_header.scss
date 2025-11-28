@@ -261,20 +261,20 @@
 	.logo {
 		display: inline-flex;
 		align-items: center;
-		min-width: 240px;
+		min-width: 140px;
 		flex-shrink: 0;
-		height: 72px;
+		height: 58px;
 		overflow: visible;
 
 		img {
-			height: 72px;
+			height: 58px;
 			width: auto;
 			display: block;
 			transition: transform 0.25s ease;
 		}
 
 		.logo-mark {
-			transform: scale(1.18);
+			transform: scale(1);
 			transform-origin: left center;
 		}
 
@@ -282,7 +282,7 @@
 			min-width: auto;
 
 			img {
-				height: 64px;
+				height: 58px;
 			}
 
 			.logo-mark {
@@ -292,7 +292,7 @@
 
 		@include breakpoint (max-sm) {
 			img {
-				height: 48px;
+				height: 64px;
 			}
 		}
 	}

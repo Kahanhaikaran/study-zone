@@ -1470,7 +1470,7 @@
 
   .logo img {
     display: block;
-    max-height: clamp(36px, 4vw, 46px);
+    max-height: clamp(40px, 4vw, 46px);
     width: auto;
   }
 
@@ -1495,7 +1495,7 @@
 
   @media (max-width: 767px) {
     .logo img {
-      max-height: 34px;
+      max-height: 46px;
     }
 
     .header-button {
