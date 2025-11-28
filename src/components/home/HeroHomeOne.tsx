@@ -35,7 +35,7 @@ const HeroHomeOne = () => {
                             </p>
                             <div className="hero-button wow fadeInUp" data-wow-delay=".7s">
                                 <Link href="/services" className="theme-btn hover-white">Explore Services</Link>
-                                <Link href="tel:+9108882309876" className="theme-btn style-2">Call +91-08882309876</Link>
+                                <Link href="tel:+918882309876" className="theme-btn hover-white">Call +91-8882309876</Link>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ const HeroHomeOne = () => {
                             <div className="hero-visual-frame">
                                 <img
                                     src="/assets/img/hero/hero-1.jpg"
-                                    alt="StudyZone hero"
+                                    alt="Shiksha Sagar hero"
                                     className="img-custom-anim-left"
                                     data-wow-duration="1.5s"
                                     data-wow-delay="0.3s"

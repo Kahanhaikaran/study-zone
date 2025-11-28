@@ -48,7 +48,7 @@ const HeaderOne = () => {
                             </div>
                             <div className="header-button">
                                 {/* <Link href="/sign-in" className="theme-btn style-2"><i className="far fa-user"></i> Admin</Link> */}
-                                <Link href="/Contact" className="theme-btn yellow-btn">Contact Us</Link>
+                                <Link href="/contact" className="theme-btn yellow-btn">Contact Us</Link>
                             </div>
                             <div className="header__hamburger d-xl-none my-auto">
                                 <div className="sidebar__toggle">

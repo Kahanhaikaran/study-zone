@@ -6,9 +6,9 @@ import React from 'react';
 
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-	title: "Courses Grid - StudyZone Academic Support",
-	description: "Grid view of StudyZone's academic support services.",
-	keywords: "StudyZone services grid, academic help",
+	title: "Courses Grid - Shiksha Sagar Academic Support",
+	description: "Grid view of Shiksha Sagar's academic support services.",
+	keywords: "Shiksha Sagar services grid, academic help",
 };
 
 

@@ -37,12 +37,28 @@ const TestimonialHomeOne = () => {
                 modules={[Pagination]}
                 onSwiper={(swiper) => {
                   swiperInstanceRef.current = swiper;
+
                   if (paginationRef.current) {
                     // @ts-expect-error Swiper typing
                     swiper.params.pagination.el = paginationRef.current;
-                    swiper.pagination.init();
-                    swiper.pagination.render();
-                    swiper.pagination.update();
+
+                    const { pagination } = swiper;
+
+                    if (pagination) {
+                      if (pagination.destroy) {
+                        pagination.destroy();
+                      }
+
+                      pagination.init();
+                      pagination.render();
+                      pagination.update();
+
+                      swiper.el.querySelectorAll('.swiper-pagination').forEach((node) => {
+                        if (node !== paginationRef.current) {
+                          node.remove();
+                        }
+                      });
+                    }
                   }
                 }}
                 breakpoints={{
@@ -65,7 +81,8 @@ const TestimonialHomeOne = () => {
                 className="swiper testimonial-slider"> 
                     <SwiperSlide className="swiper-slide">
                         <div className="testimonial-box-items">
-                            <div className="testimonial-content">
+                            <div className="testimonial-image">
+                                <img src="/assets/img/testimonial/01.png" alt="img" />
                                 <div className="star">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
@@ -73,6 +90,8 @@ const TestimonialHomeOne = () => {
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
                                 </div>
+                            </div>
+                            <div className="testimonial-content">
                                 <p>
                                     "My dissertation timeline was impossible until their team broke
                                     it into milestones. I submitted early and finally slept."
@@ -82,14 +101,12 @@ const TestimonialHomeOne = () => {
                                     <span>Masters Student</span>
                                 </div>
                             </div>
-                            <div className="testimonial-image">
-                                <img src="/assets/img/testimonial/01.png" alt="img" />
-                            </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="swiper-slide">
                         <div className="testimonial-box-items bg-2">
-                            <div className="testimonial-content">
+                            <div className="testimonial-image">
+                                <img src="/assets/img/testimonial/02.png" alt="img" />
                                 <div className="star">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
@@ -97,6 +114,8 @@ const TestimonialHomeOne = () => {
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
                                 </div>
+                            </div>
+                            <div className="testimonial-content">
                                 <p>
                                     "They rewrote my entire project deck overnight with zero
                                     plagiarism. The professor called it the model submission."
@@ -106,14 +125,12 @@ const TestimonialHomeOne = () => {
                                     <span>BBA Final Year</span>
                                 </div>
                             </div>
-                            <div className="testimonial-image">
-                                <img src="/assets/img/testimonial/02.png" alt="img" />
-                            </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="swiper-slide">
                         <div className="testimonial-box-items">
-                            <div className="testimonial-content">
+                            <div className="testimonial-image">
+                                <img src="/assets/img/testimonial/01.png" alt="img" />
                                 <div className="star">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
@@ -121,6 +138,8 @@ const TestimonialHomeOne = () => {
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
                                 </div>
+                            </div>
+                            <div className="testimonial-content">
                                 <p>
                                     "Exam week used to wreck me. Their concise notes and mock
                                     tests helped me jump two grade bands in one semester."
@@ -130,14 +149,12 @@ const TestimonialHomeOne = () => {
                                     <span>BSc Computer Science</span>
                                 </div>
                             </div>
-                            <div className="testimonial-image">
-                                <img src="/assets/img/testimonial/01.png" alt="img" />
-                            </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="swiper-slide">
                         <div className="testimonial-box-items bg-2">
-                            <div className="testimonial-content">
+                            <div className="testimonial-image">
+                                <img src="/assets/img/testimonial/02.png" alt="img" />
                                 <div className="star">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
@@ -145,6 +162,8 @@ const TestimonialHomeOne = () => {
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
                                 </div>
+                            </div>
+                            <div className="testimonial-content">
                                 <p>
                                     "From topic selection to final viva prep, they guided me like a
                                     mentor. I cleared my thesis defense with full confidence."
@@ -153,9 +172,6 @@ const TestimonialHomeOne = () => {
                                     <h4>Aditya Rao</h4>
                                     <span>MBA Candidate</span>
                                 </div>
-                            </div>
-                            <div className="testimonial-image">
-                                <img src="/assets/img/testimonial/02.png" alt="img" />
                             </div>
                         </div>
                     </SwiperSlide>

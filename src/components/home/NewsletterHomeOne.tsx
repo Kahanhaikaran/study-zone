@@ -17,7 +17,7 @@ const NewsletterHomeOne = () => {
                   data-wow-duration="1.5s"
                   data-wow-delay="0.3s"
                 >
-                  <img src="/assets/img/cta/girl-img.jpg" alt="StudyZone support specialist" />
+                  <img src="/assets/img/cta/girl-img.jpg" alt="Shiksha Sagar support specialist" />
                 </div>
               </div>
               <div className="col-lg-7">
@@ -35,8 +35,8 @@ const NewsletterHomeOne = () => {
                   className="newsletter-input-items mt-4 mt-md-0 wow fadeInUp"
                   data-wow-delay=".5s"
                 >
-                  <a href="tel:+9108882309876" className="theme-btn yellow-btn text-center">
-                    Call +91-08882309876
+                  <a href="tel:+918882309876" className="theme-btn yellow-btn text-center">
+                    Call +91-8882309876
                   </a>
                   <a
                     href="https://wa.me/917303628683"

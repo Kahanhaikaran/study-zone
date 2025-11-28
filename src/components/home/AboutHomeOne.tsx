@@ -11,7 +11,7 @@ const AboutHomeOne = () => {
 						<div className="section-title">
 							<h6 className="wow fadeInUp">Need custom academic help?</h6>
 							<h2 className="wow fadeInUp" data-wow-delay=".3s">
-								StudyZone Support has you covered
+								Shiksha Sagar Support has you covered
 							</h2>
 						</div>
 						<p className="wow fadeInUp" data-wow-delay=".5s">

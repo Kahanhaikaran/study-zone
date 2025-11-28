@@ -126,6 +126,19 @@ export const services: Service[] = [
 		],
 		deliverables: ["Synopsis document", "Timeline plan", "Keyword list"],
 	},
+	{
+		slug: "research-proposal",
+		title: "Research Proposal Service",
+		tagline: "University-ready proposals that secure quick approvals",
+		description:
+			"Get a persuasive research proposal with clear objectives, methodology, and feasibility sections tailored to your department’s template. We help you validate the problem statement and support it with early literature insights so faculty panels nod faster.",
+		highlights: [
+			"Aligned with UGC/AICTE and university proposal formats",
+			"Problem statement, objectives, and scope refined with expert feedback",
+			"Includes preliminary references, timelines, and budgeting cues",
+		],
+		deliverables: ["Proposal document", "Objective matrix", "Preliminary reference list", "Timeline + risk plan"],
+	},
 ];
 
 export const getServiceBySlug = (slug: string) => services.find((service) => service.slug === slug);

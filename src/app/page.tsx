@@ -5,9 +5,9 @@ import React from "react";
 // meta data
 
 export const metadata: Metadata = {
-	title: "StudyZone - Academic Support Platform",
+	title: "Shiksha Sagar - Academic Support Platform",
 	description: "Personalized academic support for assignments, projects, and exams.",
-	keywords: "StudyZone, academic support, assignments, projects, exam help",
+	keywords: "Shiksha Sagar, academic support, assignments, projects, exam help",
 };
 
 const index = () => {

@@ -11,8 +11,8 @@ const services = [
 ];
 
 const AboutArea = () => {
-	const phoneHref = "tel:+9108882309876";
-	const whatsappHref = "https://wa.me/9108882309876";
+	const phoneHref = "tel:+918882309876";
+	const whatsappHref = "https://wa.me/918882309876";
 
 	return (
 		<section className="about-section fix">
@@ -21,7 +21,7 @@ const AboutArea = () => {
 					<div className="row g-4 align-items-center">
 						<div className="col-lg-5">
 							<div className="section-title mb-0">
-								<h6 className="wow fadeInUp">About StudyZone Support</h6>
+								<h6 className="wow fadeInUp">About Shiksha Sagar Support</h6>
 								<h2 className="wow fadeInUp" data-wow-delay=".3s">
 									We are the solution to every academic problem
 								</h2>
@@ -57,7 +57,7 @@ const AboutArea = () => {
 										<p>Need urgent help? Call or WhatsApp anytime for reliable, affordable academic assistance.</p>
 										<div className="d-flex gap-3 flex-wrap">
 											<a className="theme-btn style-2" href={phoneHref}>
-												Call +91-08882309876
+												Call +91-8882309876
 											</a>
 											<a
 												className="theme-btn hover-white"

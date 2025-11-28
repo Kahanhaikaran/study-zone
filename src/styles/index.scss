@@ -892,8 +892,13 @@
     gap: clamp(18px, 2vw, 28px);
     align-items: center;
     min-height: 260px;
-    box-shadow: 0 25px 60px rgba(3, 22, 47, 0.35);
+    box-shadow: none;
     height: 100%;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      text-align: center;
+    }
 
     &.bg-2 {
       background: linear-gradient(135deg, #0c6c74, #083b62);
@@ -904,15 +909,6 @@
       display: flex;
       flex-direction: column;
       gap: 18px;
-
-      .star {
-        display: flex;
-        gap: 6px;
-
-        i {
-          color: #ffd25d;
-        }
-      }
 
       p {
         margin: 0;
@@ -931,10 +927,19 @@
           color: rgba(255, 255, 255, 0.7);
         }
       }
+
+      @media (max-width: 991px) {
+        align-items: center;
+      }
     }
 
     .testimonial-image {
       flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 40px;
+      gap: 12px;
 
       img {
         width: 96px;
@@ -944,30 +949,59 @@
         border: 3px solid rgba(255, 255, 255, 0.25);
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
       }
+
+      .star {
+        display: flex;
+        gap: 6px;
+        justify-content: center;
+
+        i {
+          color: #ffd25d;
+        }
+      }
+
+      @media (min-width: 992px) {
+        align-items: flex-start;
+
+        .star {
+          justify-content: flex-start;
+          margin-left: 16px;
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      .testimonial-image img {
+        width: 150px;
+        height: 150px;
+      }
     }
 
     @media (max-width: 575px) {
       flex-direction: column;
       text-align: center;
 
-      .testimonial-image {
-        order: -1;
+      .testimonial-content {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .testimonial-content {
+        padding-top: 24px;
       }
     }
   }
 
   .testimonial-controls {
-    margin-top: clamp(22px, 3vw, 36px);
+    margin-top: 0;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 18px;
-    flex-wrap: wrap;
-
-    @media (max-width: 575px) {
-      gap: 14px;
-      flex-direction: column;
-    }
+    flex-wrap: nowrap;
+    flex-direction: row;
   }
 
   .testimonial-nav {

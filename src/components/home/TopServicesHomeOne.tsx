@@ -18,7 +18,7 @@ const getServiceCategory = (service: Service): string => {
   if (['assignment-writing', 'essay-writing', 'web-content-writing'].includes(slug)) {
     return 'Writing';
   }
-  if (['dissertation-writing-service-2025', 'phd-thesis-writing-service', 'synopsis-service'].includes(slug)) {
+  if (['dissertation-writing-service-2025', 'phd-thesis-writing-service', 'synopsis-service', 'research-proposal'].includes(slug)) {
     return 'Research';
   }
   if (['study-materials', 'hand-writing'].includes(slug)) {
@@ -135,7 +135,7 @@ const TopServicesHomeOne = () => {
                                   </li>
                                 ))}
                               </ul>
-                              <Link href={`/services/${service.slug}`} className="theme-btn hero-btn mt-3">
+                              <Link href={`/services/${service.slug}`} className="theme-btn hover-white hero-btn mt-1">
                                 View Details
                               </Link>
                             </div>

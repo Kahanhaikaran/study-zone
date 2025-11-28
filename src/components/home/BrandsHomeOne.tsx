@@ -24,7 +24,7 @@ const BrandsHomeOne = () => {
 				<div className="container">
 					<div className="brands-shell">
 						<div className="section-head text-center">
-							<h3 className="headline">Students from India’s top campuses rely on StudyZone</h3>
+							<h3 className="headline">Students from India’s top campuses rely on Shiksha Sagar</h3>
 						</div>
 					<div className="brand-wrapper">
 						<div className="brand-tape">

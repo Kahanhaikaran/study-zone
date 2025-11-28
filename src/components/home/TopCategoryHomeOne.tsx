@@ -30,7 +30,7 @@ const TopCategoryHomeOne = () => {
 						</div>
 						<p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
 							Pick the category you need help with and jump straight into the service details. Each one is crafted
-							to match StudyZone’s offering.
+							to match Shiksha Sagar’s offering.
 						</p>
 						<div className="top-category-button">
 							<Link href="/services" className="theme-btn yellow-btn mt-40 wow fadeInUp" data-wow-delay=".3s">

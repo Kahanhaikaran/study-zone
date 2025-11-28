@@ -7,9 +7,9 @@ import Wrapper from '@/layouts/Wrapper';
 
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-	title: "About - StudyZone Academic Support",
-	description: "Learn how StudyZone delivers personalized academic assistance.",
-	keywords: "StudyZone, about StudyZone, academic support story",
+	title: "About - Shiksha Sagar Academic Support",
+	description: "Learn how Shiksha Sagar delivers personalized academic assistance.",
+	keywords: "Shiksha Sagar, about Shiksha Sagar, academic support story",
 };
 
 

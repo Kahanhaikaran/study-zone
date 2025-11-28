@@ -18,12 +18,12 @@ const AboutPageSection = () => {
 						</div>
 						<div className="col-lg-6 order-lg-1">
 							<div className="about-copy">
-								<p className="eyebrow wow fadeInUp">About StudyZone Support</p>
+								<p className="eyebrow wow fadeInUp">About Shiksha Sagar Support</p>
 								<h2 className="wow fadeInUp" data-wow-delay=".1s">
 									Personal academic help that feels like a teammate
 								</h2>
 								<p className="wow fadeInUp" data-wow-delay=".2s">
-									StudyZone is a freelance-led academic studio that lightens the workload for college and university
+									Shiksha Sagar is a freelance-led academic studio that lightens the workload for college and university
 									students. We combine research, writing, design, and mentoring so you can focus on learning while we
 									handle the documentation and submission grind.
 								</p>
@@ -61,8 +61,8 @@ const AboutPageSection = () => {
 									<Link href="/services" className="theme-btn">
 										View Services
 									</Link>
-									<a href="tel:+9108882309876" className="theme-btn style-2">
-										Call +91-08882309876
+									<a href="tel:+918882309876" className="theme-btn style-2">
+										Call +91-8882309876
 									</a>
 								</div>
 							</div>

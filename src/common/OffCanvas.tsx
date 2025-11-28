@@ -45,7 +45,7 @@ const OffCanvas = ({setOpenCanvas, openCanvas} : any) => {
                                     <span>
                                         Call Us:
                                     </span>
-                                    <a href="tel:+9108882309876">+91-08882309876</a>
+                                    <a href="tel:+918882309876">+91-8882309876</a>
                                 </li>
                                 <li>
                                     <span>
@@ -57,7 +57,7 @@ const OffCanvas = ({setOpenCanvas, openCanvas} : any) => {
                                     <span>
                                         Email:
                                     </span>
-                                    <a href="mailto:support@studyzone.in">support@studyzone.in</a>
+                                    <a href="mailto:support@ShikshaSagar.in">support@Shiksha Sagar.in</a>
                                 </li>
                                 <li>
                                     <span>
@@ -67,7 +67,7 @@ const OffCanvas = ({setOpenCanvas, openCanvas} : any) => {
                                 </li>
                             </ul>
                             <div className="offcanvas-button">
-                                <a href="tel:+9108882309876" className="theme-btn style-2"><i className="far fa-phone"></i> Call Now</a>
+                                <a href="tel:+918882309876" className="theme-btn style-2"><i className="far fa-phone"></i> Call Now</a>
                                 <a href="https://wa.me/917303628683" className="theme-btn yellow-btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                             </div>
                         </div>

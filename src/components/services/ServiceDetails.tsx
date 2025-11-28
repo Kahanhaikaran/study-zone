@@ -85,7 +85,7 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 									))}
 								</div>
 								<div className="assurance-box">
-									<h5>Guaranteed by StudyZone</h5>
+									<h5>Guaranteed by Shiksha Sagar</h5>
 									<ul>
 										{assurances.map((point) => (
 											<li key={point}>
@@ -97,8 +97,8 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 								</div>
 								<div className="contact-mini">
 									<p className="label">Need to talk?</p>
-									<a href="tel:+9108882309876">
-										<i className="fas fa-phone"></i> +91-08882309876
+									<a href="tel:+918882309876">
+										<i className="fas fa-phone"></i> +91-8882309876
 									</a>
 								</div>
 							</div>
@@ -144,8 +144,8 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 								<h4>Need this service?</h4>
 								<p>Share your brief, word count, and deadline. We reply within minutes.</p>
 								<div className="d-flex flex-column gap-3 mt-4">
-									<a href="tel:+9108882309876" className="theme-btn w-100 text-center">
-										Call +91-08882309876
+									<a href="tel:+918882309876" className="theme-btn w-100 text-center">
+										Call +91-8882309876
 									</a>
 									<a href="https://wa.me/917303628683" className="theme-btn yellow-btn w-100 text-center" target="_blank" rel="noopener noreferrer">
 										Chat on WhatsApp

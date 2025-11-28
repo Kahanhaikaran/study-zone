@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 	}
 
 	return {
-		title: `${service.title} - StudyZone`,
+		title: `${service.title} - Shiksha Sagar`,
 		description: service.tagline,
 	};
 }

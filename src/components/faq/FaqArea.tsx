@@ -43,7 +43,7 @@ const academicFaqs = [
 		headingId: 'headingSix',
 		question: 'How do I get started with a new task?',
 		answer:
-			'Send your requirements on WhatsApp or call at +91-08882309876 or email us. We confirm the scope, share the quote, and begin once you approve. You receive drafts, revisions, and final files right on time.',
+			'Send your requirements on WhatsApp or call at +91-8882309876 or email us. We confirm the scope, share the quote, and begin once you approve. You receive drafts, revisions, and final files right on time.',
 	},
 ];
 

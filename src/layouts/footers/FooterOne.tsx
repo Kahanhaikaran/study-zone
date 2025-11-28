@@ -58,7 +58,7 @@ const FooterOne = ({style_2} : any) => {
                                    <h3>Quick Links</h3>
                                 </div>
                                 <ul className="list-area">
-                                    <li><Link href="/about">About StudyZone</Link></li>
+                                    <li><Link href="/about">About Shiksha Sagar</Link></li>
                                     <li><Link href="/services">Our Services</Link></li>
                                     <li>
                                         <a
@@ -87,11 +87,11 @@ const FooterOne = ({style_2} : any) => {
                                         </li>
                                         <li>
                                             <span className="label">Email</span>
-                                            <a href="mailto:hello@studyzone.in" className="link">hello@studyzone.in</a>
+                                            <a href="mailto:hello@Shiksha Sagar.in" className="link">hello@Shiksha Sagar.in</a>
                                         </li>
                                         <li>
                                             <span className="label">Call</span>
-                                            <a href="tel:+9108882309876">+91-08882309876</a>
+                                            <a href="tel:+918882309876">+91-8882309876</a>
                                         </li>
                                         <li>
                                             <span className="label">WhatsApp</span>
@@ -104,7 +104,7 @@ const FooterOne = ({style_2} : any) => {
                     </div>
                 </div>
                 <div className={`footer-bottom wow fadeInUp ${style_2 ? "style-4" : ""}`} data-wow-delay=".3s">
-                    <p>Copyright © {footerYear} <Link href="/">Study Zone Services</Link> · All rights reserved.</p>
+                    <p>Copyright © {footerYear} <Link href="/">Shiksha Sagar Services</Link> · All rights reserved.</p>
                 </div>
             </div>
             <div className={`footer-name ${style_2 ? "style-2" : ""}`}>

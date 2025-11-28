@@ -49,11 +49,6 @@ const menu_data: DataType[] = [
 		title: "FAQ",
 		link: "/#faq",
 	},
-	{
-		id: 7,
-		title: "Contact",
-		link: "/contact",
-	},
 ];
 
 export default menu_data;

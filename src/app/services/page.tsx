@@ -4,7 +4,7 @@ import Wrapper from '@/layouts/Wrapper';
 
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-	title: "Services - StudyZone - Academic Support Services",
+	title: "Services - Shiksha Sagar - Academic Support Services",
 	description: "Academic solutions for every study requirement",
 	keywords: "academic services, assignment writing, study materials",
 };
