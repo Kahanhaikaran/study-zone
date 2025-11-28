@@ -37,31 +37,31 @@ const OffCanvas = ({setOpenCanvas, openCanvas} : any) => {
                             <ul className="contact-list">
                                 <li>
                                     <span>
-                                        Address:
+                                        Address: {" "}
                                     </span>
                                     India · Remote support, global delivery
                                 </li>
                                 <li>
                                     <span>
-                                        Call Us:
+                                        Call Us: {" "}
                                     </span>
                                     <a href="tel:+918882309876">+91-8882309876</a>
                                 </li>
                                 <li>
                                     <span>
-                                        WhatsApp:
+                                        WhatsApp: {" "}
                                     </span>
                                     <a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer">Chat instantly</a>
                                 </li>
                                 <li>
                                     <span>
-                                        Email:
+                                        Email: {" "}
                                     </span>
                                     <a href="mailto:support@ShikshaSagar.in">support@Shiksha Sagar.in</a>
                                 </li>
                                 <li>
                                     <span>
-                                        Hours:
+                                        Hours: {" "}
                                     </span>
                                     10 AM – 11 PM IST (7 days)
                                 </li>

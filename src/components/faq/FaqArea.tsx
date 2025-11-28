@@ -66,7 +66,7 @@ const FaqArea = () => {
 									<div className="faq-items">
 										<div className="accordion" id="accordionLeft">
 											{leftFaqs.map((faq, index) => (
-												<div className={`accordion-item ${index === leftFaqs.length - 1 ? 'mb-0' : ''}`} key={faq.id}>
+												<div className={`accordion-item ${index === leftFaqs.length - 1 ? 'm-0' : ''}`} key={faq.id}>
 													<h2 className="accordion-header" id={faq.headingId}>
 														<button
 															className={`accordion-button ${index === 0 ? '' : 'collapsed'}`}
@@ -100,7 +100,7 @@ const FaqArea = () => {
 									<div className="faq-items">
 										<div className="accordion" id="accordionRight">
 											{rightFaqs.map((faq, index) => (
-												<div className={`accordion-item ${index === rightFaqs.length - 1 ? 'mb-0' : ''}`} key={faq.id}>
+												<div className={`accordion-item ${index === rightFaqs.length - 1 ? 'm-0' : ''}`} key={faq.id}>
 													<h2 className="accordion-header" id={faq.headingId}>
 														<button
 															className="accordion-button collapsed"

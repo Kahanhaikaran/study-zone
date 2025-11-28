@@ -28,7 +28,7 @@ const HeaderOne = () => {
                         <div className="header-left">
                             <div className="logo">
                                 <Link href="/" className="header-logo">
-                                    <img src="/assets/img/logo/logo-sz.svg" alt="logo-img" />
+                                    <img src="/assets/img/logo/logo-sz.svg" alt="logo-img" className="logo-mark" />
                                 </Link>
                             </div>
                             <div className="category-oneadjust">

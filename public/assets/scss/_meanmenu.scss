@@ -139,27 +139,34 @@
   .mean-container .mean-nav ul li a.mean-expand {
 	margin-top: 5px;
 	padding: 0 !important;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
   }
   
   .mean-container .mean-nav ul li > a > i {
 	display: none;
   }
   
-  .mean-container .mean-nav ul li > a.mean-expand i {
+.mean-container .mean-nav ul li > a.mean-expand i {
 	display: inline-block;
+	@include transition;
+	transform: rotate(0deg);
   }
   
   .mean-container .mean-nav > ul > li:first-child > a {
 	border-top: 0;
   }
   
-  .mean-container .mean-nav ul li a.mean-expand.mean-clicked i {
-	transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	@include transition;
+.mean-container .mean-nav ul li a.mean-expand.mean-clicked i {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
   }
   
   .mean-container .mean-nav ul li .mega-menu li a {

@@ -8399,7 +8399,7 @@ p {
 }
 
 .faq-wrapper .faq-content .faq-items {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .faq-wrapper .faq-content .faq-items .accordion .accordion-item {
@@ -8417,7 +8417,7 @@ p {
           box-shadow: none;
   font-family: "Sora", system-ui;
   color: var(--header);
-  padding: 35px 0;
+  padding: 0 0;
   padding-left: 105px;
 }
 
@@ -8433,10 +8433,10 @@ p {
   padding-left: 105px;
   padding-right: 50px;
   padding-top: 0;
-  margin-top: -10px;
+  margin-top: -60px;
   position: relative;
   z-index: 1;
-  padding-bottom: 20px;
+  padding-bottom: 0;
 }
 
 @media (max-width: 1199px) {

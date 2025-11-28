@@ -243,6 +243,69 @@
         .faq-content {
             margin-left: 0;
         }
+        // Remove vertical gutter between stacked columns so there's no extra
+        // space between the 3rd and 4th FAQ when the columns collapse on
+        // smaller screens. Apply at max-xl so stacking breakpoints are covered.
+        @include breakpoint (max-xl){
+            .row.g-4{
+                --bs-gutter-y: 0;
+
+                > [class*="col-"]{
+                    margin-top: 0;
+                }
+            }
+
+            .faq-content {
+                .faq-items {
+                    .accordion {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .col-lg-6:first-child .faq-content {
+                padding-bottom: 0;
+            }
+
+            .col-lg-6:last-child .faq-content {
+                padding-top: 0;
+
+                .faq-items .accordion {
+                    padding-top: 0;
+                }
+            }
+        }
+
+        // Keep the existing small-screen (max-lg) rules as-is for stricter targets
+        @include breakpoint (max-lg){
+            .row.g-4{
+                --bs-gutter-y: 0;
+
+                > [class*="col-"]{
+                    margin-top: 0;
+                }
+            }
+
+            .faq-content {
+                .faq-items {
+                    .accordion {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .col-lg-6:first-child .faq-content {
+                padding-bottom: 0;
+            }
+
+            .col-lg-6:last-child .faq-content {
+                padding-top: 0;
+
+                .faq-items .accordion {
+                    padding-top: 0;
+                }
+            }
+        }
     }
 }
 

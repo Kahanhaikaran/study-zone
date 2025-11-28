@@ -4,6 +4,10 @@ import menu_data from "@/data/menu_data";
 import Link from "next/link";
 import React, { useState } from "react";
 
+const mobileOnlyLinks = [
+	{ title: "Contact", link: "/contact" },
+];
+
 const MobileMenu = () => {
 	const [openMenu, setOpenMenu] = useState<string | null>(null);
 
@@ -45,11 +49,17 @@ const MobileMenu = () => {
 												e.preventDefault();
 												toggleMenu(item.title);
 											}}
+											aria-label={`Toggle ${item.title} submenu`}
 										>
-											<i className="far fa-plus"></i>
+											<i className="far fa-chevron-down"></i>
 										</a>
 									</>
 								)}
+							</li>
+						))}
+						{mobileOnlyLinks.map((item) => (
+							<li key={item.title}>
+								<Link href={item.link}>{item.title}</Link>
 							</li>
 						))}
 					</ul>

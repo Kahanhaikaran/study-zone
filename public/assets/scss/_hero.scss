@@ -29,12 +29,20 @@
         position: absolute;
         left: 110px;
         top: 50%;
+
+        @include breakpoint (max-md){
+            display: none;
+        }
     }
 
     .vector-shape {
         position: absolute;
         right: 110px;
         top: 30%;
+
+        @include breakpoint (max-md){
+            display: none;
+        }
     }
 
     .hero-content {
@@ -240,6 +248,10 @@
             top: -55px;
             left: -55px;
             z-index: -1;
+
+            @include breakpoint (max-md){
+                display: none;
+            }
         }
     }
 }

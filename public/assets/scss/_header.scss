@@ -258,6 +258,45 @@
 
 //>>>>> Header 01 Start <<<<<//
 .header-1 {
+	.logo {
+		display: inline-flex;
+		align-items: center;
+		min-width: 240px;
+		flex-shrink: 0;
+		height: 72px;
+		overflow: visible;
+
+		img {
+			height: 72px;
+			width: auto;
+			display: block;
+			transition: transform 0.25s ease;
+		}
+
+		.logo-mark {
+			transform: scale(1.18);
+			transform-origin: left center;
+		}
+
+		@include breakpoint (max-lg) {
+			min-width: auto;
+
+			img {
+				height: 64px;
+			}
+
+			.logo-mark {
+				transform: none;
+			}
+		}
+
+		@include breakpoint (max-sm) {
+			img {
+				height: 48px;
+			}
+		}
+	}
+
 	.container-fluid {
 		padding: 0 70px;
 
