@@ -82,7 +82,7 @@ const TestimonialHomeOne = () => {
                     <SwiperSlide className="swiper-slide">
                         <div className="testimonial-box-items">
                             <div className="testimonial-image">
-                                <img src="/assets/img/testimonial/01.png" alt="img" />
+                                <img src="/assets/img/testimonial/b1.jpeg" alt="Neha Kapoor" />
                                 <div className="star">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
@@ -106,7 +106,7 @@ const TestimonialHomeOne = () => {
                     <SwiperSlide className="swiper-slide">
                         <div className="testimonial-box-items bg-2">
                             <div className="testimonial-image">
-                                <img src="/assets/img/testimonial/02.png" alt="img" />
+                                <img src="/assets/img/testimonial/a1.jpeg" alt="Rahul Deshmukh" />
                                 <div className="star">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
@@ -130,7 +130,7 @@ const TestimonialHomeOne = () => {
                     <SwiperSlide className="swiper-slide">
                         <div className="testimonial-box-items">
                             <div className="testimonial-image">
-                                <img src="/assets/img/testimonial/01.png" alt="img" />
+                                <img src="/assets/img/testimonial/b2.jpeg" alt="Saanvi Mehta" />
                                 <div className="star">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
@@ -154,7 +154,7 @@ const TestimonialHomeOne = () => {
                     <SwiperSlide className="swiper-slide">
                         <div className="testimonial-box-items bg-2">
                             <div className="testimonial-image">
-                                <img src="/assets/img/testimonial/02.png" alt="img" />
+                                <img src="/assets/img/testimonial/a2.jpeg" alt="Aditya Rao" />
                                 <div className="star">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
