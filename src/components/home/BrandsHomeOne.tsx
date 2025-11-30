@@ -57,14 +57,14 @@ const BrandsHomeOne = () => {
 				.brands-shell {
 					background: transparent;
 					border-radius: 0;
-					padding: clamp(10px, 1.5vw, 20px) 0;
+					padding: clamp(10px, 1.5vw, 20px) 0 0;
 					box-shadow: none;
 					position: relative;
 					z-index: 2;
 				}
 				.section-head {
 					color: #0f172a;
-					margin-bottom: clamp(8px, 1.2vw, 16px);
+					margin-bottom: 0;
 					font-family: "Space Grotesk", "Poppins", sans-serif;
 					text-align: center;
 				}
@@ -79,7 +79,7 @@ const BrandsHomeOne = () => {
 					overflow: hidden;
 					position: relative;
 					padding: clamp(6px, 1vw, 12px) 0;
-					margin-top: clamp(6px, 1vw, 14px);
+					margin-top: 0;
 					width: 100vw;
 					margin-left: calc(-50vw + 50%);
 					margin-right: calc(-50vw + 50%);
