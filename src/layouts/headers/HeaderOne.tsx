@@ -21,7 +21,7 @@ const HeaderOne = () => {
         className={`header-1 ${sticky ? "sticky" : ""}`}
       >
         <div className="container-fluid">
-          <div className="mega-menu-wrapper">
+          <div >
             <div className="header-main d-flex align-items-center justify-content-between">
 
               {/* LEFT SECTION - LOGO */}
@@ -32,13 +32,13 @@ const HeaderOne = () => {
                     width: "auto",
                     display: "flex",
                     alignItems: "center",
-                    marginLeft: "0",
+                    marginLeft: "5px",
                     marginRight: "auto",
                   }}
                 >
                   <Link href="/" className="header-logo">
                     <img
-                      src="/assets/img/logo/logo-sz.svg"
+                      src="/assets/img/logo/logo.png"
                       alt="My Shiksha Sagar Logo"
                       className="logo-image"
                     />

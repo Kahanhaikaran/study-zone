@@ -10,10 +10,10 @@ const OffCanvas = ({setOpenCanvas, openCanvas} : any) => {
             <div className={`offcanvas__info ${openCanvas ? "info-open" : ""}`}>
                 <div className="offcanvas__wrapper">
                     <div className="offcanvas__content">
-                        <div className="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                        <div className="offcanvas__top mb-3 d-flex justify-content-between align-items-center">
                             <div className="offcanvas__logo">
                                 <Link href="/">
-                                    <img src="/assets/img/logo/logo-sz.svg" alt="MyShikshaSagar logo" />
+                                    <img src="/assets/img/logo/logo.png" alt="MyShikshaSagar logo" />
                                 </Link>
                             </div>
                             <div className="offcanvas__close" onClick={() => setOpenCanvas(false)}>

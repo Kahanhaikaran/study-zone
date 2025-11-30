@@ -16,9 +16,9 @@ const FooterOne = ({style_2} : any) => {
                                 <div className="widget-head">
                                     <div className="footer-brand">
                                         <Link href="/" className="footer-logo">
-                                            {style_2 ? <img src="/assets/img/logo/logo-sz.svg" alt="MyShikshaSagar logo" /> 
+                                            {style_2 ? <img src="/assets/img/logo/logo-foot.png" alt="My Shiksha Sagar logo" /> 
                                             :                                        
-                                            <img src="/assets/img/logo/logo-sz.svg" alt="MyShikshaSagar logo" />
+                                            <img src="/assets/img/logo/logo-foot.png" alt="My Shiksha Sagar logo" />
                                             }
                                         </Link>
                                         <p className="footer-brand-text">

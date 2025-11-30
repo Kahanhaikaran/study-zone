@@ -783,24 +783,25 @@
   .footer-brand {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
     flex-wrap: wrap;
 
     .footer-logo {
       display: block;
       transition: opacity 0.3s ease;
+      transform: scale(1.8);
       
       &:hover {
         opacity: 0.9;
       }
       
       img {
-        max-height: 80px;
-        height: 80px;
+        max-height: 140px;
+        height: 140px;
         width: auto;
         display: block;
-        object-fit: contain;
-        transform: none;
+        object-fit: cover;
+        transform: scale(1.8) !important;
         filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
         opacity: 1;
         transition: all 0.3s ease;
@@ -1744,26 +1745,26 @@
   .logo img,
   .logo .logo-image {
     display: block !important;
-    height: 72px !important;
-    max-height: 72px !important;
-    width: auto !important;
-    object-fit: contain !important;
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    height: 84px !important;
+    max-height: 84px !important;
+    width: 160% !important;
+    object-fit:cover !important;
+    transition: all 0.6s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
     opacity: 0.95;
     
     &:hover {
       opacity: 1;
       filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-      transform: translateY(-1px);
+      transform: translateY(-5px);
     }
   }
 
   @media (min-width: 1200px) {
     .logo img,
     .logo .logo-image {
-      height: 77px !important;
-      max-height: 77px !important;
+      height: 84px !important;
+      max-height: 84px !important;
     }
   }
 
