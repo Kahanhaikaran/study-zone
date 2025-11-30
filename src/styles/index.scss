@@ -759,7 +759,15 @@
   &:not(.footer-bg) {
     background: #ffffff;
   }
-  padding: clamp(32px, 4vw, 60px) 0 clamp(24px, 4vw, 50px);
+  padding: clamp(20px, 2.5vw, 45px) 0 clamp(20px, 3vw, 45px);
+
+  .footer-widget-wrapper {
+    margin-top: -15px;
+    
+    @media (max-width: 991px) {
+      margin-top: -10px;
+    }
+  }
 
   .footer-widget-wrapper .row {
     row-gap: clamp(16px, 3vw, 30px);
@@ -774,6 +782,15 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @media (max-width: 991px) {
+      padding: clamp(16px, 2.5vw, 22px);
+    }
+
+    @media (max-width: 575px) {
+      padding: clamp(14px, 2vw, 18px);
+      gap: 12px;
+    }
   }
 
   .widget-head {
@@ -912,6 +929,13 @@
       min-width: 220px;
       margin: 0;
       color: rgba(15, 23, 42, 0.7);
+      font-size: clamp(13px, 1.2vw, 15px);
+      line-height: 1.5;
+
+      @media (max-width: 575px) {
+        min-width: auto;
+        font-size: 13px;
+      }
     }
   }
 
@@ -968,8 +992,8 @@
 
   .footer-bottom {
     border-top: 1px solid rgba(15, 23, 42, 0.08);
-    margin-top: clamp(24px, 4vw, 40px);
-    padding-top: 18px;
+    margin-top: clamp(20px, 3vw, 35px);
+    padding-top: clamp(14px, 2vw, 18px);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -985,11 +1009,22 @@
     p {
       margin: 0;
       color: rgba(15, 23, 42, 0.72);
+      font-size: clamp(13px, 1.2vw, 15px);
+      line-height: 1.5;
+
+      @media (max-width: 575px) {
+        font-size: 12px;
+      }
     }
 
     a {
       font-weight: 600;
       color: #0057ff;
+      word-break: break-word;
+
+      @media (max-width: 575px) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -1066,6 +1101,149 @@
         color: #ffd25d;
       }
     }
+  }
+}
+
+// Footer name "Gyan Ka Mahasagar" responsive fixes
+.footer-name {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  padding: clamp(5px, 1.5vw, 15px) 0 clamp(5px, 1vw, 10px) 0 !important;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: auto !important;
+  min-height: 0 !important;
+
+  h2 {
+    font-size: clamp(32px, 5vw, 120px) !important;
+    letter-spacing: clamp(-2px, -0.3vw, -4px) !important;
+    word-break: break-word;
+    line-height: 1.1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+
+    @media (max-width: 1199px) {
+      font-size: clamp(28px, 5.5vw, 90px) !important;
+      white-space: normal;
+    }
+
+    @media (max-width: 991px) {
+      font-size: clamp(24px, 6vw, 60px) !important;
+      letter-spacing: -1px !important;
+      white-space: normal;
+    }
+
+    @media (max-width: 767px) {
+      font-size: clamp(20px, 6.5vw, 45px) !important;
+      letter-spacing: 0px !important;
+    }
+
+    @media (max-width: 575px) {
+      font-size: clamp(18px, 7vw, 35px) !important;
+      letter-spacing: 0px !important;
+      white-space: normal;
+    }
+  }
+
+  // Hide empty white strap at bottom
+  &:empty {
+    display: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 0 !important;
+  }
+}
+
+// Remove white space/strap at bottom of page
+body {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+html {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+// Remove any extra white space at bottom of footer
+footer.footer-section {
+  padding-bottom: clamp(20px, 3vw, 40px) !important;
+  position: relative;
+  
+  &::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  // Remove any white strap/empty space
+  .footer-name:empty {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  // Remove white strap completely
+  .footer-name {
+    padding-bottom: clamp(5px, 1vw, 15px) !important;
+    margin-bottom: 0 !important;
+    min-height: 0 !important;
+  }
+}
+
+// Scroll to top button - Navy blue circular button
+.back-to-top {
+  border-radius: 50% !important;
+  background-color: #005BFF !important; // Navy blue
+  width: 50px !important;
+  height: 50px !important;
+  line-height: 50px !important;
+  color: #ffffff !important;
+  font-size: 18px !important;
+  position: fixed !important;
+  display: inline-block !important;
+  z-index: 9999 !important;
+  right: 30px !important;
+  bottom: 30px !important;
+  border: none !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  box-shadow: 0 4px 12px rgba(0, 91, 255, 0.3) !important;
+  transition: all 0.4s ease-in-out !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(20px) !important;
+
+  &:hover {
+    background-color: #031F42 !important; // Darker navy on hover
+    color: #ffffff !important;
+    box-shadow: 0 6px 16px rgba(0, 91, 255, 0.4) !important;
+    transform: translateY(-2px) !important;
+  }
+
+  &.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+
+  i {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  @media (max-width: 767px) {
+    width: 45px !important;
+    height: 45px !important;
+    line-height: 45px !important;
+    right: 20px !important;
+    bottom: 20px !important;
+    font-size: 16px !important;
   }
 }
 
@@ -1815,16 +1993,28 @@
 
   @media (max-width: 767px) {
     .logo {
-      min-width: 320px;
+      min-width: auto;
+      max-width: 200px;
     }
 
     .logo img {
       height: 48px;
-      width: 100%;
+      width: auto;
+      max-width: 100%;
     }
 
     .header-button {
       display: none;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .logo {
+      max-width: 180px;
+    }
+
+    .logo img {
+      height: 42px;
     }
   }
 

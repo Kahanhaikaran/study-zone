@@ -25,11 +25,11 @@ const ScrollToTop = ({ style }: style_type) => {
 	useEffect(() => {
 		window.addEventListener("scroll", checkScrollTop);
 		return () => window.removeEventListener("scroll", checkScrollTop);
-	}, []);
+	}, [showScroll]);
 
 	return (
 		<> 
-			<button id="back-top" className={`back-to-top ${sticky && "show"}`} onClick={scrollTop}>
+			<button id="back-top" className={`back-to-top ${showScroll ? "show" : ""}`} onClick={scrollTop}>
 				<i className="fas fa-long-arrow-up"></i>
 			</button>
 		</>
