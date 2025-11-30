@@ -111,7 +111,7 @@ const FooterOne = ({style_2} : any) => {
             </div>
             <div className={`footer-name ${style_2 ? "style-2" : ""}`}>
                 <h2>
-                    Study smarter with us
+                    Gyan Ka Mahasagar
                 </h2>
             </div>
         </footer>
