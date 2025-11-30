@@ -10,6 +10,7 @@ interface DataType {
 	title: string;
 	link: string;
 	sub_menus?: SubMenu[];
+	hidden?: boolean;
 }
 
 const servicesMenus: SubMenu[] = services.map((service) => ({
@@ -48,6 +49,12 @@ const menu_data: DataType[] = [
 		id: 6,
 		title: "FAQ",
 		link: "/#faq",
+	},
+	{
+		id: 7,
+		title: "Payment",
+		link: "/payment",
+		hidden: true,
 	},
 ];
 

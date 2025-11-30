@@ -27,7 +27,7 @@ const MobileMenu = () => {
 				</a>
 				<nav className="mean-nav">
 					<ul>
-						{menu_data.map((item) => (
+						{menu_data.filter(item => !item.hidden).map((item) => (
 							<li key={item.id} className={item.sub_menus ? "has-dropdown" : ""}>
 								<Link href={item.link}>{item.title}</Link>
 								{item.sub_menus && (

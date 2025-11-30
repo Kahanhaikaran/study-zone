@@ -44,10 +44,10 @@ const FooterOne = ({style_2} : any) => {
                                    <h3>Key Services</h3>
                                 </div>
                                 <ul className="list-area">
-                                    <li><Link href="/services">Assignments & Case Studies</Link></li>
-                                    <li><Link href="/services">Projects & Viva Decks</Link></li>
-                                    <li><Link href="/services">Exam Notes & Handwriting</Link></li>
-                                    <li><Link href="/services">Dissertations & Thesis Support</Link></li>
+                                    <li><Link href="/services/assignment-writing">Assignments & Case Studies</Link></li>
+                                    <li><Link href="/services/dissertation-writing-service-2025">Projects & Viva Decks</Link></li>
+                                    <li><Link href="/services/study-materials">Exam Notes & Handwriting</Link></li>
+                                    <li><Link href="/services/dissertation-writing-service-2025">Dissertations & Thesis Support</Link></li>
                                     <li><Link href="/services">Custom Academic Solutions</Link></li>
                                 </ul>
                             </div>
@@ -69,7 +69,7 @@ const FooterOne = ({style_2} : any) => {
                                             Sample Work
                                         </a>
                                     </li>
-                                    <li><Link href="/faq">FAQs</Link></li>
+                                    <li><Link href="/#faq">FAQs</Link></li>
                                     <li><Link href="/contact">Contact</Link></li>
                                 </ul>
                             </div>
