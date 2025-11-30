@@ -1,5 +1,4 @@
 import BreadcrumbEvent from "@/common/breadcrumb/BreadcrumbEvent";
-import MarqueeOne from "@/common/MarqueeOne";
 import FooterOne from "@/layouts/footers/FooterOne";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import React from "react";
@@ -11,7 +10,6 @@ const Pricing = () => {
 			<HeaderOne />
 			<BreadcrumbEvent title="Price List" subtitle="Price List" />
 			<PricingArea />       
-			<MarqueeOne style_2={true} />
 			<FooterOne />
 		</>
 	);

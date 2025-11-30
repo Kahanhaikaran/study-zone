@@ -56,7 +56,7 @@ const AboutArea = () => {
 									<div className="text wow fadeInUp" data-wow-delay=".5s">
 										<p>Need urgent help? Call or WhatsApp anytime for reliable, affordable academic assistance.</p>
 										<div className="d-flex gap-3 flex-wrap">
-											<a className="theme-btn style-2" href={phoneHref}>
+											<a className="theme-btn yellow-btn style-2" href={phoneHref}>
 												Call +91-8882309876
 											</a>
 											<a

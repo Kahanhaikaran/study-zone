@@ -149,7 +149,7 @@ Phone: ${formData.phone}`;
                     
                     <div className="col-12">
                       <div className="form-submit">
-                        <button type="submit" className="theme-btn">
+                        <button type="submit" className="theme-btn yellow-btn">
                           Get Price
                           <i className="fas fa-arrow-right"></i>
                         </button>

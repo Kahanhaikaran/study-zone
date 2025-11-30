@@ -12,10 +12,10 @@ const contactDetails = [
 	},
 	{
 		label: "Email",
-		value: "support@Shiksha Sagar.in",
+		value: "myShikshaSagar@gmail.com",
 		subtext: "Send detailed requirements",
 		icon: "fas fa-envelope-open-text",
-		link: "mailto:support@Shiksha Sagar.in",
+		link: "mailto:myShikshaSagar@gmail.com",
 	},
 	{
 		label: "Support Hours",
@@ -26,7 +26,7 @@ const contactDetails = [
 	{
 		label: "Service Region",
 		value: "India (Global delivery)",
-		subtext: "Online/Offline assistance",
+		subtext: "Online/ Offline assistance",
 		icon: "fas fa-globe",
 	},
 ];
@@ -81,7 +81,7 @@ const ContactArea = () => {
 							<a href="tel:+918882309876" className="theme-btn yellow-btn">
 								Call Now
 							</a>
-							<a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer" className="theme-btn hover-white">
+							<a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer" className="theme-btn yellow-btn style-2">
 								WhatsApp
 							</a>
 						</div>

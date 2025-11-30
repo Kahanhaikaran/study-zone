@@ -31,9 +31,9 @@ const FooterOne = ({style_2} : any) => {
                                         Is the burden of studies weighing you down? We craft assignments, projects, notes, and dissertations that let you focus on learning while we handle the paperwork.
                                     </p>
                                     <div className="social-icon">
-                                        <a href="https://www.instagram.com" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-                                        <a href="https://www.linkedin.com" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
-                                        <a href="https://wa.me/917303628683" aria-label="WhatsApp"><i className="fab fa-whatsapp"></i></a>
+                                        <a href="https://www.facebook.com/profile.php?id=61580290574882" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com/acade_mixpro?igsh=MWY3a3VyNzk1bTE4dg==" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+                                        <a href="https://wa.me/917303628683" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@ const FooterOne = ({style_2} : any) => {
                                         </li>
                                         <li>
                                             <span className="label">Email</span>
-                                            <a href="mailto:hello@Shiksha Sagar.in" className="link">hello@Shiksha Sagar.in</a>
+                                            <a href="mailto:myShikshaSagar@gmail.com" className="link">myShikshaSagar@gmail.com</a>
                                         </li>
                                         <li>
                                             <span className="label">Call</span>

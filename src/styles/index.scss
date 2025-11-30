@@ -525,18 +525,19 @@
         text-align: left;
       }
 
+      span {
+        font-size: clamp(12px, 1.2vw, 14px);
+        display: block;
+        margin-bottom: clamp(14px, 0.8vw, 10px);
+      }
+
       h1 {
-        // Slightly smaller so a single line doesn’t collide with the hero image
-        // while still feeling like a strong headline.
-        font-size: clamp(1.6rem, 2.2vw, 2.4rem);
-        line-height: 1.18;
-        letter-spacing: -0.02em;
+        font-size: clamp(24px, 1.5vw, 16px);
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         margin-top: clamp(4px, 0.7vw, 8px);
         margin-bottom: clamp(6px, 0.9vw, 10px);
-        
-        @media (min-width: 1400px) {
-          white-space: nowrap;
-        }
+        white-space: normal;
       }
 
       p {
@@ -744,10 +745,122 @@
     gap: 16px;
     flex-wrap: wrap;
 
-    .footer-logo img {
-      max-height: 56px;
-      width: auto;
+    .footer-logo {
       display: block;
+      transition: opacity 0.3s ease;
+      
+      &:hover {
+        opacity: 0.9;
+      }
+      
+      img {
+        max-height: 80px;
+        height: 80px;
+        width: auto;
+        display: block;
+        object-fit: contain;
+        transform: none;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        opacity: 1;
+        transition: all 0.3s ease;
+        mix-blend-mode: normal;
+        
+        &:hover {
+          opacity: 1;
+          filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+        }
+      }
+
+      svg {
+        max-height: 80px;
+        height: 80px;
+        width: auto;
+        display: block;
+        transform: none !important;
+        transform-origin: center center !important;
+        mix-blend-mode: normal;
+        opacity: 1;
+        filter: none !important;
+        
+        // Light blue for background elements - make it more visible
+        path[fill="#02326D"],
+        path[fill="#02326E"],
+        path[fill="#03336F"],
+        path[fill="#033370"],
+        path[fill="#03326F"],
+        path[fill="#043370"],
+        path[fill="#04497D"],
+        path[fill="#02477B"],
+        path[fill="#05336E"],
+        path[fill="#063571"] {
+          fill: #7DB8FF !important;
+        }
+
+        // Golden yellow for "Shiksha" text - make it more vibrant
+        path[fill="#FED437"],
+        path[fill="#FEAE27"],
+        path[fill="#FDAC26"],
+        path[fill="#FEAA1F"],
+        path[fill="#FEA91D"],
+        path[fill="#FEA81E"],
+        path[fill="#FEA91E"],
+        path[fill="#FEAA20"],
+        path[fill="#FEAB1D"],
+        path[fill="#FEAB1E"],
+        path[fill="#FEAC1C"],
+        path[fill="#FEAD20"],
+        path[fill="#FEAE22"],
+        path[fill="#FEAE24"],
+        path[fill="#FEF88F"],
+        path[fill="#FEF887"],
+        path[fill="#FEF788"],
+        path[fill="#FEF88E"],
+        path[fill="#FECF2D"],
+        path[fill="#FED33C"],
+        path[fill="#EEB62F"] {
+          fill: #FFC107 !important;
+        }
+
+        // Light cream/white for "My" text - make it more visible
+        path[fill="#FDF8EA"] {
+          fill: #E0F2FE !important;
+        }
+
+        // White background - keep it white
+        path[fill="#FFFFFF"],
+        path[fill="#FAF8EF"],
+        path[fill="#FEF8EC"],
+        path[fill="#F6F5EE"],
+        path[fill="#F9F7EF"],
+        path[fill="#C9D3D2"],
+        path[fill="#E3ECEE"],
+        path[fill="#FEEFD2"],
+        path[fill="#FCF8EA"],
+        path[fill="#FEF7E0"],
+        path[fill="#DCE8EC"],
+        path[fill="#EFF4F2"],
+        path[fill="#EEF3F2"] {
+          fill: #FFFFFF !important;
+        }
+      }
+
+      @media (max-width: 991px) {
+        img,
+        svg {
+          height: 70px !important;
+          max-height: 70px !important;
+          transform: none !important;
+        }
+      }
+
+      @media (max-width: 575px) {
+        img,
+        svg {
+          height: 60px !important;
+          max-height: 60px !important;
+          transform: none !important;
+        }
+      }
     }
 
     .footer-brand-text {
@@ -846,6 +959,21 @@
 
     .widget-head h3 {
       color: #fff;
+    }
+
+    .footer-brand {
+      .footer-logo {
+        img {
+          opacity: 1;
+          filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+        }
+
+        svg {
+          opacity: 1;
+          filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+          mix-blend-mode: normal;
+        }
+      }
     }
 
     .footer-brand-text,
@@ -1245,10 +1373,41 @@
           align-items: center;
           justify-content: center;
           border-radius: 999px;
+          position: relative;
+          overflow: hidden;
+          z-index: 2;
+
+          &::after,&::before {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            background-color: #031f42;
+            transition: 1s ease;
+          }
+
+          &::before {
+            top: -2em;
+            left: -2em;
+          }
+
+          &::after {
+            left: calc(100% + 2em);
+            top: calc(100% + 2em);
+          }
 
           &:hover {
-            background: #f8be26;
-            color: #031f42;
+            color: #fff;
+            box-shadow: none;
+
+            &::after,&::before {
+              height: 410px;
+              width: 410px;
+            }
           }
         }
       }
@@ -1502,17 +1661,82 @@
 // Header adjustments: slimmer bar + responsive logo sizing
 .header-1 {
   .header-main {
-    padding: clamp(6px, 1vw, 10px) 0;
+    padding: clamp(6px, 0.8vw, 8px) 0;
+    min-height: 60px !important;
+    justify-content: flex-start !important;
+    gap: 40px !important;
 
     @media (max-width: 575px) {
       padding: 6px 0;
     }
   }
 
-  .logo img {
-    display: block;
-    max-height: clamp(40px, 4vw, 46px);
-    width: auto;
+  .header-left {
+    max-width: none !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .logo {
+    width: auto !important;
+    min-width: unset !important;
+    max-width: none !important;
+    flex: 0 0 auto !important;
+    align-items: center !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .logo .header-logo {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    transition: opacity 0.3s ease;
+    
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .logo img,
+  .logo .logo-image {
+    display: block !important;
+    height: 70px !important;
+    max-height: 70px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    opacity: 0.95;
+    
+    &:hover {
+      opacity: 1;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+      transform: translateY(-1px);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .logo img {
+      height: 75px !important;
+      max-height: 75px !important;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .logo img {
+      height: 60px !important;
+      max-height: 60px !important;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .logo img {
+      height: 50px !important;
+      max-height: 50px !important;
+    }
   }
 
   .main-menu ul li a {
@@ -1535,8 +1759,13 @@
   }
 
   @media (max-width: 767px) {
+    .logo {
+      min-width: 320px;
+    }
+
     .logo img {
-      max-height: 46px;
+      height: 48px;
+      width: 100%;
     }
 
     .header-button {
@@ -1582,3 +1811,423 @@
 //   text-transform: uppercase;
 //   background: rgba(255, 255, 255, 0.55);
 // }
+
+// Header z-index fix
+.header-1 {
+  position: relative;
+  z-index: 1000 !important;
+  
+  &.sticky {
+    z-index: 1000 !important;
+  }
+}
+
+// Hero responsive styles
+.hero-section {
+  position: relative;
+  z-index: 1;
+  
+  .hero-content {
+    position: relative;
+    z-index: 1 !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 20px !important;
+    white-space: nowrap !important;
+    
+    @media (max-width: 991px) {
+      font-size: 18px !important;
+      white-space: nowrap !important;
+    }
+    
+    @media (max-width: 767px) {
+      font-size: 16px !important;
+      white-space: nowrap !important;
+    }
+    
+    @media (max-width: 575px) {
+      font-size: 14px !important;
+      white-space: nowrap !important;
+      padding-bottom: 8px !important;
+    }
+    
+    @media (max-width: 400px) {
+      font-size: 12px !important;
+      white-space: nowrap !important;
+    }
+  }
+
+  .hero-title {
+    line-height: 1.2 !important;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .hero-description {
+    font-size: clamp(13px, 1.4vw, 16px) !important;
+    line-height: 1.6 !important;
+
+    @media (max-width: 767px) {
+      font-size: clamp(12px, 1.2vw, 14px) !important;
+      line-height: 1.65 !important;
+      margin-bottom: 24px !important;
+    }
+
+    @media (max-width: 575px) {
+      font-size: clamp(11px, 1.1vw, 13px) !important;
+      line-height: 1.7 !important;
+      margin-bottom: 20px !important;
+    }
+  }
+
+  .hero-button {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+
+    @media (min-width: 992px) {
+      justify-content: flex-start;
+    }
+
+    @media (max-width: 575px) {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 30px !important;
+
+      .theme-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 24px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// Fix button colors - ensure yellow-btn is always yellow
+.theme-btn.yellow-btn {
+  background-color: #facc15 !important;
+  color: #0f172a !important;
+  
+  &:hover {
+    color: #ffffff !important;
+  }
+  
+  &.style-2 {
+    background-color: transparent !important;
+    border: 2px solid #facc15 !important;
+    color: #0f172a !important;
+    
+    &:hover {
+      background-color: #facc15 !important;
+      color: #ffffff !important;
+    }
+  }
+}
+
+// Fix pricing and contact form buttons
+.pricing-form-wrapper,
+.contact-cta-bar {
+  .theme-btn.yellow-btn {
+    background-color: #facc15 !important;
+    color: #0f172a !important;
+    
+    &:hover {
+      color: #ffffff !important;
+    }
+    
+    &.style-2 {
+      &:hover {
+        color: #ffffff !important;
+      }
+    }
+  }
+}
+
+// Mobile responsiveness fixes
+@media (max-width: 767px) {
+  // Fix container padding
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  // Fix text overflow issues
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  // Fix button spacing on mobile
+  .theme-btn {
+    padding: 16px 24px !important;
+    font-size: 14px !important;
+    white-space: nowrap;
+  }
+  
+  // Fix service cards on mobile
+  .service-card-lite {
+    margin-bottom: 20px;
+  }
+  
+  // Fix about stats on mobile
+  .about-stats {
+    flex-direction: column;
+    gap: 20px;
+    
+    .stat {
+      text-align: center;
+    }
+  }
+  
+  // Fix contact cards on mobile
+  .contact-info-card {
+    margin-bottom: 20px;
+  }
+  
+  // Fix pricing form on mobile
+  .pricing-form {
+    .form-group {
+      margin-bottom: 20px;
+    }
+  }
+  
+  // Fix FAQ accordion on mobile
+  .accordion-button {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+  
+  // Fix section padding on mobile
+  .section-padding {
+    padding: 50px 0 !important;
+  }
+  
+  // Fix hero buttons stacking
+  .hero-button {
+    .theme-btn {
+      width: 100%;
+      margin-bottom: 10px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  // Fix about actions buttons
+  .about-actions {
+    flex-direction: column;
+    gap: 12px;
+    
+    .theme-btn {
+      width: 100%;
+    }
+  }
+  
+  // Fix contact CTA bar
+  .contact-cta-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    
+    .cta-actions {
+      flex-direction: column;
+      width: 100%;
+      
+      .theme-btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  // Extra small mobile fixes
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  // Fix font sizes
+  h1 {
+    font-size: clamp(24px, 6vw, 34px) !important;
+  }
+  
+  h2 {
+    font-size: clamp(20px, 5vw, 28px) !important;
+  }
+  
+  h3 {
+    font-size: clamp(18px, 4.5vw, 24px) !important;
+  }
+  
+  // Fix buttons
+  .theme-btn {
+    padding: 14px 20px !important;
+    font-size: 13px !important;
+  }
+  
+  // Fix cards padding
+  .service-card-lite,
+  .contact-info-card,
+  .info-panel {
+    padding: 18px 16px !important;
+  }
+  
+  // Fix pill groups
+  .pill-group {
+    gap: 8px;
+    
+    .pill {
+      font-size: 11px;
+      padding: 10px 12px;
+    }
+  }
+  
+  // Fix service cards on extra small screens
+  .service-card-lite {
+    .head-text h4 {
+      font-size: 15px !important;
+    }
+    
+    p {
+      font-size: 12px !important;
+    }
+  }
+  
+  // Fix section titles
+  .section-title {
+    h2 {
+      font-size: clamp(22px, 6vw, 32px) !important;
+      line-height: 1.3 !important;
+    }
+    
+    p {
+      font-size: 14px !important;
+    }
+  }
+  
+  // Prevent horizontal scroll
+  body {
+    overflow-x: hidden;
+  }
+  
+  // Fix images
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  // Fix tables if any
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+// General mobile fixes for all screen sizes
+@media (max-width: 991px) {
+  // Fix navigation menu
+  .main-menu {
+    ul {
+      flex-direction: column;
+    }
+  }
+  
+  // Fix grid layouts
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+    
+    [class*="col-"] {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+// Fix for very small screens
+@media (max-width: 375px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .theme-btn {
+    padding: 12px 18px !important;
+    font-size: 12px !important;
+  }
+  
+  h1 {
+    font-size: 22px !important;
+  }
+  
+  h2 {
+    font-size: 20px !important;
+  }
+}
+
+// Fix email address wrapping in contact cards
+.contact-info-card {
+  min-width: 0; // Allow card to shrink
+  overflow: hidden; // Prevent content from going outside
+  
+  .value {
+    font-size: 18px !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    line-height: 1.4 !important;
+    display: block !important;
+    max-width: 100% !important;
+    
+    @media (max-width: 991px) {
+      font-size: 16px !important;
+    }
+    
+    @media (max-width: 767px) {
+      font-size: 14px !important;
+    }
+    
+    @media (max-width: 575px) {
+      font-size: 13px !important;
+    }
+    
+    @media (max-width: 400px) {
+      font-size: 12px !important;
+    }
+  }
+  
+  a.value {
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
+    max-width: 100% !important;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Fix offcanvas button styling
+.offcanvas-button {
+  .theme-btn.yellow-btn {
+    background-color: #facc15 !important;
+    color: #0f172a !important;
+    border: none !important;
+    
+    &:hover {
+      color: #ffffff !important;
+    }
+  }
+}

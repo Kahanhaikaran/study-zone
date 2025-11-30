@@ -25,9 +25,9 @@ const OffCanvas = ({setOpenCanvas, openCanvas} : any) => {
                         <h3 className="offcanvas-title">Need academic support?</h3>
                         <p>We respond daily between <strong>10 AM – 11 PM IST</strong>. Choose a channel below and get a plan within minutes.</p>
                         <div className="social-icon d-flex align-items-center">
-                            <a href="https://www.instagram.com" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
-                            <a href="https://wa.me/917303628683" aria-label="WhatsApp"><i className="fab fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61580290574882" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/acade_mixpro?igsh=MWY3a3VyNzk1bTE4dg==" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/917303628683" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
                         </div>
                         <div className="mobile-menu fix mb-3 mean-container">
                           <MobileMenu />
@@ -57,7 +57,7 @@ const OffCanvas = ({setOpenCanvas, openCanvas} : any) => {
                                     <span>
                                         Email: {" "}
                                     </span>
-                                    <a href="mailto:support@ShikshaSagar.in">support@Shiksha Sagar.in</a>
+                                    <a href="mailto:myShikshaSagar@gmail.com">myShikshaSagar@gmail.com</a>
                                 </li>
                                 <li>
                                     <span>
@@ -67,7 +67,7 @@ const OffCanvas = ({setOpenCanvas, openCanvas} : any) => {
                                 </li>
                             </ul>
                             <div className="offcanvas-button">
-                                <a href="tel:+918882309876" className="theme-btn style-2"><i className="far fa-phone"></i> Call Now</a>
+                                <a href="tel:+918882309876" className="theme-btn yellow-btn"><i className="far fa-phone"></i> Call Now</a>
                                 <a href="https://wa.me/917303628683" className="theme-btn yellow-btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                             </div>
                         </div>

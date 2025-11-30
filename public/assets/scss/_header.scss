@@ -7,8 +7,11 @@
 .header-main {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	padding: 10px 0;
+	justify-content: flex-start;
+	padding: 12px 0;
+	min-height: 80px;
+	overflow: visible;
+	gap: 40px;
 	
 	.main-menu {
 		ul {
@@ -230,6 +233,7 @@
 
 	.header-right {
 		gap: 30px;
+		margin-left: auto;
 
 		@include breakpoint (max-xxl){
 			gap: 20px;
@@ -248,31 +252,58 @@
 	}
 }
 
-.marquee-section {
-    &.style-header {
-        .scrolling-wrap {
-
-        }
-    }
-}
+// Marquee section styling
 
 //>>>>> Header 01 Start <<<<<//
 .header-1 {
 	.logo {
-		display: inline-flex;
-		align-items: center;
-		min-width: 140px;
+		display: flex !important;
+		align-items: center !important;
+		width: auto !important;
+		min-width: unset !important;
 		flex-shrink: 0;
-		height: 58px;
-		overflow: visible;
+		margin-left: 0 !important;
+		margin-right: auto !important;
 
-		img {
-			// Very bold logo size as requested
-			height: 300px;
-			max-width: 300px;
-			width: auto;
-			display: block;
-			transition: transform 0.25s ease;
+		.header-logo {
+			display: block !important;
+			width: auto !important;
+			height: auto !important;
+			transition: opacity 0.3s ease;
+			
+			&:hover {
+				opacity: 0.9;
+			}
+		}
+
+		img,
+		.logo-image {
+			width: auto !important;
+			height: 150px !important;
+			max-height: 150px !important;
+			object-fit: contain !important;
+			transform: scaleX(1.15) !important;
+			transform-origin: left center !important;
+			display: block !important;
+			transition: all 0.3s ease;
+			filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+			opacity: 1;
+			mix-blend-mode: normal;
+			
+			&:hover {
+				opacity: 1;
+				filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+				transform: scaleX(1.15) translateY(-1px) !important;
+			}
+		}
+
+		svg {
+			width: auto !important;
+			height: 150px !important;
+			max-height: 150px !important;
+			transform: scaleX(1.15) !important;
+			transform-origin: left center !important;
+			display: block !important;
 		}
 
 		.logo-mark {
@@ -281,23 +312,26 @@
 		}
 
 		@include breakpoint (max-lg) {
-			min-width: auto;
-
-			img {
-				height: 56px;
-			}
-
-			.logo-mark {
-				transform: none;
+			img,
+			.logo-image,
+			svg {
+				height: 120px !important;
+				max-height: 120px !important;
+				transform: scaleX(1.12) !important;
 			}
 		}
 
 		@include breakpoint (max-sm) {
-			img {
-				height: 52px;
+			img,
+			.logo-image,
+			svg {
+				height: 100px !important;
+				max-height: 100px !important;
+				transform: scaleX(1.1) !important;
 			}
 		}
 	}
+
 
 	.container-fluid {
 		padding: 0 70px;
@@ -314,26 +348,29 @@
 	.header-left {
 		@include flex;
 		gap: 50px;
-		max-width: 415px;
-		width: 100%;
+		max-width: none;
+		width: auto;
+		flex: 0 0 auto;
+		margin-left: 0 !important;
+		margin-right: auto !important;
 
 		@include breakpoint (max-xl4){
-			max-width: 360px;
+			max-width: none;
 			gap: 25px;
 		}
 
 		@include breakpoint (max-xxxl){
-			max-width: 340px;
+			max-width: none;
 		}
 
 		@include breakpoint (max-xxl){
-			max-width: initial;
-			width: initial;
+			max-width: none;
+			width: auto;
 		}
 
 		@include breakpoint (max-xl){
-			max-width: 415px;
-			width: 100%;
+			max-width: none;
+			width: auto;
 		}
 
 		.category-oneadjust{
@@ -450,6 +487,22 @@
                     i {
                         margin-left: 0;
                         margin-right: 0;
+                    }
+
+                    // Ensure yellow-btn style-2 also has the hover effect
+                    &.yellow-btn {
+                        background-color: transparent;
+                        border: 1px solid $theme-yellow;
+                        color: $theme-yellow;
+                        
+                        &::after,&::before {
+                            background-color: $header-color;
+                        }
+
+                        &:hover {
+                            color: $white;
+                            border-color: $header-color;
+                        }
                     }
                 }
             }
@@ -1064,6 +1117,43 @@
 	animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 	box-shadow: $shadow;
 
+	.logo {
+		img,
+		.logo-image {
+			height: 150px !important;
+			max-height: 150px !important;
+			transform: scaleX(1.15) !important;
+			transform-origin: left center !important;
+		}
+
+		svg {
+			height: 150px !important;
+			max-height: 150px !important;
+			transform: scaleX(1.15) !important;
+			transform-origin: left center !important;
+		}
+
+		@include breakpoint (max-lg) {
+			img,
+			.logo-image,
+			svg {
+				height: 120px !important;
+				max-height: 120px !important;
+				transform: scaleX(1.12) !important;
+			}
+		}
+
+		@include breakpoint (max-sm) {
+			img,
+			.logo-image,
+			svg {
+				height: 100px !important;
+				max-height: 100px !important;
+				transform: scaleX(1.1) !important;
+			}
+		}
+	}
+
 	&.header-2 {
 		.header-logo {
 			display: block;
@@ -1227,8 +1317,38 @@
 
 .offcanvas__logo {
 	a {
-		img {
-			width: 150px;
+		display: block;
+		transition: opacity 0.3s ease;
+		
+		&:hover {
+			opacity: 0.9;
+		}
+		
+		img,
+		svg {
+			width: auto;
+			height: 160px;
+			max-height: 160px;
+			object-fit: contain;
+			transform: scaleX(1.15);
+			transform-origin: left center;
+			filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+			opacity: 1;
+			transition: all 0.3s ease;
+			
+			&:hover {
+				opacity: 1;
+				filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+			}
+		}
+
+		@include breakpoint (max-sm) {
+			img,
+			svg {
+				height: 110px;
+				max-height: 110px;
+				transform: scaleX(1.1);
+			}
 		}
 	}
 }

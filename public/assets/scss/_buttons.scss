@@ -94,11 +94,27 @@
     &.pink-btn {
         background-color: $theme-pink;
         color: $white;
+        
+        &::after,&::before {
+            background-color: $header-color;
+        }
+
+        &:hover {
+            color: $white;
+        }
     }
 
     &.theme-blue-2 {
         background-color: $theme-blue-2;
         color: $white;
+        
+        &::after,&::before {
+            background-color: $header-color;
+        }
+
+        &:hover {
+            color: $white;
+        }
     }
 
     @include breakpoint (max-sm){

@@ -58,10 +58,10 @@ const AboutPageSection = () => {
 									</li>
 								</ul>
 								<div className="about-actions wow fadeInUp" data-wow-delay=".6s">
-									<Link href="/services" className="theme-btn">
+									<Link href="/services" className="theme-btn yellow-btn">
 										View Services
 									</Link>
-									<a href="tel:+918882309876" className="theme-btn style-2">
+									<a href="tel:+918882309876" className="theme-btn yellow-btn">
 										Call +91-8882309876
 									</a>
 								</div>

@@ -19,10 +19,10 @@ const AboutHomeOne = () => {
 							freelance team tackles every academic requirement with speed, confidentiality, and clarity.
 						</p>
 						<div className="d-flex gap-3 flex-wrap mt-4 wow fadeInUp" data-wow-delay=".6s">
-							<Link href="/services" className="theme-btn">
+							<Link href="/services" className="theme-btn yellow-btn">
 								View Our Services
 							</Link>
-							<Link href="/about" className="theme-btn style-2">
+							<Link href="/about" className="theme-btn yellow-btn style-2">
 								Learn About Us
 							</Link>
 						</div>

@@ -23,19 +23,18 @@ const HeroHomeOne = () => {
                 <div className="row align-items-center g-5 hero-grid">
                     <div className="col-xl-5 col-lg-6">
                         <div className="hero-content text-center text-lg-start">
-                            <span className="wow fadeInUp">Study support that adapts to you</span>
-                            <h1 className="wow fadeInUp" data-wow-delay=".3s">
-                                Is the burden of studies
-                                weighing you down?
+                            <span className="hero-subtitle wow fadeInUp">Study support that adapts to you</span>
+                            <h1 className="hero-title wow fadeInUp" data-wow-delay=".3s">
+                                Is the burden of studies weighing you down?
                             </h1>
-                            <p className="wow fadeInUp" data-wow-delay=".5s">
+                            <p className="hero-description wow fadeInUp" data-wow-delay=".5s">
                                 We are the solution to every academic roadblock—assignments, dissertations, projects,
                                 notes, or exam guidance. Partner with our expert freelance team and achieve your goals
                                 with confidence, clarity, and zero stress.
                             </p>
                             <div className="hero-button wow fadeInUp" data-wow-delay=".7s">
-                                <Link href="/services" className="theme-btn hover-white">Explore Services</Link>
-                                <Link href="tel:+918882309876" className="theme-btn hover-white">Call +91-8882309876</Link>
+                                <Link href="/services" className="theme-btn yellow-btn">Explore Services</Link>
+                                <a href="tel:+918882309876" className="theme-btn yellow-btn">Call +91-8882309876</a>
                             </div>
                         </div>
                     </div>

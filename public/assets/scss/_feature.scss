@@ -105,7 +105,7 @@
             }
 
             &.text-color-2 {
-                color: $header-color;
+                color: $white;
             }
 		}
 	}
@@ -156,6 +156,9 @@
 
 .mycustom-marque {
 	&.style-3 {
+		background-color: $header-color;
+		border-top: 1px solid rgba(255, 255, 255, 0.08);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
 		.scrolling-wrap {
 			padding: 0;
@@ -163,7 +166,7 @@
 			.cmn-textslide {
 				font-size: 55px;
 				font-weight: 600;
-				color: $header-color;
+				color: $white;
 
 				@include breakpoint (max-md){
 					font-size: 40px;
@@ -175,7 +178,7 @@
 	
 				i {
 					font-size: 55px;
-					color: $theme-red;
+					color: $theme-yellow;
 
                     @include breakpoint (max-sm){
                         font-size: 44px;
@@ -210,7 +213,9 @@
 	}
 
 	&.theme-yellow-bg {
-		background-color: $theme-yellow-3;
+		background-color: $header-color;
+		border-top: 1px solid rgba(255, 255, 255, 0.08);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
 		.scrolling-wrap {
 			.comm {
@@ -221,18 +226,30 @@
 				cursor: pointer;
 			}
 			.cmn-textslide {
-				color: $header-color;
+				color: $white;
 	
 				i {
-					color: $header-color;
+					color: $theme-yellow;
 				}
 			}
 		}
 	}
 
 	&.theme-blue-bg-2 {
-		background-color: $theme-blue-2;
+		background-color: $header-color;
+		border-top: 1px solid rgba(255, 255, 255, 0.08);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 		position: static;
+
+		.scrolling-wrap {
+			.cmn-textslide {
+				color: $white;
+
+				i {
+					color: $theme-yellow;
+				}
+			}
+		}
 	}
 
 	&.style-two {

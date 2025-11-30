@@ -144,7 +144,7 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 								<h4>Need this service?</h4>
 								<p>Share your brief, word count, and deadline. We reply within minutes.</p>
 								<div className="d-flex flex-column gap-3 mt-4">
-									<a href="tel:+918882309876" className="theme-btn w-100 text-center">
+									<a href="tel:+918882309876" className="theme-btn yellow-btn w-100 text-center">
 										Call +91-8882309876
 									</a>
 									<a href="https://wa.me/917303628683" className="theme-btn yellow-btn w-100 text-center" target="_blank" rel="noopener noreferrer">

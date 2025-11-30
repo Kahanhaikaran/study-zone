@@ -4,9 +4,9 @@ import Link from "next/link";
 import { services } from "@/data/services";
 
 const cardThemes = [
-	{ icon: "fas fa-book-open", accent: "#ffcc4d" },
-	{ icon: "fas fa-pen-fancy", accent: "#2fd2b1" },
-	{ icon: "fas fa-lightbulb", accent: "#4c7df3" },
+	{ icon: "fas fa-book-open" },
+	{ icon: "fas fa-pen-fancy" },
+	{ icon: "fas fa-lightbulb" },
 ];
 
 const ServicesPage = () => {
@@ -30,7 +30,7 @@ const ServicesPage = () => {
 								{/* Light scroll animation without heavy staggering */}
 								<div className="service-card-lite courses-card-items h-100 wow fadeInUp" data-wow-delay=".05s">
 									<div className="service-card-head">
-										<div className="icon-circle" style={{ color: theme.accent }}>
+										<div className="icon-circle">
 											<i className={theme.icon}></i>
 										</div>
 										<div className="head-text">
@@ -47,19 +47,9 @@ const ServicesPage = () => {
 											</li>
 										))}
 									</ul>
-									<div className="service-card-footer">
-										<div className="footer-meta">
-											<strong>{service.deliverables.length}</strong>
-											<span>Deliverables</span>
-										</div>
-										<div className="footer-meta">
-											<strong>{service.highlights.length}</strong>
-											<span>Benefits</span>
-										</div>
-										<Link href={`/services/${service.slug}`} className="theme-btn yellow-btn flex-shrink-0">
-											View Details
-										</Link>
-									</div>
+									<Link href={`/services/${service.slug}`} className="theme-btn yellow-btn">
+										View Details
+									</Link>
 								</div>
 							</div>
 						);
@@ -74,20 +64,18 @@ const ServicesPage = () => {
 				.service-card-lite {
 					border-radius: 18px;
 					padding: 22px 20px;
-					background: #0d1930;
-					box-shadow: 0 14px 32px rgba(15, 23, 42, 0.45);
+					background: transparent;
+					box-shadow: 0 14px 32px rgba(15, 23, 42, 0.15);
 					border: 1px solid rgba(148, 163, 184, 0.18);
 					display: flex;
 					flex-direction: column;
 					gap: 14px;
 					height: 100%;
-					transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background-color 0.22s ease;
+					transition: transform 0.3s ease, box-shadow 0.3s ease;
 				}
 				.service-card-lite:hover {
-					transform: translateY(-4px);
-					box-shadow: 0 22px 55px rgba(15, 23, 42, 0.7);
-					border-color: rgba(250, 204, 21, 0.6);
-					background: #101f3a;
+					transform: translateY(-8px) scale(1.02);
+					box-shadow: 0 24px 60px rgba(15, 23, 42, 0.25), 0 8px 24px rgba(15, 23, 42, 0.15);
 				}
 				.service-card-head {
 					display: flex;
@@ -98,15 +86,16 @@ const ServicesPage = () => {
 					width: 46px;
 					height: 46px;
 					border-radius: 999px;
-					background: rgba(15, 23, 42, 0.85);
+					background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.15) 100%);
 					display: grid;
 					place-items: center;
 					font-size: 18px;
-					box-shadow: 0 10px 22px rgba(15, 23, 42, 0.7);
+					color: #3b82f6;
+					box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+					border: 1px solid rgba(59, 130, 246, 0.2);
 				}
 				.head-text h4 {
 					margin: 0;
-					color: #f9fafb;
 					font-size: 17px;
 				}
 				.tag {
@@ -116,55 +105,44 @@ const ServicesPage = () => {
 					color: rgba(148, 163, 184, 0.95);
 				}
 				p {
-					color: rgba(226, 232, 240, 0.9);
 					font-size: 13px;
 					margin-bottom: 4px;
 				}
 				.pill-group {
-					display: grid;
-					grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-					gap: 6px;
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
 					padding: 0;
-					margin: 4px 0 0;
+					margin: 12px 0 0;
 					list-style: none;
 				}
 				.pill {
 					display: flex;
-					align-items: center;
-					gap: 6px;
-					font-size: 12px;
-					padding: 7px 12px;
-					border-radius: 999px;
-					border: 1px solid rgba(148, 163, 184, 0.35);
-					background: rgba(15, 23, 42, 0.8);
-					color: rgba(229, 231, 235, 0.96);
+					align-items: flex-start;
+					gap: 10px;
+					font-size: 13px;
+					line-height: 1.5;
+					padding: 12px 14px;
+					border-radius: 12px;
+					border: 1px solid rgba(148, 163, 184, 0.2);
+					background: linear-gradient(135deg, rgba(249, 250, 251, 0.95) 0%, rgba(241, 245, 249, 0.9) 100%);
+					color: #1e293b;
+					transition: transform 0.25s ease, box-shadow 0.25s ease;
+					box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+				}
+				.pill:hover {
+					transform: translateY(-2px) scale(1.02);
+					box-shadow: 0 6px 16px rgba(15, 23, 42, 0.15), 0 2px 8px rgba(15, 23, 42, 0.1);
 				}
 				.pill i {
 					color: #22c55e;
-					font-size: 13px;
+					font-size: 14px;
+					margin-top: 2px;
+					flex-shrink: 0;
 				}
-				.service-card-footer {
-					display: flex;
-					align-items: flex-end;
-					justify-content: space-between;
-					gap: 14px;
-					padding-top: 14px;
-					border-top: 1px solid rgba(148, 163, 184, 0.35);
-					font-size: 12px;
-					color: rgba(148, 163, 184, 0.95);
-					flex-wrap: wrap;
-					margin-top: auto;
-				}
-				.footer-meta {
-					min-width: 90px;
-				}
-				.footer-meta strong {
-					display: block;
-					font-size: 18px;
-					color: #f9fafb;
-				}
-				.footer-meta span {
-					color: rgba(148, 163, 184, 0.95);
+				.pill span {
+					flex: 1;
+					font-weight: 500;
 				}
 				@media (max-width: 991px) {
 					.section-title p {
@@ -182,10 +160,6 @@ const ServicesPage = () => {
 					}
 				}
 				@media (max-width: 575px) {
-					.service-card-footer {
-						flex-direction: column;
-						align-items: flex-start;
-					}
 					.section-padding {
 						padding: 60px 0;
 					}

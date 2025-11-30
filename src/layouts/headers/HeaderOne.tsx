@@ -1,67 +1,90 @@
+"use client";
 
-"use client"
-
-import UseSticky from '@/hooks/UseSticky';
-import NiceSelect from '@/ui/NiceSelect';
-import Link from 'next/link';
-import React, { useState } from 'react';
-import NavMenu from './NavMenu';
-import MarqueeOne from '@/common/MarqueeOne';
-import OffCanvas from '@/common/OffCanvas';
+import UseSticky from "@/hooks/UseSticky";
+import Link from "next/link";
+import React, { useState } from "react";
+import NavMenu from "./NavMenu";
+import MarqueeOne from "@/common/MarqueeOne";
+import OffCanvas from "@/common/OffCanvas";
 
 const HeaderOne = () => {
-
-  const selectHandler = (e: any) => { };
-  const { sticky } = UseSticky()
-
-
-  const [openCanvas, setOpenCanvas] = useState(false)
-
+  const { sticky } = UseSticky();
+  const [openCanvas, setOpenCanvas] = useState(false);
 
   return (
     <>
-    <MarqueeOne />
-     <header id="header-sticky" className={`header-1 ${sticky ? "sticky" : ""}`}>
-            <div className="container-fluid">
-                <div className="mega-menu-wrapper">
-                    <div className="header-main">
-                        <div className="header-left">
-                            <div className="logo">
-                                <Link href="/" className="header-logo">
-                                    <img src="/assets/img/logo/logo-sz.svg" alt="logo-img" className="logo-mark" />
-                                </Link>
-                            </div>
-                            {/* Removed decorative dot cluster near logo */}
-                        </div>
-                        <div className="header-right d-flex justify-content-end align-items-center">
-                            <div className="mean__menu-wrapper">
-                                <div className="main-menu">
-                                    <nav id="mobile-menu">
-                                        <NavMenu />
-                                    </nav>
-                                </div>
-                            </div>
-                            <div className="header-button">
-                                {/* <Link href="/sign-in" className="theme-btn style-2"><i className="far fa-user"></i> Admin</Link> */}
-                                <Link href="/contact" className="theme-btn yellow-btn">Contact Us</Link>
-                            </div>
-                            <div className="header__hamburger d-xl-none my-auto">
-                                <div className="sidebar__toggle">
-                                    <div className="header-bar" onClick={ () => setOpenCanvas(!openCanvas)}>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+      {/* Top Scrolling Bar */}
+      <MarqueeOne />
 
-        <OffCanvas openCanvas={openCanvas} setOpenCanvas={setOpenCanvas} />
-      
+      <header
+        id="header-sticky"
+        className={`header-1 ${sticky ? "sticky" : ""}`}
+      >
+        <div className="container-fluid">
+          <div className="mega-menu-wrapper">
+            <div className="header-main d-flex align-items-center justify-content-between">
+
+              {/* LEFT SECTION - LOGO */}
+              <div className="header-left d-flex align-items-center">
+                <div
+                  className="logo"
+                  style={{
+                    width: "auto",
+                    display: "flex",
+                    alignItems: "center",
+                    marginLeft: "0",
+                    marginRight: "auto",
+                  }}
+                >
+                  <Link href="/" className="header-logo">
+                    <img
+                      src="/assets/img/logo/logo-sz.svg"
+                      alt="My Shiksha Sagar Logo"
+                      className="logo-image"
+                    />
+                  </Link>
+                </div>
+              </div>
+
+              {/* RIGHT SECTION */}
+              <div className="header-right d-flex align-items-center gap-4">
+
+                {/* MAIN MENU */}
+                <div className="main-menu d-none d-xl-block">
+                  <nav id="mobile-menu">
+                    <NavMenu />
+                  </nav>
+                </div>
+
+                {/* CONTACT BUTTON */}
+                <div className="header-button d-none d-xl-block">
+                  <Link href="/contact" className="theme-btn yellow-btn">
+                    Contact Us
+                  </Link>
+                </div>
+
+                {/* MOBILE HAMBURGER */}
+                <div className="header__hamburger d-xl-none">
+                  <div className="sidebar__toggle">
+                    <div
+                      className="header-bar"
+                      onClick={() => setOpenCanvas(!openCanvas)}
+                    >
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile Menu Drawer */}
+      <OffCanvas openCanvas={openCanvas} setOpenCanvas={setOpenCanvas} />
     </>
   );
 };

@@ -8,7 +8,6 @@ const academicFaqs = [
 		question: 'What types of academic work can you help me with?',
 		answer:
 			'We handle daily assignments, handwritten notes, lab files, reports, projects, presentations, viva decks, and long-form work like dissertations or theses. If it is part of your coursework or exam prep, we can guide or execute it end-to-end.',
-		defaultOpen: true,
 	},
 	{
 		id: 'collapseTwo',
@@ -69,11 +68,11 @@ const FaqArea = () => {
 												<div className={`accordion-item ${index === leftFaqs.length - 1 ? 'm-0' : ''}`} key={faq.id}>
 													<h2 className="accordion-header" id={faq.headingId}>
 														<button
-															className={`accordion-button ${index === 0 ? '' : 'collapsed'}`}
+															className="accordion-button collapsed"
 															type="button"
 															data-bs-toggle="collapse"
 															data-bs-target={`#${faq.id}`}
-															aria-expanded={index === 0}
+															aria-expanded="false"
 															aria-controls={faq.id}
 														>
 															{faq.question}
@@ -81,7 +80,7 @@ const FaqArea = () => {
 													</h2>
 													<div
 														id={faq.id}
-														className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
+														className="accordion-collapse collapse"
 														aria-labelledby={faq.headingId}
 														data-bs-parent="#accordionLeft"
 													>

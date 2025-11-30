@@ -303,11 +303,28 @@
         }
 
         .value {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             color: $header-color;
             display: block;
-            word-break: break-word;
+            word-break: break-all;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            line-height: 1.4;
+            max-width: 100%;
+            white-space: nowrap;
+            
+            @include breakpoint (max-lg){
+                font-size: 16px;
+            }
+            
+            @include breakpoint (max-md){
+                font-size: 14px;
+            }
+            
+            @include breakpoint (max-sm){
+                font-size: 13px;
+            }
         }
 
         .subtext {
