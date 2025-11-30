@@ -95,7 +95,9 @@ const FooterOne = ({style_2} : any) => {
                                         </li>
                                         <li>
                                             <span className="label">WhatsApp</span>
-                                            <a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer" className="link">Chat instantly</a>
+                                            <a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer" className="link">
+                                                Chat instantly <i className="fab fa-whatsapp" style={{ marginLeft: '6px' }}></i>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
