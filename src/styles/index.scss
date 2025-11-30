@@ -789,19 +789,21 @@
     .footer-logo {
       display: block;
       transition: opacity 0.3s ease;
-      transform: scale(1.8);
+      transform: scale(1.0);
+      max-width: 100%;
       
       &:hover {
         opacity: 0.9;
       }
       
       img {
-        max-height: 140px;
-        height: 140px;
+        max-height: 120px;
+        height: auto;
+        max-width: 100%;
         width: auto;
         display: block;
-        object-fit: cover;
-        transform: scale(1.8) !important;
+        object-fit: contain;
+        transform: scale(1.0) !important;
         filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
         opacity: 1;
         transition: all 0.3s ease;
@@ -889,8 +891,8 @@
       @media (max-width: 991px) {
         img,
         svg {
-          height: 70px !important;
-          max-height: 70px !important;
+          max-height: 90px !important;
+          height: auto !important;
           transform: none !important;
         }
       }
@@ -898,8 +900,8 @@
       @media (max-width: 575px) {
         img,
         svg {
-          height: 60px !important;
-          max-height: 60px !important;
+          max-height: 75px !important;
+          height: auto !important;
           transform: none !important;
         }
       }
