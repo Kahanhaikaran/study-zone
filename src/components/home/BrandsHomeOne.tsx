@@ -24,18 +24,18 @@ const BrandsHomeOne = () => {
 				<div className="container">
 					<div className="brands-shell">
 						<div className="section-head text-center">
-							<h3 className="headline">Students from India’s top campuses rely on Shiksha Sagar</h3>
-						</div>
-					<div className="brand-wrapper">
-						<div className="brand-tape">
-							{[...partnerUniversities, ...partnerUniversities].map((partner, index) => (
-								<div className="brand-pill" key={`${partner.name}-${index}`}>
-									<img src={partner.logo} alt={partner.name} />
-									<span>{partner.name}</span>
-								</div>
-							))}
+							<h3 className="headline">Students from India's top campuses rely on Shiksha Sagar</h3>
 						</div>
 					</div>
+				</div>
+				<div className="brand-wrapper">
+					<div className="brand-tape">
+						{[...partnerUniversities, ...partnerUniversities].map((partner, index) => (
+							<div className="brand-pill" key={`${partner.name}-${index}`}>
+								<img src={partner.logo} alt={partner.name} />
+								<span>{partner.name}</span>
+							</div>
+						))}
 					</div>
 				</div>
 			</section>
@@ -45,6 +45,7 @@ const BrandsHomeOne = () => {
 					background: #f6f7fb;
 					padding: clamp(10px, 2vw, 28px) 0 26px;
 					margin-top: clamp(8px, 2vw, 24px);
+					overflow: hidden;
 				}
 				.brands-highlight.slim {
 					padding: clamp(6px, 1.5vw, 20px) 0 clamp(12px, 2vw, 24px);
@@ -75,6 +76,11 @@ const BrandsHomeOne = () => {
 					position: relative;
 					padding: clamp(6px, 1vw, 12px) 0;
 					margin-top: clamp(6px, 1vw, 14px);
+					width: 100vw;
+					margin-left: calc(-50vw + 50%);
+					margin-right: calc(-50vw + 50%);
+					left: 0;
+					right: 0;
 				}
 				.brand-tape {
 					display: flex;
