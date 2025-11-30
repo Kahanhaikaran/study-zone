@@ -32,7 +32,11 @@ const BrandsHomeOne = () => {
 					<div className="brand-tape">
 						{[...partnerUniversities, ...partnerUniversities].map((partner, index) => (
 							<div className="brand-pill" key={`${partner.name}-${index}`}>
-								<img src={partner.logo} alt={partner.name} />
+								<img 
+									src={partner.logo} 
+									alt={partner.name}
+									className={partner.name === "Chandigarh University" || partner.name === "Galgotias University" ? "brand-logo-large" : ""}
+								/>
 								<span>{partner.name}</span>
 							</div>
 						))}
@@ -103,9 +107,19 @@ const BrandsHomeOne = () => {
 					box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
 
 					img {
-						height: clamp(24px, 3vw, 32px);
-						width: auto;
-						object-fit: contain;
+						height: clamp(24px, 3vw, 32px) !important;
+						max-height: clamp(24px, 3vw, 32px) !important;
+						max-width: clamp(24px, 3vw, 32px) !important;
+						width: auto !important;
+						object-fit: contain !important;
+						object-position: center !important;
+						flex-shrink: 0;
+					}
+					
+					.brand-logo-large {
+						max-width: clamp(20px, 2.5vw, 28px) !important;
+						max-height: clamp(20px, 2.5vw, 28px) !important;
+						height: clamp(20px, 2.5vw, 28px) !important;
 					}
 
 					span {
@@ -114,9 +128,6 @@ const BrandsHomeOne = () => {
 						color: rgba(15, 23, 42, 0.85);
 						white-space: nowrap;
 					}
-				}
-				.brand-wrapper:hover .brand-tape {
-					animation-play-state: paused;
 				}
 				@media (max-width: 991px) {
 					.brands-shell {

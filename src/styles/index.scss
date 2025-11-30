@@ -579,7 +579,7 @@
     box-shadow: 0 45px 80px rgba(4, 8, 20, 0.4);
     isolation: isolate;
     border: 1px solid rgba(255, 255, 255, 0.07);
-    width: min(520px, 100%);
+    width: min(580px, 100%);
     margin-left: auto;
     margin-right: auto;
 
@@ -609,9 +609,9 @@
 
     .stat-card {
       position: absolute;
-      width: clamp(170px, 32vw, 200px);
+      width: clamp(150px, 28vw, 180px);
       border-radius: 22px;
-      padding: 18px 22px;
+      padding: 14px 18px;
       background: #fff;
       box-shadow: 0 25px 55px rgba(7, 11, 28, 0.18);
       border: 1px solid rgba(3, 17, 43, 0.08);
@@ -619,16 +619,17 @@
       text-align: center;
 
       .label {
-        font-size: 13px;
+        font-size: 11px;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: #6b7280;
         display: block;
         text-align: center;
+        margin-bottom: 4px;
       }
 
       h3 {
-        font-size: 34px;
+        font-size: 28px;
         margin-bottom: 4px;
       }
 
@@ -642,11 +643,16 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 14px 16px;
-        gap: 6px;
+        padding: 12px 14px;
+        gap: 4px;
+
+        h3 {
+          font-size: 24px;
+        }
 
         .muted {
           margin-bottom: 0;
+          font-size: 12px;
         }
       }
 
