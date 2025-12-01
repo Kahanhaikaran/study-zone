@@ -22,7 +22,7 @@ const FooterOne = ({style_2} : any) => {
                                             }
                                         </Link>
                                         <p className="footer-brand-text">
-                                            Your on-demand academic studio for assignments, research, and exam prep.
+                                            {'\n'}Your on-demand academic studio for assignments, research, and exam prep.
                                         </p>
                                     </div>
                                 </div>
