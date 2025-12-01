@@ -20,7 +20,7 @@ export const services: Service[] = [
 			"References and suggested readings included",
 			"Editable formats for quick updates",
 		],
-		deliverables: ["Semester-wise notes", "Topic summaries", "Solved examples & Q/ A banks"],
+		deliverables: ["Semester-wise notes", "Topic summaries", "Solved examples & Q&A banks"],
 	},
 	{
 		slug: "assignment-writing",
@@ -37,7 +37,7 @@ export const services: Service[] = [
 	},
 	{
 		slug: "hand-writing",
-		title: "Hand-Writing Service",
+		title: "Handwriting Service",
 		tagline: "Neat handwritten copies that meet exam standards",
 		description:
 			"Perfect for practical submissions or viva-ready notebooks, our handwriting experts deliver clean, legible pages that look like your own voice.",
@@ -102,7 +102,7 @@ export const services: Service[] = [
 	},
 	{
 		slug: "phd-thesis-writing-service",
-		title: "PHD Thesis Writing Service",
+		title: "PhD Thesis Writing Service",
 		tagline: "Scholarly research support for doctoral aspirants",
 		description:
 			"Collaborate with subject experts for drafting, editing, and formatting your PhD thesis while maintaining confidentiality.",
@@ -133,7 +133,7 @@ export const services: Service[] = [
 		description:
 			"Get a persuasive research proposal with clear objectives, methodology, and feasibility sections tailored to your department’s template. We help you validate the problem statement and support it with early literature insights so faculty panels nod faster.",
 		highlights: [
-			"Aligned with UGC/ AICTE and university proposal formats",
+			"Aligned with UGC/AICTE and university proposal formats",
 			"Problem statement, objectives, and scope refined with expert feedback",
 			"Includes preliminary references, timelines, and budgeting cues",
 		],
