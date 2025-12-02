@@ -383,7 +383,20 @@ const Wrapper = ({ children }: any) => {
 										required
 									/>
 								</div>
-								<div className="form-group form-group-captcha">
+								<div className="form-group form-group-full">
+									<label htmlFor="query-message">Message</label>
+									<textarea
+										id="query-message"
+										name="message"
+										className="form-control"
+										rows={3}
+										placeholder="Describe your assignment, project, or exam help needed"
+										value={formState.message}
+										onChange={handleChange}
+										required
+									/>
+								</div>
+								<div className="form-group form-group-captcha form-group-full">
 									<label htmlFor="query-captcha">
 										Captcha: What is <span className="captcha-question">{captcha.question}</span>?
 									</label>
@@ -399,19 +412,6 @@ const Wrapper = ({ children }: any) => {
 											required
 										/>
 									</div>
-								</div>
-								<div className="form-group form-group-full query-message-group">
-									<label htmlFor="query-message">Message</label>
-									<textarea
-										id="query-message"
-										name="message"
-										className="form-control"
-										rows={3}
-										placeholder="Describe your assignment, project, or exam help needed"
-										value={formState.message}
-										onChange={handleChange}
-										required
-									/>
 								</div>
 							</div>
 							{formError && <p className="query-modal-error">{formError}</p>}

@@ -2705,11 +2705,11 @@ footer.footer-section {
 .query-modal-grid {
   display: grid;
   gap: 12px;
-  margin-bottom: 12px;
-  grid-template-columns: minmax(0, 1fr);
+  margin-bottom: 16px;
+  grid-template-columns: 1fr;
 
   @media (min-width: 576px) {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .form-group {
@@ -2718,10 +2718,6 @@ footer.footer-section {
 
   .form-group-full {
     grid-column: 1 / -1;
-  }
-
-  .query-message-group textarea {
-    min-height: 100px;
   }
 
   label {
