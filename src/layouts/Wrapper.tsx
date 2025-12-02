@@ -3,6 +3,7 @@
 import ScrollToTop from "@/common/ScrollToTop";
 import { animationCreate } from "@/utils/utils";
 import React, { useEffect, useState } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
 
 if (typeof window !== "undefined") {
 	require("bootstrap/dist/js/bootstrap");
@@ -26,6 +27,10 @@ const buildCaptcha = () => {
 };
 
 const Wrapper = ({ children }: any) => {
+	const pathname = usePathname();
+	const searchParams = useSearchParams();
+	const isHomePage = pathname === "/";
+
 	const [showQueryForm, setShowQueryForm] = useState(true);
 	const [captcha, setCaptcha] = useState(buildCaptcha);
 	const [formState, setFormState] = useState<QueryFormState>({
@@ -46,6 +51,43 @@ const Wrapper = ({ children }: any) => {
 
 		return () => clearTimeout(timer);
 	}, []);
+
+	// Auto-open query form when visiting home with ?openQueryForm=1
+	useEffect(() => {
+		if (!isHomePage) return;
+		const shouldOpen = searchParams?.get("openQueryForm") === "1";
+		if (shouldOpen) {
+			setShowQueryForm(true);
+		}
+	}, [isHomePage, searchParams]);
+
+	// Close or prevent showing the popup form on specific hash sections (e.g. testimonials, FAQ)
+	useEffect(() => {
+		if (!isHomePage || typeof window === "undefined") {
+			return;
+		}
+
+		const shouldHideForHash = (hash: string | null) => {
+			if (!hash) return false;
+			const clean = hash.toLowerCase();
+			return clean.includes("testimonials") || clean.includes("faq");
+		};
+
+		// Initial check on mount
+		if (shouldHideForHash(window.location.hash)) {
+			setShowQueryForm(false);
+		}
+
+		// Update when hash changes (e.g. clicking navbar links to #testimonials or #faq)
+		const handleHashChange = () => {
+			if (shouldHideForHash(window.location.hash)) {
+				setShowQueryForm(false);
+			}
+		};
+
+		window.addEventListener("hashchange", handleHashChange);
+		return () => window.removeEventListener("hashchange", handleHashChange);
+	}, [isHomePage]);
 
 	useEffect(() => {
 		if (typeof window === "undefined") {
@@ -327,7 +369,7 @@ const Wrapper = ({ children }: any) => {
 
 	return (
 		<>
-			{showQueryForm && (
+			{isHomePage && showQueryForm && (
 				<div className="query-modal-backdrop">
 					<div className="query-modal">
 						<button

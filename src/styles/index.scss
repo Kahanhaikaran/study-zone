@@ -1876,6 +1876,148 @@ footer.footer-section {
   }
 }
 
+// University detail pages
+.university-detail-page {
+  .section-title .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 13px;
+    color: rgba(3, 31, 66, 0.6);
+  }
+
+  .title {
+    font-size: clamp(30px, 3vw, 40px);
+  }
+
+  .university-accordion {
+    border-radius: 16px;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  .ua-panel {
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  .ua-header {
+    list-style: none;
+    cursor: pointer;
+    padding: 16px 22px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 15px;
+    background: #fef2f2;
+    color: #b91c1c;
+
+    .ua-icon {
+      font-size: 14px;
+      transition: transform 0.2s ease;
+    }
+  }
+
+  details[open] .ua-header .ua-icon {
+    transform: rotate(180deg);
+  }
+
+  .ua-body {
+    padding: 16px 22px 18px;
+    background: #ffffff;
+    color: #0f172a;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  .ua-list {
+    padding-left: 18px;
+    margin: 8px 0 0;
+
+    li {
+      margin-bottom: 4px;
+    }
+  }
+
+  .ua-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(3, 31, 66, 0.12);
+      font-size: 13px;
+      background: #f9fafb;
+    }
+  }
+
+  .university-rich-copy {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 24px 22px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+
+    h2,
+    h3 {
+      color: #031f42;
+    }
+
+    p {
+      color: #475569;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .ua-header,
+    .ua-body {
+      padding-inline: 14px;
+    }
+
+    .university-rich-copy {
+      padding-inline: 16px;
+    }
+  }
+}
+
+// University list cards (similar feel to services cards)
+.university-page {
+  .service-card-lite {
+    border-radius: 18px;
+    padding: 22px 20px;
+    background: #ffffff;
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.2), 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+
+    .head-text h4 {
+      margin: 0;
+      font-size: 17px;
+    }
+  }
+}
+
 // Hide main menu on mobile - only show in drawer
 .header-main .mean__menu-wrapper .main-menu {
   @media (max-width: 1199px) {
