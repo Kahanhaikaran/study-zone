@@ -3,7 +3,7 @@
 import ScrollToTop from "@/common/ScrollToTop";
 import { animationCreate } from "@/utils/utils";
 import React, { useEffect, useState } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 if (typeof window !== "undefined") {
 	require("bootstrap/dist/js/bootstrap");
@@ -28,7 +28,6 @@ const buildCaptcha = () => {
 
 const Wrapper = ({ children }: any) => {
 	const pathname = usePathname();
-	const searchParams = useSearchParams();
 	const isHomePage = pathname === "/";
 
 	const [showQueryForm, setShowQueryForm] = useState(true);
@@ -54,12 +53,12 @@ const Wrapper = ({ children }: any) => {
 
 	// Auto-open query form when visiting home with ?openQueryForm=1
 	useEffect(() => {
-		if (!isHomePage) return;
-		const shouldOpen = searchParams?.get("openQueryForm") === "1";
-		if (shouldOpen) {
+		if (!isHomePage || typeof window === "undefined") return;
+		const params = new URLSearchParams(window.location.search);
+		if (params.get("openQueryForm") === "1") {
 			setShowQueryForm(true);
 		}
-	}, [isHomePage, searchParams]);
+	}, [isHomePage]);
 
 	// Close or prevent showing the popup form on specific hash sections (e.g. testimonials, FAQ)
 	useEffect(() => {
