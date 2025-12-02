@@ -8,7 +8,7 @@ const marqueeMessages = [
 	"Dissertations with expert mentoring",
 	"Confidential & plagiarism-free",
 	"On-time delivery, every time",
-	"Call or WhatsApp +91-8882309876",
+	"Call or WhatsApp +91 73036 28683",
 ];
 
 const renderStrip = (style_2: boolean) => (

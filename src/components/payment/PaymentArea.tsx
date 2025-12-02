@@ -127,13 +127,13 @@ const PaymentArea = () => {
 					<div className="cta-content">
 						<h4>Need Help with Payment?</h4>
 						<p>Our support team is available to assist you with any payment-related questions.</p>
-						<div className="cta-buttons">
-							<a href="tel:+918882309876" className="theme-btn yellow-btn">
-								Call Us
-							</a>
-							<a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer" className="theme-btn yellow-btn style-2">
-								WhatsApp
-							</a>
+							<div className="cta-buttons">
+								<a href="tel:+917303628683" className="theme-btn yellow-btn">
+									Call Us
+								</a>
+								<a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer" className="theme-btn yellow-btn style-2">
+									WhatsApp
+								</a>
 						</div>
 					</div>
 				</div>

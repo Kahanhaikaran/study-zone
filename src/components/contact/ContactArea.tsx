@@ -4,10 +4,10 @@ import React from "react";
 const contactDetails = [
 	{
 		label: "Phone / WhatsApp",
-		value: "+91-8882309876",
+		value: "+91 73036 28683",
 		subtext: "Tap to call or chat",
 		icon: "fas fa-phone",
-		link: "tel:+918882309876",
+		link: "tel:+917303628683",
 		altLink: "https://wa.me/917303628683",
 	},
 	{
@@ -78,7 +78,7 @@ const ContactArea = () => {
 							<p>Average response time: under 30 minutes during support hours.</p>
 						</div>
 						<div className="cta-actions">
-							<a href="tel:+918882309876" className="theme-btn yellow-btn">
+							<a href="tel:+917303628683" className="theme-btn yellow-btn">
 								Call Now
 							</a>
 							<a href="https://wa.me/917303628683" target="_blank" rel="noopener noreferrer" className="theme-btn yellow-btn style-2">

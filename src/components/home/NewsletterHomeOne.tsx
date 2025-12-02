@@ -35,8 +35,8 @@ const NewsletterHomeOne = () => {
                   className="newsletter-input-items mt-4 mt-md-0 wow fadeInUp"
                   data-wow-delay=".5s"
                 >
-                  <a href="tel:+918882309876" className="theme-btn yellow-btn text-center">
-                    Call +91-8882309876
+                  <a href="tel:+917303628683" className="theme-btn yellow-btn text-center">
+                    Call +91 73036 28683
                   </a>
                   <a
                     href="https://wa.me/917303628683"

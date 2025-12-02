@@ -91,7 +91,7 @@ const FooterOne = ({style_2} : any) => {
                                         </li>
                                         <li>
                                             <span className="label">Call</span>
-                                            <a href="tel:+918882309876">+91-8882309876</a>
+                                            <a href="tel:+917303628683">+91 73036 28683</a>
                                         </li>
                                         <li>
                                             <span className="label">WhatsApp</span>

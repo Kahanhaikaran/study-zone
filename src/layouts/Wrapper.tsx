@@ -2,13 +2,42 @@
 
 import ScrollToTop from "@/common/ScrollToTop";
 import { animationCreate } from "@/utils/utils";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 if (typeof window !== "undefined") {
 	require("bootstrap/dist/js/bootstrap");
 }
 
+type QueryFormState = {
+	name: string;
+	email: string;
+	phone: string;
+	message: string;
+	captchaAnswer: string;
+};
+
+const buildCaptcha = () => {
+	const a = Math.floor(Math.random() * 5) + 3; // 3-7
+	const b = Math.floor(Math.random() * 5) + 2; // 2-6
+	return {
+		question: `${a} + ${b}`,
+		value: a + b,
+	};
+};
+
 const Wrapper = ({ children }: any) => {
+	const [showQueryForm, setShowQueryForm] = useState(true);
+	const [captcha, setCaptcha] = useState(buildCaptcha);
+	const [formState, setFormState] = useState<QueryFormState>({
+		name: "",
+		email: "",
+		phone: "",
+		message: "",
+		captchaAnswer: "",
+	});
+	const [formError, setFormError] = useState<string | null>(null);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+
 	useEffect(() => {
 		// animation
 		const timer = setTimeout(() => {
@@ -232,8 +261,174 @@ const Wrapper = ({ children }: any) => {
 		return () => observer.disconnect();
 	}, []);
 
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+		const { name, value } = e.target;
+		setFormState((prev) => ({
+			...prev,
+			[name]: value,
+		}));
+		setFormError(null);
+	};
+
+	const handleSubmit = (e: React.FormEvent) => {
+		e.preventDefault();
+		if (!formState.name || !formState.email || !formState.phone || !formState.message) {
+			setFormError("Please fill in all fields.");
+			return;
+		}
+
+		const expected = captcha.value;
+		const userAnswer = Number(formState.captchaAnswer.trim());
+
+		if (!Number.isFinite(userAnswer) || userAnswer !== expected) {
+			setFormError("Captcha is incorrect. Please try again.");
+			setCaptcha(buildCaptcha());
+			setFormState((prev) => ({ ...prev, captchaAnswer: "" }));
+			return;
+		}
+
+		setIsSubmitting(true);
+
+		try {
+			const whatsappNumber = "917303628683";
+			const messageLines = [
+				"Hello! I have a query from the website popup form.",
+				"",
+				`Name: ${formState.name}`,
+				`Email: ${formState.email}`,
+				`Phone: ${formState.phone}`,
+				"",
+				`Message: ${formState.message}`,
+			];
+			const fullMessage = messageLines.join("\n");
+			const encoded = encodeURIComponent(fullMessage);
+
+			if (typeof window !== "undefined") {
+				window.open(`https://wa.me/${whatsappNumber}?text=${encoded}`, "_blank");
+			}
+
+			setShowQueryForm(false);
+			setFormState({
+				name: "",
+				email: "",
+				phone: "",
+				message: "",
+				captchaAnswer: "",
+			});
+			setCaptcha(buildCaptcha());
+		} finally {
+			setIsSubmitting(false);
+		}
+	};
+
+	const handleClose = () => {
+		setShowQueryForm(false);
+	};
+
 	return (
 		<>
+			{showQueryForm && (
+				<div className="query-modal-backdrop">
+					<div className="query-modal">
+						<button
+							type="button"
+							className="query-modal-close"
+							aria-label="Close query form"
+							onClick={handleClose}
+						>
+							<i className="fas fa-times" />
+						</button>
+						<h3 className="query-modal-title">Query Form</h3>
+						<p className="query-modal-subtitle">
+							Share your assignment or project details and we&apos;ll respond quickly.
+						</p>
+						<form className="query-modal-form" onSubmit={handleSubmit}>
+							<div className="query-modal-grid">
+								<div className="form-group">
+									<label htmlFor="query-name">Name</label>
+									<input
+										id="query-name"
+										name="name"
+										type="text"
+										className="form-control"
+										placeholder="Enter your full name"
+										value={formState.name}
+										onChange={handleChange}
+										required
+									/>
+								</div>
+								<div className="form-group">
+									<label htmlFor="query-email">Email</label>
+									<input
+										id="query-email"
+										name="email"
+										type="email"
+										className="form-control"
+										placeholder="Enter your email address"
+										value={formState.email}
+										onChange={handleChange}
+										required
+									/>
+								</div>
+								<div className="form-group">
+									<label htmlFor="query-phone">Phone Number</label>
+									<input
+										id="query-phone"
+										name="phone"
+										type="tel"
+										className="form-control"
+										placeholder="Enter your phone or WhatsApp number"
+										value={formState.phone}
+										onChange={handleChange}
+										required
+									/>
+								</div>
+								<div className="form-group form-group-captcha">
+									<label htmlFor="query-captcha">
+										Captcha: What is <span className="captcha-question">{captcha.question}</span>?
+									</label>
+									<div className="captcha-row">
+										<input
+											id="query-captcha"
+											name="captchaAnswer"
+											type="number"
+											className="form-control"
+											placeholder="Enter answer"
+											value={formState.captchaAnswer}
+											onChange={handleChange}
+											required
+										/>
+									</div>
+								</div>
+								<div className="form-group form-group-full query-message-group">
+									<label htmlFor="query-message">Message</label>
+									<textarea
+										id="query-message"
+										name="message"
+										className="form-control"
+										rows={3}
+										placeholder="Describe your assignment, project, or exam help needed"
+										value={formState.message}
+										onChange={handleChange}
+										required
+									/>
+								</div>
+							</div>
+							{formError && <p className="query-modal-error">{formError}</p>}
+							<button type="submit" className="theme-btn yellow-btn query-submit-btn" disabled={isSubmitting}>
+								{isSubmitting && <span className="query-loader" aria-hidden="true" />}
+								<span className="query-submit-label">
+									{isSubmitting ? "Opening WhatsApp..." : "Submit"}
+								</span>
+							</button>
+						</form>
+						<p className="query-modal-footnote">
+							We respect your privacy. Your details are used only to respond to your query.
+						</p>
+					</div>
+				</div>
+			)}
+
 			{children}
 			<ScrollToTop />
 		</>

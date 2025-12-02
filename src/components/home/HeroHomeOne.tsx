@@ -34,7 +34,7 @@ const HeroHomeOne = () => {
                             </p>
                             <div className="hero-button wow fadeInUp" data-wow-delay=".7s">
                                 <Link href="/services" className="theme-btn yellow-btn">Explore Services</Link>
-                                <a href="tel:+918882309876" className="theme-btn yellow-btn">Call +91-8882309876</a>
+                                <a href="tel:+917303628683" className="theme-btn yellow-btn">Call +91 73036 28683</a>
                             </div>
                         </div>
                     </div>

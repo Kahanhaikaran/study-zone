@@ -61,8 +61,8 @@ const AboutPageSection = () => {
 									<Link href="/services" className="theme-btn yellow-btn">
 										View Services
 									</Link>
-									<a href="tel:+918882309876" className="theme-btn yellow-btn">
-										Call +91-8882309876
+									<a href="tel:+917303628683" className="theme-btn yellow-btn">
+										Call +91 73036 28683
 									</a>
 								</div>
 							</div>
