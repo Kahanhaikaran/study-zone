@@ -45,11 +45,8 @@ export const generateMetadata = ({
   };
 };
 
-const amitySynopsisPrograms = ["MBA", "MCA", "PGDHHM", "PGDM"];
-
 const UniversityDetailPage = ({ params }: { params: { slug: UniversitySlug } }) => {
   const name = prettyName(params.slug);
-  const isAmity = params.slug === "amity";
 
   return (
     <Wrapper>
@@ -65,14 +62,35 @@ const UniversityDetailPage = ({ params }: { params: { slug: UniversitySlug } }) 
                   <span className="subtitle">University Solutions</span>
                   <h1 className="title">{name}</h1>
                   <p className="mt-10">
-                    {isAmity
-                      ? "End-to-end solved assignment, exam notes, synopsis and project support for Amity distance and regular learning courses."
-                      : `Solved assignments, exam notes, synopsis and project support tailored for ${name} distance and regular learning students.`}
+                    Solved assignments, exam notes, synopses and project help tailored for {name} students.
                   </p>
-                  <div className="mt-3 d-flex justify-content-center">
-                    <a href="/pricing" className="theme-btn yellow-btn">
-                      Get more detail
-                    </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="row justify-content-center mb-30">
+              <div className="col-lg-10">
+                <div className="university-highlight-row">
+                  <div className="highlight-card">
+                    <i className="far fa-clock" aria-hidden="true" />
+                    <div>
+                      <p className="label">Fast delivery</p>
+                      <p className="value">48-hour priority slots</p>
+                    </div>
+                  </div>
+                  <div className="highlight-card">
+                    <i className="far fa-copy" aria-hidden="true" />
+                    <div>
+                      <p className="label">Plagiarism safe</p>
+                      <p className="value">Turnitin-checked</p>
+                    </div>
+                  </div>
+                  <div className="highlight-card">
+                    <i className="far fa-comments" aria-hidden="true" />
+                    <div>
+                      <p className="label">WhatsApp support</p>
+                      <p className="value">Direct expert chat</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -80,73 +98,14 @@ const UniversityDetailPage = ({ params }: { params: { slug: UniversitySlug } }) 
 
             <div className="row justify-content-center">
               <div className="col-lg-10">
-                <div className="university-accordion">
-                  {/* ASSIGNMENT */}
-                  <details className="ua-panel" open>
-                    <summary className="ua-header">
-                      <span>ASSIGNMENT</span>
-                      <i className="far fa-chevron-down ua-icon" />
-                    </summary>
-                    <div className="ua-body">
-                      <p>
-                        {isAmity
-                          ? "We provide Amity solved assignments prepared by experienced Indian subject experts. Each solution follows university guidelines and focuses on clear, exam-oriented answers."
-                          : `We provide solved assignments for key programmes of ${name}, prepared by experienced subject experts and aligned with university guidelines.`}
-                      </p>
-                      <p>
-                        Students often struggle with time, formatting rules, and topic clarity. Our team simplifies complex topics,
-                        structures answers, and delivers plagiarism-checked content so you can focus on learning and revision.
-                      </p>
-                    </div>
-                  </details>
-
-                  {/* EXAM NOTES */}
-                  <details className="ua-panel">
-                    <summary className="ua-header">
-                      <span>EXAM NOTES</span>
-                      <i className="far fa-chevron-down ua-icon" />
-                    </summary>
-                    <div className="ua-body">
-                      <p>
-                        Compact, exam-ready notes that summarise the full syllabus into easy-to-revise points. Ideal for last-minute
-                        preparation and quick concept revision.
-                      </p>
-                      <ul className="ua-list">
-                        <li>Unit-wise summaries and important questions</li>
-                        <li>Definitions, diagrams and key formulas where required</li>
-                        <li>Previous trend-based topics and probable questions</li>
-                      </ul>
-                    </div>
-                  </details>
-
-                  {/* SYNOPSIS AND PROJECT */}
-                  <details className="ua-panel">
-                    <summary className="ua-header">
-                      <span>SYNOPSIS AND PROJECT</span>
-                      <i className="far fa-chevron-down ua-icon" />
-                    </summary>
-                    <div className="ua-body">
-                      {isAmity && (
-                        <>
-                          <h4 className="ua-subtitle mb-3">Programmes Covered</h4>
-                          <ul className="ua-tag-list mb-4">
-                            {amitySynopsisPrograms.map((p) => (
-                              <li key={p}>{p}</li>
-                            ))}
-                          </ul>
-                        </>
-                      )}
-
-                      <p>
-                        We guide you from topic selection to final report for synopsis and full project work. Our experts help you
-                        shape clear objectives, strong literature review, research methodology and well‑structured analysis.
-                      </p>
-                      <p>
-                        All work is customised as per university format, plagiarism-checked and delivered within timelines so you
-                        can submit with confidence.
-                      </p>
-                    </div>
-                  </details>
+                <div className="university-rich-copy">
+                  <h2 className="mb-15">What we do for {name} students</h2>
+                  <ul className="ua-list">
+                    <li>University-wise solved assignments prepared as per latest {name} guidelines.</li>
+                    <li>Exam-focused notes that cover important questions and easy-to-revise points.</li>
+                    <li>Custom synopsis and full project guidance from topic selection to final report.</li>
+                    <li>Support for both distance and regular learning students across multiple programmes.</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -154,55 +113,25 @@ const UniversityDetailPage = ({ params }: { params: { slug: UniversitySlug } }) 
             <div className="row justify-content-center mt-40">
               <div className="col-lg-10">
                 <div className="university-rich-copy">
-                  <h2 className="mb-20">
-                    {isAmity
-                      ? "Best Assignment & Project Services for Amity Students"
-                      : `Why Students Choose Us for ${name} Solved Assignments`}
-                  </h2>
-                  <p>
-                    Guide Techs is a trusted name among university students for solved assignments, synopses, projects, and exam
-                    support. Our in‑house experts bring 10+ years of experience across management, IT, engineering, commerce,
-                    humanities and more.
-                  </p>
-                  {isAmity && (
-                    <p>
-                      For Amity learners, we understand the exact pattern of assignments, project guidelines, and evaluation style.
-                      That is why students across India rely on us for Amity solved assignments and Amity solved project guidance.
-                    </p>
-                  )}
-
-                  <h3 className="mt-30 mb-15">What You Get</h3>
+                  <h3 className="mb-15">Why students trust us for {name}</h3>
                   <ul className="ua-list">
-                    <li>Experienced assignment guides with full conceptual knowledge</li>
-                    <li>Support across multiple streams and specialisations</li>
-                    <li>On‑time delivery for every assignment and project</li>
-                    <li>Turnitin‑checked, plagiarism‑free content</li>
-                    <li>Affordable and student‑friendly pricing</li>
+                    <li>Ready help for last-minute submissions and exams with WhatsApp-first support.</li>
+                    <li>Content aligned to university pattern so you submit in the correct format.</li>
+                    <li>Focus on clarity and scoring rather than complicated theory language.</li>
+                    <li>Personalised guidance for synopsis and projects instead of one-size-fits-all files.</li>
                   </ul>
-
-                  <h3 className="mt-30 mb-15">Subjects & Areas We Cover</h3>
-                  <p>
-                    We help with homework and solved assignments in Accounts, Finance, Statistics, Computer Science, Mathematics,
-                    Economics, Management, Law, Nursing, HR, Marketing, IT, Operations, Logistics, Hospital Administration and many
-                    more domains.
+                  <p className="mt-20 mb-0">
+                    Whenever you are stuck with {name} assignments, exams or projects, click below, share your course and semester,
+                    and we&apos;ll guide you directly on WhatsApp.
                   </p>
-                  <p>
-                    From programming (C, C++, Java, Python, Data Structures, PHP, JavaScript) to business plans, case studies,
-                    research papers, theses and dissertations – our team can support you end‑to‑end.
-                  </p>
-
-                  <h3 className="mt-30 mb-15">Why Guide Techs</h3>
-                  <ul className="ua-list">
-                    <li>Dedicated subject experts for every course and university</li>
-                    <li>24/7 query handling over WhatsApp and email</li>
-                    <li>Strict quality checks before delivery</li>
-                    <li>Custom solutions prepared from scratch as per your guidelines</li>
-                  </ul>
-
-                  <p className="mt-25">
-                    If you are searching for an expert who can help with solved assignments, synopsis or project work for {name},
-                    you can share your requirements with Guide Techs and get personalised guidance for A+ performance.
-                  </p>
+                  <div className="mt-3 d-flex justify-content-center justify-content-md-start">
+                    <a
+                      href={`/university/query?university=${encodeURIComponent(name)}`}
+                      className="theme-btn yellow-btn"
+                    >
+                      Get more detail
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

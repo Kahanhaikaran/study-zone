@@ -17,6 +17,11 @@ type QueryFormState = {
 	captchaAnswer: string;
 };
 
+type CaptchaState = {
+	question: string;
+	value: number;
+} | null;
+
 const buildCaptcha = () => {
 	const a = Math.floor(Math.random() * 5) + 3; // 3-7
 	const b = Math.floor(Math.random() * 5) + 2; // 2-6
@@ -31,7 +36,9 @@ const Wrapper = ({ children }: any) => {
 	const isHomePage = pathname === "/";
 
 	const [showQueryForm, setShowQueryForm] = useState(true);
-	const [captcha, setCaptcha] = useState(buildCaptcha);
+	// Initialise captcha as null so server and client render the same
+	// markup during hydration. We generate the real captcha only on the client.
+	const [captcha, setCaptcha] = useState<CaptchaState>(null);
 	const [formState, setFormState] = useState<QueryFormState>({
 		name: "",
 		email: "",
@@ -41,6 +48,12 @@ const Wrapper = ({ children }: any) => {
 	});
 	const [formError, setFormError] = useState<string | null>(null);
 	const [isSubmitting, setIsSubmitting] = useState(false);
+
+	// Create captcha once after the component mounts on the client
+	useEffect(() => {
+		if (typeof window === "undefined") return;
+		setCaptcha(buildCaptcha());
+	}, []);
 
 	useEffect(() => {
 		// animation
@@ -318,6 +331,11 @@ const Wrapper = ({ children }: any) => {
 			return;
 		}
 
+		if (!captcha) {
+			setFormError("Captcha is still loading. Please wait a moment and try again.");
+			return;
+		}
+
 		const expected = captcha.value;
 		const userAnswer = Number(formState.captchaAnswer.trim());
 
@@ -439,7 +457,11 @@ const Wrapper = ({ children }: any) => {
 								</div>
 								<div className="form-group form-group-captcha form-group-full">
 									<label htmlFor="query-captcha">
-										Captcha: What is <span className="captcha-question">{captcha.question}</span>?
+										Captcha: What is{" "}
+										<span className="captcha-question">
+											{captcha ? captcha.question : "0 + 0"}
+										</span>
+										?
 									</label>
 									<div className="captcha-row">
 										<input
