@@ -92,23 +92,36 @@ const UniversityQueryForm: React.FC<UniversityQueryFormProps> = ({ universityNam
 			!formState.name ||
 			!formState.phone ||
 			!formState.course ||
-			!formState.year ||
-			!formState.semester ||
 			!formState.serviceType
 		) {
 			setError("Please fill in all required fields marked with *.");
 			return;
 		}
 
+		// Require at least one of year or semester
+		if (!formState.year && !formState.semester) {
+			setError("Please select either your year or your semester.");
+			return;
+		}
+
 		setIsSubmitting(true);
 
 		try {
+			let semesterYearLine = "";
+			if (formState.semester && formState.year) {
+				semesterYearLine = `Semester / Year: Semester ${formState.semester}, ${formState.year}`;
+			} else if (formState.semester) {
+				semesterYearLine = `Semester / Year: Semester ${formState.semester}`;
+			} else if (formState.year) {
+				semesterYearLine = `Semester / Year: ${formState.year}`;
+			}
+
 			const lines = [
 				"Hello! I have a query for university support.",
 				"",
 				`University: ${universityName}`,
 				`Course: ${formState.course}`,
-				`Semester / Year: Semester ${formState.semester}, ${formState.year}`,
+				semesterYearLine,
 				`Service Type: ${formState.serviceType}`,
 				"",
 				`Name: ${formState.name}`,
@@ -238,16 +251,23 @@ const UniversityQueryForm: React.FC<UniversityQueryFormProps> = ({ universityNam
 										</select>
 									</div>
 									<div className="form-group">
-										<label htmlFor="uq-year">
-											Year <span className="text-danger">*</span>
-										</label>
+										<label htmlFor="uq-year">Year</label>
 										<select
 											id="uq-year"
 											name="year"
 											className="form-select form-control"
 											value={formState.year}
-											onChange={handleChange}
-											required
+											onChange={(e) => {
+												const value = e.target.value;
+												setFormState((prev) => ({
+													...prev,
+													year: value,
+													// Clear semester when year is chosen
+													semester: value ? "" : prev.semester,
+												}));
+												setError(null);
+											}}
+											disabled={!!formState.semester}
 										>
 											<option value="">Select year</option>
 											{YEARS.map((year) => (
@@ -258,16 +278,23 @@ const UniversityQueryForm: React.FC<UniversityQueryFormProps> = ({ universityNam
 										</select>
 									</div>
 									<div className="form-group">
-										<label htmlFor="uq-semester">
-											Semester <span className="text-danger">*</span>
-										</label>
+										<label htmlFor="uq-semester">Semester</label>
 										<select
 											id="uq-semester"
 											name="semester"
 											className="form-select form-control"
 											value={formState.semester}
-											onChange={handleChange}
-											required
+											onChange={(e) => {
+												const value = e.target.value;
+												setFormState((prev) => ({
+													...prev,
+													semester: value,
+													// Clear year when semester is chosen
+													year: value ? "" : prev.year,
+												}));
+												setError(null);
+											}}
+											disabled={!!formState.year}
 										>
 											<option value="">Select semester</option>
 											{SEMESTERS.map((semester) => (
@@ -298,6 +325,9 @@ const UniversityQueryForm: React.FC<UniversityQueryFormProps> = ({ universityNam
 										</select>
 									</div>
 									<div className="form-group form-group-full">
+										<small className="text-muted d-block mb-1">
+											Select either your year or your semester (only one is required).
+										</small>
 										<label htmlFor="uq-message">Additional details (optional)</label>
 										<textarea
 											id="uq-message"
