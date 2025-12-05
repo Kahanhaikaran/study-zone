@@ -24,10 +24,9 @@ const BrandsHomeOne = () => {
 			<section className="brands-highlight slim">
 				<div className="container">
 					<div className="brands-shell">
-						<div className="section-head text-center">
-							<h3 className="headline">Students from India's top campuses rely on Shiksha Sagar</h3>
-							<p className="brand-cta-hint">Click the moving brands to view our university solutions</p>
-						</div>
+					<div className="section-head text-center">
+						<h3 className="headline">Students from India's top campuses rely on Shiksha Sagar</h3>
+					</div>
 					</div>
 				</div>
 				<Link
@@ -80,11 +79,6 @@ const BrandsHomeOne = () => {
 					font-weight: 600;
 					line-height: 1.4;
 					color: rgba(15, 23, 42, 0.78);
-				}
-				.section-head .brand-cta-hint {
-					margin: 6px 0 0;
-					font-size: clamp(12px, 1.2vw, 14px);
-					color: rgba(15, 23, 42, 0.65);
 				}
 				.brand-wrapper {
 					overflow: hidden;
