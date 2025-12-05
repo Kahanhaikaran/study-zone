@@ -38,18 +38,22 @@ const getServicesByCategory = (category: string): Service[] => {
   return services.filter(service => getServiceCategory(service) === category);
 };
 
-// Get service image (using PNG images 1-8)
-const getServiceImage = (index: number): string => {
+// Get service image with a special cover for Research Proposal (image 10)
+const getServiceImage = (service: Service, index: number): string => {
+  if (service.slug === 'research-proposal') {
+    return '/assets/img/services/10.png';
+  }
+
   const images = [
-    '/assets/img/courses/1.png',
-    '/assets/img/courses/2.png',
-    '/assets/img/courses/3.png',
-    '/assets/img/courses/4.png',
-    '/assets/img/courses/5.png',
-    '/assets/img/courses/6.png',
-    '/assets/img/courses/7.png',
-    '/assets/img/courses/8.png',
-    '/assets/img/courses/9.png',
+    '/assets/img/services/1.png',
+    '/assets/img/services/2.png',
+    '/assets/img/services/3.png',
+    '/assets/img/services/4.png',
+    '/assets/img/services/5.png',
+    '/assets/img/services/6.png',
+    '/assets/img/services/7.png',
+    '/assets/img/services/8.png',
+    '/assets/img/services/9.png',
   ];
   return images[index % images.length];
 };
@@ -106,7 +110,7 @@ const TopServicesHomeOne = () => {
                         <div className="courses-card-main-items">
                           <div className="courses-card-items">
                             <div className="courses-image">
-                              <img src={getServiceImage(index)} alt={service.title} />
+                              <img src={getServiceImage(service, index)} alt={service.title} />
                             </div>
                             <div className="courses-content">
                               <ul className="post-cat">

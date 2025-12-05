@@ -30,6 +30,15 @@ const HomeOne = () => {
 		<FaqArea />
 		{/* <BlogHomeOne /> */}
 		<MarqueeOne /> 
+		<a
+			href="https://wa.me/917303628683"
+			className="floating-whatsapp"
+			aria-label="Chat on WhatsApp"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<i className="fab fa-whatsapp" aria-hidden="true" />
+		</a>
 		<FooterOne />      
 	</>
 	);

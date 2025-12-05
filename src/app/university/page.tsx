@@ -36,7 +36,7 @@ const UniversityPage = () => {
         <HeaderOne />
         <BreadcrumbEvent title="Universities" subtitle="Universities" />
 
-        <section className="university-page section-padding">
+        <section id="universities-section" className="university-page section-padding">
           <div className="container">
           {/* Top heading + grid of university cards (like Services list) */}
           <div className="row justify-content-center mb-30">
@@ -70,6 +70,21 @@ const UniversityPage = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="row justify-content-center mt-40">
+            <div className="col-lg-10">
+              <div className="service-card-lite courses-card-items from-other-uni text-center">
+                <h4 className="mb-10">From another university?</h4>
+                <p className="mb-20">
+                  We support many more universities. Share your details and we&apos;ll help with solved assignments,
+                  exam notes, synopsis or project guidance tailored to your course.
+                </p>
+                <Link href="/university/query?university=Other University" className="theme-btn yellow-btn">
+                  Fill the query form
+                </Link>
+              </div>
+            </div>
           </div>
           </div>
         </section>

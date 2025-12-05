@@ -1211,8 +1211,8 @@ footer.footer-section {
   position: fixed !important;
   display: inline-block !important;
   z-index: 9999 !important;
-  right: 30px !important;
-  bottom: 30px !important;
+  right: 28px !important;
+  bottom: 92px !important;
   border: none !important;
   cursor: pointer !important;
   text-align: center !important;
@@ -2439,6 +2439,11 @@ footer.footer-section {
       }
     }
   }
+
+  .hero-button .theme-btn i {
+    margin-left: 8px;
+    font-size: 16px;
+  }
 }
 
 // Fix button colors - ensure yellow-btn is always yellow
@@ -2459,6 +2464,48 @@ footer.footer-section {
       background-color: #facc15 !important;
       color: #ffffff !important;
     }
+  }
+}
+
+.query-submit-btn i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.floating-whatsapp {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+  z-index: 999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.floating-whatsapp:hover,
+.floating-whatsapp:focus-visible {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .floating-whatsapp {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .back-to-top {
+    right: 16px !important;
+    bottom: 84px !important;
   }
 }
 

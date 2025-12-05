@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 type UniversityQueryFormProps = {
 	universityName: string;
@@ -65,7 +65,14 @@ const SERVICE_TYPES = [
 
 const whatsappNumber = "917303628683";
 
+const normalizeUniversity = (value: string | undefined) => {
+	if (!value) return "";
+	if (value.toLowerCase() === "other university") return "";
+	return value;
+};
+
 const UniversityQueryForm: React.FC<UniversityQueryFormProps> = ({ universityName }) => {
+	const [universityInput, setUniversityInput] = useState(normalizeUniversity(universityName));
 	const [formState, setFormState] = useState<FormState>({
 		name: "",
 		phone: "",
@@ -78,6 +85,11 @@ const UniversityQueryForm: React.FC<UniversityQueryFormProps> = ({ universityNam
 	});
 	const [error, setError] = useState<string | null>(null);
 	const [isSubmitting, setIsSubmitting] = useState(false);
+
+	useEffect(() => {
+		// Keep local input in sync when the university changes via query params, but avoid pre-filling "Other University"
+		setUniversityInput(normalizeUniversity(universityName));
+	}, [universityName]);
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
 		const { name, value } = e.target;
@@ -119,7 +131,7 @@ const UniversityQueryForm: React.FC<UniversityQueryFormProps> = ({ universityNam
 			const lines = [
 				"Hello! I have a query for university support.",
 				"",
-				`University: ${universityName}`,
+				`University: ${universityInput || "Not specified"}`,
 				`Course: ${formState.course}`,
 				semesterYearLine,
 				`Service Type: ${formState.serviceType}`,
@@ -221,13 +233,14 @@ const UniversityQueryForm: React.FC<UniversityQueryFormProps> = ({ universityNam
 										/>
 									</div>
 									<div className="form-group">
-										<label>University</label>
+										<label htmlFor="uq-university">University</label>
 										<input
+											id="uq-university"
 											type="text"
 											className="form-control"
-											value={universityName}
-											disabled
-											readOnly
+											placeholder="Enter your university"
+											value={universityInput}
+											onChange={(e) => setUniversityInput(e.target.value)}
 										/>
 									</div>
 									<div className="form-group">
@@ -344,7 +357,11 @@ const UniversityQueryForm: React.FC<UniversityQueryFormProps> = ({ universityNam
 								<button type="submit" className="theme-btn yellow-btn query-submit-btn" disabled={isSubmitting}>
 									{isSubmitting && <span className="query-loader" aria-hidden="true" />}
 									<span className="query-submit-label">
-										{isSubmitting ? "Opening WhatsApp..." : "Get details on WhatsApp"}
+										{isSubmitting ? "Opening WhatsApp..." : (
+											<>
+												<i className="fab fa-whatsapp" aria-hidden="true" /> Get details on WhatsApp
+											</>
+										)}
 									</span>
 								</button>
 								<p className="query-modal-footnote mt-2 mb-0">
