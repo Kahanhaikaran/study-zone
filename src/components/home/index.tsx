@@ -7,7 +7,6 @@ import MarqueeOne from "@/common/MarqueeOne";
 import FeatureHomeOne from "./FeatureHomeOne";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import NewsletterHomeOne from "./NewsletterHomeOne";
-// import TopCategoryHomeOne from "./TopCategoryHomeOne";
 import TestimonialHomeOne from "./TestimonialHomeOne";
 import FooterOne from "@/layouts/footers/FooterOne";
 import TopServicesHomeOne from "./TopServicesHomeOne";
@@ -20,7 +19,6 @@ const HomeOne = () => {
         <HeroHomeOne />
         <BrandsHomeOne />
         <FeatureHomeOne />
-        {/* <TopCategoryHomeOne /> */}
 		<TopServicesHomeOne />
 		<MarqueeOne />
 		<ChooseHomeOne />

@@ -86,6 +86,7 @@ const TopServicesHomeOne = () => {
                       data-bs-toggle="tab" 
                       className={`nav-link ${isActive ? 'active' : ''}`}
                       role="tab"
+                      tabIndex={isActive ? 0 : -1}
                       aria-selected={isActive ? "true" : "false"}
                       aria-controls={key}
                       id={`${key}-tab`}
