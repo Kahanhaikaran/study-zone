@@ -4,6 +4,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
 	title: "Shiksha Sagar - Academic Support Platform",
 	description: "Personalized academic support for assignments, projects, and exams.",
+	icons: {
+		icon: "/favicon.ico",
+	},
 };
 
 export default function RootLayout({
@@ -13,9 +16,6 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" />
-      </head>
 			<body>{children}</body>
 		</html>
 	);
