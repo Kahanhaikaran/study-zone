@@ -109,7 +109,7 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 
 			<section className="section-padding service-body pt-0">
 				<div className="container">
-					<div className="row g-5">
+					<div className="row g-4">
 						<div className="col-lg-8">
 							<div className="info-panel wow fadeInUp">
 								<h3>What&apos;s delivered</h3>
@@ -305,10 +305,10 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 					padding: 32px;
 					border-radius: 24px;
 					box-shadow: 0 12px 45px rgba(15, 23, 42, 0.08);
-					margin-bottom: 26px;
+					margin-bottom: 20px;
 				}
 				.info-panel + .info-panel {
-					margin-top: 10px;
+					margin-top: 0;
 				}
 				.info-panel > p {
 					max-width: 640px;
@@ -396,7 +396,10 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 					}
 					.sticky-card {
 						position: static;
-						margin-top: 8px;
+						margin-top: 20px;
+					}
+					.info-panel {
+						margin-bottom: 20px;
 					}
 				}
 				@media (max-width: 767px) {
@@ -422,27 +425,62 @@ const ServiceDetails = ({ service }: ServiceDetailsProps) => {
 					.process-step .step-count {
 						width: 100%;
 					}
+					.info-panel {
+						padding: 24px 20px;
+						margin-bottom: 16px;
+					}
+					.service-body {
+						padding-top: 0 !important;
+					}
 				}
 				@media (max-width: 575px) {
 					.section-padding {
-						padding: 60px 0;
+						padding: 50px 0;
+					}
+					.service-hero {
+						padding-top: 40px;
+						padding-bottom: 40px;
+					}
+					.service-body {
+						padding-top: 0 !important;
+						padding-bottom: 40px;
+					}
+					.hero-panel {
+						padding: 20px 16px !important;
 					}
 					.hero-meta-card,
 					.info-panel,
 					.sticky-card {
-						padding: 22px;
+						padding: 20px 18px;
 					}
 					.chip {
 						width: 100%;
 						justify-content: center;
+						padding: 8px 14px;
+						font-size: 13px;
 					}
 					.cta-stack {
 						flex-direction: column;
+						gap: 10px;
 					}
 					.styled-list li {
 						align-items: flex-start;
-						flex-direction: column;
-						gap: 8px;
+						flex-direction: row;
+						gap: 10px;
+						font-size: 14px;
+					}
+					.info-panel h3 {
+						font-size: 20px;
+						margin-bottom: 12px;
+					}
+					.process-step {
+						padding: 16px;
+					}
+					.process-step h5 {
+						font-size: 16px;
+					}
+					.process-step p {
+						font-size: 13px;
 					}
 				}
 			`}</style>

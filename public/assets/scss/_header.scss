@@ -100,6 +100,13 @@
 					transform: translate(0, 10px);
 				}
 
+				@include breakpoint (max-md) {
+					min-width: 280px;
+					max-width: calc(100vw - 32px);
+					padding: 18px 20px 20px;
+					column-gap: 24px;
+				}
+
 				li {
 					display: block;
 					width: calc(33.333% - 26px);
@@ -117,6 +124,10 @@
 					@include breakpoint (max-lg) {
 						width: 100%;
 					}
+
+					@include breakpoint (max-md) {
+						width: 100%;
+					}
 	
 					a {
 						position: relative;
@@ -124,17 +135,19 @@
 						font-size: 16px;
 						font-weight: 600;
 						color: $header-color;
-						padding: 4px 0;
+						padding: 8px 12px;
 						text-transform: capitalize;
 						font-family: $heading-font;
 						width: 100%;
 						display: flex;
 						align-items: center;
 						justify-content: space-between;
-
+						border-radius: 8px;
+						transition: all 0.2s ease;
 
 						&:hover {
-							color: $white !important;
+							color: $theme-blue !important;
+							background: rgba(0, 91, 255, 0.08);
 						}
 					}
 					&:last-child {
@@ -151,6 +164,7 @@
 					&:hover {
 						>a {
 							color: $theme-blue !important;
+							background: rgba(0, 91, 255, 0.08);
 
 							&::after {
 								color: $theme-blue;

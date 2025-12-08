@@ -75,19 +75,26 @@ const TopServicesHomeOne = () => {
                 Assignments, research, exams, and presentations handled by domain experts with full confidentiality.
               </p>
             </div>
-            <ul className="nav">
-              {Object.entries(serviceCategories).map(([key, label], index) => (
-                // Keep tabs snappy but add a subtle fade-in
-                <li key={key} className="nav-item wow fadeInUp" data-wow-delay=".05s">
-                  <a 
-                    href={`#${key}`} 
-                    data-bs-toggle="tab" 
-                    className={`nav-link ${key === 'All' ? 'active' : ''}`}
-                  >
-                    {label}
-                  </a>
-                </li>
-              ))}
+            <ul className="nav" role="tablist">
+              {Object.entries(serviceCategories).map(([key, label], index) => {
+                const isActive = key === 'All';
+                return (
+                  // Keep tabs snappy but add a subtle fade-in
+                  <li key={key} className="nav-item wow fadeInUp" data-wow-delay=".05s" role="presentation">
+                    <a 
+                      href={`#${key}`} 
+                      data-bs-toggle="tab" 
+                      className={`nav-link ${isActive ? 'active' : ''}`}
+                      role="tab"
+                      aria-selected={isActive ? "true" : "false"}
+                      aria-controls={key}
+                      id={`${key}-tab`}
+                    >
+                      {label}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className="tab-content">
@@ -98,6 +105,9 @@ const TopServicesHomeOne = () => {
                   key={category} 
                   id={category} 
                   className={`tab-pane fade ${category === 'All' ? 'show active' : ''}`}
+                  role="tabpanel"
+                  aria-labelledby={`${category}-tab`}
+                  aria-hidden={category !== 'All' ? "true" : "false"}
                 >
                   <div className="row">
                     {categoryServices.map((service, index) => (

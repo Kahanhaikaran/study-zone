@@ -14,21 +14,6 @@ type QueryFormState = {
 	email: string;
 	phone: string;
 	message: string;
-	captchaAnswer: string;
-};
-
-type CaptchaState = {
-	question: string;
-	value: number;
-} | null;
-
-const buildCaptcha = () => {
-	const a = Math.floor(Math.random() * 5) + 3; // 3-7
-	const b = Math.floor(Math.random() * 5) + 2; // 2-6
-	return {
-		question: `${a} + ${b}`,
-		value: a + b,
-	};
 };
 
 const Wrapper = ({ children }: any) => {
@@ -36,24 +21,14 @@ const Wrapper = ({ children }: any) => {
 	const isHomePage = pathname === "/";
 
 	const [showQueryForm, setShowQueryForm] = useState(true);
-	// Initialise captcha as null so server and client render the same
-	// markup during hydration. We generate the real captcha only on the client.
-	const [captcha, setCaptcha] = useState<CaptchaState>(null);
 	const [formState, setFormState] = useState<QueryFormState>({
 		name: "",
 		email: "",
 		phone: "",
 		message: "",
-		captchaAnswer: "",
 	});
 	const [formError, setFormError] = useState<string | null>(null);
 	const [isSubmitting, setIsSubmitting] = useState(false);
-
-	// Create captcha once after the component mounts on the client
-	useEffect(() => {
-		if (typeof window === "undefined") return;
-		setCaptcha(buildCaptcha());
-	}, []);
 
 	useEffect(() => {
 		// animation
@@ -331,27 +306,12 @@ const Wrapper = ({ children }: any) => {
 			return;
 		}
 
-		if (!captcha) {
-			setFormError("Captcha is still loading. Please wait a moment and try again.");
-			return;
-		}
-
-		const expected = captcha.value;
-		const userAnswer = Number(formState.captchaAnswer.trim());
-
-		if (!Number.isFinite(userAnswer) || userAnswer !== expected) {
-			setFormError("Captcha is incorrect. Please try again.");
-			setCaptcha(buildCaptcha());
-			setFormState((prev) => ({ ...prev, captchaAnswer: "" }));
-			return;
-		}
-
 		setIsSubmitting(true);
 
 		try {
 			const whatsappNumber = "917303628683";
 			const messageLines = [
-				"Hello! I have a query from the website popup form.",
+				"Hello! I have a query",
 				"",
 				`Name: ${formState.name}`,
 				`Email: ${formState.email}`,
@@ -372,9 +332,7 @@ const Wrapper = ({ children }: any) => {
 				email: "",
 				phone: "",
 				message: "",
-				captchaAnswer: "",
 			});
-			setCaptcha(buildCaptcha());
 		} finally {
 			setIsSubmitting(false);
 		}
@@ -399,7 +357,7 @@ const Wrapper = ({ children }: any) => {
 						</button>
 						<h3 className="query-modal-title">Query Form</h3>
 						<p className="query-modal-subtitle">
-							Share your assignment or project details and we&apos;ll respond quickly.
+							Hello! I have a query
 						</p>
 						<form className="query-modal-form" onSubmit={handleSubmit}>
 							<div className="query-modal-grid">
@@ -454,27 +412,6 @@ const Wrapper = ({ children }: any) => {
 										onChange={handleChange}
 										required
 									/>
-								</div>
-								<div className="form-group form-group-captcha form-group-full">
-									<label htmlFor="query-captcha">
-										Captcha: What is{" "}
-										<span className="captcha-question">
-											{captcha ? captcha.question : "0 + 0"}
-										</span>
-										?
-									</label>
-									<div className="captcha-row">
-										<input
-											id="query-captcha"
-											name="captchaAnswer"
-											type="number"
-											className="form-control"
-											placeholder="Enter answer"
-											value={formState.captchaAnswer}
-											onChange={handleChange}
-											required
-										/>
-									</div>
 								</div>
 							</div>
 							{formError && <p className="query-modal-error">{formError}</p>}
